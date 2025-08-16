@@ -1,300 +1,986 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Findora - Solutions IA Innovantes</title>
-    <meta name="description" content="Findora propose des solutions d'intelligence artificielle dans trois catégories : Open Source, Agent Public et Agent Entreprise. Découvrez nos agents IA avancés.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Findora propose des solutions d'intelligence artificielle dans trois catégories : Open Source, Agent Public et Agent Entreprise. Découvrez nos agents IA avancés."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: {
+              18: "4.5rem",
+              25: "6.25rem",
+              72: "18rem",
+              84: "21rem",
+              96: "24rem",
+            },
+            borderRadius: {
+              xl: "12px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-findora-inter text-text-primary leading-relaxed antialiased"
+  >
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <div class="nav-logo">
-                <a href="#" class="logo-link">
-                    <div class="logo">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="75"
-                            height="20"
-                            viewBox="0 0 88 24"
-                            class="logo-svg"
-                        >
-                            <g>
-                                <rect
-                                    x="0"
-                                    y="0"
-                                    width="88"
-                                    height="24"
-                                    rx="12"
-                                    ry="12"
-                                    fill="#ffbd59"
-                                />
-                                <circle cx="60" cy="12" r="6" fill="white" />
-                                <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
-                            </g>
-                        </svg>
-                        <span class="logo-text">Findora</span>
-                    </div>
-                </a>
+    <nav
+      class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18"
+      >
+        <!-- Navigation adaptative : afficher desktop sur large écrans, mobile sur petits écrans -->
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="logo-svg"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span
+                class="logo-text text-xl font-bold text-primary tracking-tight relative"
+                >Findora</span
+              >
             </div>
-
-            <!-- Menu Principal -->
-            <div class="nav-menu">
-                <div class="nav-item dropdown">
-                    <button class="nav-link dropdown-toggle" id="solutions-dropdown">
-                        Solutions
-                        <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu" id="solutions-menu">
-                        <div class="dropdown-content">
-                            <div class="dropdown-section">
-                                <div class="dropdown-item">
-                                    <a href="#open-source" class="dropdown-link">
-                                        <div class="dropdown-icon-wrapper">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                                                <div class="dropdown-text">
-                            <h3>Open Source</h3>
-                            <p>Solutions ouvertes et collaboratives pour la communauté</p>
-                            <div class="dropdown-projects">
-                                <div class="project-item">
-                                    <h4>Agent de Voyage</h4>
-                                    <span>Temps réel et intelligent</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4><span class="tech-element">MCP Creator</span></h4>
-                                    <span>Créer et déployer par prompt</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4>Community Hub</h4>
-                                    <span>Collaboration développeurs</span>
-                                </div>
-                            </div>
-                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="dropdown-section">
-                                <div class="dropdown-item">
-                                    <a href="#agent-public" class="dropdown-link">
-                                        <div class="dropdown-icon-wrapper">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                                                <div class="dropdown-text">
-                            <h3>Agent Public</h3>
-                            <p>IA accessible via plateformes populaires</p>
-                            <div class="dropdown-projects">
-                                <div class="project-item">
-                                    <h4>WhatsApp IA</h4>
-                                    <span>Conversation intelligente</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4>Telegram Bot</h4>
-                                    <span>Assistant personnel</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4>Web Interface</h4>
-                                    <span>Accès universel</span>
-                                </div>
-                            </div>
-                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="dropdown-section">
-                                <div class="dropdown-item">
-                                    <a href="#agent-entreprise" class="dropdown-link">
-                                        <div class="dropdown-icon-wrapper">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                                                <div class="dropdown-text">
-                            <h3>Agent Entreprise</h3>
-                            <p>Solutions professionnelles et intégrations sur mesure</p>
-                            <div class="dropdown-projects">
-                                <div class="project-item">
-                                    <h4>Data Entry Agent</h4>
-                                    <span>Saisie automatisée</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4>Distribution Hub</h4>
-                                    <span>Gestion logistique</span>
-                                </div>
-                                <div class="project-item">
-                                    <h4>Custom Integration</h4>
-                                    <span>API sur mesure</span>
-                                </div>
-                            </div>
-                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#about" class="nav-link">À propos</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="nav-cta">
-                <a href="#demo" class="btn btn-secondary">Demander une démo</a>
-                <a href="#start" class="btn btn-primary">Commencer</a>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+          </a>
         </div>
+
+        <!-- Menu Principal -->
+        <div class="hidden md:flex items-center gap-8 relative">
+          <div class="nav-item dropdown">
+            <button
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+              id="solutions-dropdown"
+            >
+              Solutions
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-menu" id="solutions-menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-section">
+                    <div class="dropdown-item">
+                      <a href="#open-source" class="dropdown-link">
+                        <div class="dropdown-text">
+                          <div>
+                            <div class="flex gap-2">
+                              <div class="dropdown-icon-wrapper">
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M2 17L12 22L22 17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                  <path
+                                    d="M2 12L12 17L22 12"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                              <div>
+                                <h3>Open Source</h3>
+                                <p>Solutions ouvertes et gratuites</p>
+                              </div>
+                            </div>
+              
+                            <div class="dropdown-projects">
+                              <div class="project-item">
+                                <h4>Agent de Voyage</h4>
+                                <span>Temps réel et intelligent</span>
+                              </div>
+                              <div class="project-item">
+                                <h4>
+                                  <span class="tech-element">MCP Creator</span>
+                                </h4>
+                                <span>Créer et déployer par prompt</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+              
+                  <div class="dropdown-section">
+                    <div class="dropdown-item">
+                      <a href="#agent-public" class="dropdown-link">
+                        <div class="dropdown-text">
+                          <div>
+                            <div class="flex gap-2">
+                              <div class="dropdown-icon-wrapper">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                    d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
+                                    clip-rule="evenodd"
+                                  />
+                                  <path
+                                    fill="currentColor"
+                                    d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
+                                  />
+                                </svg>
+                              </div>
+                              <div>
+                                <h3>Agent Public</h3>
+                                <p>AI accessible via plateformes</p>
+                              </div>
+                            </div>
+                            <div class="dropdown-projects">
+                              <div class="project-item">
+                                <h4>WhatsApp Agent IA</h4>
+                                <span>Conversation intelligente</span>
+                              </div>
+                              <div class="project-item">
+                                <h4>Web Interface</h4>
+                                <span>Accès universel</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+              
+                  <div class="dropdown-section">
+                    <div class="dropdown-item">
+                      <a href="#agent-entreprise" class="dropdown-link">
+                        <div class="dropdown-text">
+                          <div>
+                            <div class="flex gap-2">
+                              <div class="dropdown-icon-wrapper">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
+                                  />
+                                  <path
+                                    fill="currentColor"
+                                    d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
+                                    opacity="0.2"
+                                  />
+                                  <path
+                                    fill="currentColor"
+                                    d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
+                                    opacity="0.15"
+                                  />
+                                </svg>
+                              </div>
+                              <div>
+                                <h3>Agent Entreprise</h3>
+                                <p>Optimmiser pour cas d'usage</p>
+                              </div>
+                            </div>
+                            <div class="dropdown-projects">
+                              <div class="project-item">
+                                <h4>Data Entry Agent</h4>
+                                <span>Saisie automatisée</span>
+                              </div>
+                              <div class="project-item">
+                                <h4>Web research</h4>
+                                <span>Collecter les données</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <a
+            href="#about"
+            class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
+            >Recherche</a
+          >
+          
+          <div class="nav-item dropdown">
+            <button
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+              id="ressources-dropdown"
+            >
+              Ressources
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-menu" id="ressources-menu">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#use-cases" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M9 12L11 14L15 10"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Use Cases</h3>
+                              <p>Exemples d'utilisations</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>E-commerce</h4>
+                              <span>Automatisation complète</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Support Client</h4>
+                              <span>Réponses intelligentes</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#developers" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M16 18L22 12L16 6"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M8 6L2 12L8 18"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Développeurs</h3>
+                              <p>Outils et ressources techniques</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>API Documentation</h4>
+                              <span>Guide complet</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>SDK & Libraries</h4>
+                              <span>Intégration rapide</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#docs" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M14 2V8H20"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M16 13H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M16 17H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M10 9H9H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Docs</h3>
+                              <p>Documentation complète</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>Guide de démarrage</h4>
+                              <span>Premiers pas</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Tutoriels</h4>
+                              <span>Apprentissage guidé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#contact"
+            class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
+            >Contact</a
+          >
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="#demo"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg"
+            >Demander une démo</a
+          >
+          <a
+            href="#start"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+            >Commencer</a
+          >
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-text">✨ Nouvelle génération d'IA</span>
-                </div>
-                <h1 class="hero-title">
-                    L'IA qui transforme
-                    <span class="gradient-text">votre business</span>
-                </h1>
-                <p class="hero-description">
-                    Findora démocratise l'intelligence artificielle avec des solutions sur mesure. 
-                    De l'open source aux entreprises, nos agents IA redefinissent l'interaction homme-machine.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Catégories</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Open Source</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Disponible</span>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#solutions" class="btn btn-primary btn-large">Découvrir nos solutions</a>
-                    <a href="#demo" class="btn btn-secondary btn-large">Voir la démo</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-gradient"></div>
-                <div class="floating-elements">
-                    <div class="floating-card card-1">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Open Source</span>
-                    </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Agent Public</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Entreprise</span>
-                    </div>
-                </div>
-            </div>
+    <section
+      class="hero pt-32 pb-20 bg-[#f5f5f5] min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div
+        class="px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10"
+      >
+        <div class="pl-8 w-full">
+          <div
+            class="inline-flex items-center px-4 py-2 bg-bg-card border border-border-subtle rounded-full mb-6 shadow-lg"
+          >
+            <span
+              class="text-sm font-medium text-text-secondary font-findora-regular"
+              >✨ Construisez plus vite</span
+            >
+          </div>
+          <h1
+            class="text-5xl lg:text-5xl font-extrabold leading-tight mb-6 text-text-primary tracking-tight font-findora-inter"
+          >
+            Construire un futur avec
+            <br />
+            <span
+              class="text-[#e8e8e8] relative font-findora-inter font-extrabold"
+              >moins d'effort.</span
+            >
+          </h1>
+          <p
+            class="text-xl lg:text-lg text-text-secondary mb-10 leading-relaxed font-normal max-w-lg font-findora-inter"
+          >
+            Jusqu'à présent , il fallait beaucoup d'argent pour ambitionner et
+            rêver.
+          </p>
+
+          <div class="flex gap-4 flex-wrap">
+            <a
+              href="#solutions"
+              class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+              >Open source</a
+            >
+            <a
+              href="#demo"
+              class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg"
+              >Demander une démo</a
+            >
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="hero-gradient"></div>
+          <div class="floating-elements">
+            <div class="floating-card card-1">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <span>Open Source</span>
+            </div>
+            <div class="floating-card card-2">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
+                  />
+                </svg>
+              </div>
+              <span>Agent Public</span>
+            </div>
+            <div class="floating-card card-3">
+              <div class="card-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
+                    opacity="0.2"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
+                    opacity="0.15"
+                  />
+                </svg>
+              </div>
+              <span>Entreprise</span>
+            </div>
+          </div>
+        </div>
+      </div>
+        </section>
+
+    <!-- Agents Publics Section -->
+    <section class="agents-publics-section py-25 bg-gray-50 relative">
+      <div class=" mx-auto px-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Contenu gauche -->
+          <div class="space-y-8">
+            <div>
+              <span class="text-sm font-medium text-text-light uppercase tracking-wider font-findora-inter">
+                AGENTS PUBLICS
+              </span>
+              <h2 class="text-4xl lg:text-5xl font-extrabold mt-4 mb-6 text-text-primary leading-tight font-findora-inter">
+                Agents publics accessibles
+              </h2>
+              <p class="text-lg text-text-secondary leading-relaxed font-findora-regular">
+                Les agents IA sont conçus pour être efficaces, et puissants sur des charges courantes.
+                D'une varité de domaine , ils permettent de résoudre des problèmes complexes.
+              </p>
+            </div>
+            
+            <div class="flex gap-4 flex-wrap">
+              <a href="#contact" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">
+                Contacter le service commercial
+              </a>
+              <a href="#learn-more" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">
+                Apprendre encore plus
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Carte WhatsApp Agent -->
+            <div class="bg-white cursor-pointer border border-border-subtle rounded-xl p-6 relative overflow-hidden hover:shadow-2xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800 font-findora-inter">
+                  NOUVEAU
+                </span>
+              </div>
+              
+              <div class="flex items-start gap-4 mt-8">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-bg-dark rounded-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-white">
+                      <path fill="currentColor" fill-rule="evenodd" d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755" clip-rule="evenodd" />
+                      <path fill="currentColor" d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="flex-1">
+                  <h3 class="text-xl font-bold text-text-primary mb-2 font-findora-inter">
+                   Découvrez WhatsApp Agent IA multilingue...
+                  </h3>
+                  
+                  <a href="#whatsapp-agent" class="inline-flex items-center text-text-secondary hover:text-accent transition-colors font-findora-regular">
+                    Apprendre encore plus
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visualisation droite -->
+          <div class="relative">
+            <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 relative overflow-hidden">
+              <!-- Grille de points -->
+              <div class="absolute inset-0 opacity-30">
+                <div class="grid grid-cols-12 gap-2 h-full w-full">
+                  <div class="col-span-12 grid grid-cols-12 gap-1">
+                    <!-- Génération de points décoratifs -->
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-40"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-60"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-30"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-50"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-40"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-70"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-30"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-45"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-60"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-35"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-50"></div>
+                    <div class="w-1 h-1 bg-text-light rounded-full opacity-40"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Éléments connectés centraux -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative">
+                  <!-- Centre principal -->
+                  <div class="w-24 h-24 bg-bg-dark rounded-2xl flex items-center justify-center shadow-2xl relative z-10">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="text-white">
+                      <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  
+                  <!-- Points connectés autour -->
+                  <div class="absolute -top-8 -left-8 w-4 h-4 bg-accent rounded-full"></div>
+                  <div class="absolute -top-12 left-8 w-3 h-3 bg-text-light rounded-full"></div>
+                  <div class="absolute -right-10 -top-4 w-3 h-3 bg-text-light rounded-full"></div>
+                  <div class="absolute -right-8 top-8 w-4 h-4 bg-accent rounded-full"></div>
+                  <div class="absolute -bottom-8 -right-8 w-3 h-3 bg-text-light rounded-full"></div>
+                  <div class="absolute -bottom-10 left-4 w-4 h-4 bg-text-light rounded-full"></div>
+                  <div class="absolute -left-10 bottom-4 w-3 h-3 bg-accent rounded-full"></div>
+                  <div class="absolute -left-8 -top-2 w-3 h-3 bg-text-light rounded-full"></div>
+                  
+                  <!-- Lignes de connexion -->
+                  <svg class="absolute inset-0 w-full h-full pointer-events-none" style="transform: scale(1.5)">
+                    <defs>
+                      <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="1" fill="currentColor" opacity="0.3"/>
+                      </pattern>
+                    </defs>
+                    <line x1="50%" y1="50%" x2="30%" y2="20%" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-dasharray="2,2"/>
+                    <line x1="50%" y1="50%" x2="70%" y2="30%" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-dasharray="2,2"/>
+                    <line x1="50%" y1="50%" x2="70%" y2="70%" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-dasharray="2,2"/>
+                    <line x1="50%" y1="50%" x2="30%" y2="80%" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-dasharray="2,2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
+  
     <!-- Solutions Preview -->
-    <section class="solutions-preview" id="solutions">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Notre expertise</span>
-                <h2 class="section-title">Nos Solutions IA</h2>
-                <p class="section-description">Découvrez nos trois catégories de solutions adaptées à tous vos besoins</p>
-            </div>
-            <div class="solutions-grid">
-                <div class="solution-card" id="open-source">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Open Source</h3>
-                    <p>Solutions ouvertes et collaboratives pour la communauté</p>
-                    <ul class="solution-features">
-                        <li>Agent de voyage en temps réel</li>
-                        <li><span class="tech-element">Findora MCP Creator</span></li>
-                        <li>Création d'agents par prompt</li>
-                        <li>Déploiement simplifié</li>
-                        <li>Code source accessible</li>
-                        <li>Communauté active</li>
-                    </ul>
-                </div>
-
-                <div class="solution-card" id="agent-public">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Agent Public</h3>
-                    <p>IA accessible au grand public via des plateformes populaires</p>
-                    <ul class="solution-features">
-                        <li>IA conversation WhatsApp</li>
-                        <li>Interface intuitive</li>
-                        <li>Accessible à tous</li>
-                    </ul>
-                </div>
-
-                <div class="solution-card" id="agent-entreprise">
-                    <div class="solution-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Agent Entreprise</h3>
-                    <p>Solutions professionnelles sur mesure pour votre business</p>
-                    <ul class="solution-features">
-                        <li>Agent de saisie de données</li>
-                        <li>Spécialisé distribution</li>
-                        <li>Intégration sur mesure</li>
-                    </ul>
-                </div>
-            </div>
+    <section class="py-25 bg-bg-card relative" id="solutions">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span
+            class="inline-block text-base font-semibold text-accent uppercase tracking-widest mb-4 font-findora-inter"
+            >Notre expertise</span
+          >
+          <h2
+            class="text-4xl lg:text-5xl font-extrabold text-center mb-20 text-text-primary tracking-tight relative font-findora-inter"
+          >
+            Nos Solutions IA
+          </h2>
+          <p
+            class="text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-findora-regular"
+          >
+            Découvrez nos trois catégories de solutions adaptées à tous vos
+            besoins
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div
+            class="solution-card bg-bg-card border border-border-subtle rounded-xl p-10 transition-all duration-300 relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:border-accent"
+            id="open-source"
+          >
+            <div
+              class="w-18 h-18 bg-bg-dark rounded-md flex items-center justify-center mb-8 text-text-on-dark transition-all duration-300 solution-icon"
+            >
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2L2 7L12 12L22 7L12 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2 17L12 22L22 17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2 12L12 17L22 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-4 text-text-primary tracking-tight font-findora-inter"
+            >
+              Open Source
+            </h3>
+            <p
+              class="text-text-secondary mb-5 leading-relaxed font-findora-regular"
+            >
+              Solutions ouvertes et collaboratives pour la communauté
+            </p>
+            <ul class="list-none font-findora-regular">
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Agent de voyage en temps réel
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                <span
+                  class="tech-element font-findora-mono bg-accent/15 text-primary px-1.5 py-0.5 rounded border border-accent/30 text-xs"
+                  >Findora MCP Creator</span
+                >
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Création d'agents par prompt
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Déploiement simplifié
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Code source accessible
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Communauté active
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="solution-card bg-bg-card border border-border-subtle rounded-xl p-10 transition-all duration-300 relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:border-accent"
+            id="agent-public"
+          >
+            <div
+              class="w-18 h-18 bg-bg-dark rounded-md flex items-center justify-center mb-8 text-text-on-dark transition-all duration-300 solution-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill="currentColor"
+                  d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-4 text-text-primary tracking-tight font-findora-inter"
+            >
+              Agent Public
+            </h3>
+            <p
+              class="text-text-secondary mb-5 leading-relaxed font-findora-regular"
+            >
+              IA accessible au grand public via des plateformes populaires
+            </p>
+            <ul class="list-none font-findora-regular">
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                IA conversation WhatsApp
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Interface intuitive
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Accessible à tous
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="solution-card bg-bg-card border border-border-subtle rounded-xl p-10 transition-all duration-300 relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:border-accent"
+            id="agent-entreprise"
+          >
+            <div
+              class="w-18 h-18 bg-bg-dark rounded-md flex items-center justify-center mb-8 text-text-on-dark transition-all duration-300 solution-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
+                />
+                <path
+                  fill="currentColor"
+                  d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
+                  opacity="0.2"
+                />
+                <path
+                  fill="currentColor"
+                  d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
+                  opacity="0.15"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-4 text-text-primary tracking-tight font-findora-inter"
+            >
+              Agent Entreprise
+            </h3>
+            <p
+              class="text-text-secondary mb-5 leading-relaxed font-findora-regular"
+            >
+              Solutions professionnelles sur mesure pour votre business
+            </p>
+            <ul class="list-none font-findora-regular">
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Agent de saisie de données
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Spécialisé distribution
+              </li>
+              <li
+                class="py-2 text-text-secondary text-sm relative pl-5 leading-relaxed"
+              >
+                Intégration sur mesure
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

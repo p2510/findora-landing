@@ -5,31 +5,59 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdown = dropdownToggle.closest('.dropdown');
     const dropdownMenu = document.getElementById('solutions-menu');
     
-    let timeoutId;
+    // Gestion du menu déroulant Ressources
+    const ressourcesDropdownToggle = document.getElementById('ressources-dropdown');
+    const ressourcesDropdown = ressourcesDropdownToggle.closest('.dropdown');
+    const ressourcesDropdownMenu = document.getElementById('ressources-menu');
     
-    // Ouvrir le menu au survol
+    let solutionsTimeoutId;
+    let ressourcesTimeoutId;
+    
+    // Gestion des dropdowns Solutions
     dropdown.addEventListener('mouseenter', function() {
-        clearTimeout(timeoutId);
+        clearTimeout(solutionsTimeoutId);
+        clearTimeout(ressourcesTimeoutId);
+        ressourcesDropdown.classList.remove('active');
         dropdown.classList.add('active');
     });
     
-    // Fermer le menu avec un délai au départ du survol
     dropdown.addEventListener('mouseleave', function() {
-        timeoutId = setTimeout(() => {
+        solutionsTimeoutId = setTimeout(() => {
             dropdown.classList.remove('active');
         }, 150);
     });
     
-    // Clic sur le toggle pour mobile
     dropdownToggle.addEventListener('click', function(e) {
         e.preventDefault();
+        ressourcesDropdown.classList.remove('active');
         dropdown.classList.toggle('active');
     });
     
-    // Fermer le menu en cliquant ailleurs
+    // Gestion des dropdowns Ressources
+    ressourcesDropdown.addEventListener('mouseenter', function() {
+        clearTimeout(ressourcesTimeoutId);
+        clearTimeout(solutionsTimeoutId);
+        dropdown.classList.remove('active');
+        ressourcesDropdown.classList.add('active');
+    });
+    
+    ressourcesDropdown.addEventListener('mouseleave', function() {
+        ressourcesTimeoutId = setTimeout(() => {
+            ressourcesDropdown.classList.remove('active');
+        }, 150);
+    });
+    
+    ressourcesDropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.remove('active');
+        ressourcesDropdown.classList.toggle('active');
+    });
+    
+    // Fermer les menus en cliquant ailleurs
     document.addEventListener('click', function(e) {
-        if (!dropdown.contains(e.target)) {
+        if (!dropdown.contains(e.target) && !ressourcesDropdown.contains(e.target)) {
             dropdown.classList.remove('active');
+            ressourcesDropdown.classList.remove('active');
         }
     });
     
