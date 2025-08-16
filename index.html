@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findora - Solutions IA Innovantes</title>
+    <meta name="description" content="Findora propose des solutions d'intelligence artificielle dans trois catégories : Open Source, Agent Public et Agent Entreprise. Découvrez nos agents IA avancés.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="#" class="logo-link">
+                    <div class="logo">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="75"
+                            height="20"
+                            viewBox="0 0 88 24"
+                            class="logo-svg"
+                        >
+                            <g>
+                                <rect
+                                    x="0"
+                                    y="0"
+                                    width="88"
+                                    height="24"
+                                    rx="12"
+                                    ry="12"
+                                    fill="#ffbd59"
+                                />
+                                <circle cx="60" cy="12" r="6" fill="white" />
+                                <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                            </g>
+                        </svg>
+                        <span class="logo-text">Findora</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Menu Principal -->
+            <div class="nav-menu">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" id="solutions-dropdown">
+                        Solutions
+                        <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="solutions-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <div class="dropdown-item">
+                                    <a href="#open-source" class="dropdown-link">
+                                        <div class="dropdown-icon-wrapper">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                                                <div class="dropdown-text">
+                            <h3>Open Source</h3>
+                            <p>Solutions ouvertes et collaboratives pour la communauté</p>
+                            <div class="dropdown-projects">
+                                <div class="project-item">
+                                    <h4>Agent de Voyage</h4>
+                                    <span>Temps réel et intelligent</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4><span class="tech-element">MCP Creator</span></h4>
+                                    <span>Créer et déployer par prompt</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Community Hub</h4>
+                                    <span>Collaboration développeurs</span>
+                                </div>
+                            </div>
+                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dropdown-section">
+                                <div class="dropdown-item">
+                                    <a href="#agent-public" class="dropdown-link">
+                                        <div class="dropdown-icon-wrapper">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                                                <div class="dropdown-text">
+                            <h3>Agent Public</h3>
+                            <p>IA accessible via plateformes populaires</p>
+                            <div class="dropdown-projects">
+                                <div class="project-item">
+                                    <h4>WhatsApp IA</h4>
+                                    <span>Conversation intelligente</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Telegram Bot</h4>
+                                    <span>Assistant personnel</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Web Interface</h4>
+                                    <span>Accès universel</span>
+                                </div>
+                            </div>
+                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="dropdown-section">
+                                <div class="dropdown-item">
+                                    <a href="#agent-entreprise" class="dropdown-link">
+                                        <div class="dropdown-icon-wrapper">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                                                <div class="dropdown-text">
+                            <h3>Agent Entreprise</h3>
+                            <p>Solutions professionnelles et intégrations sur mesure</p>
+                            <div class="dropdown-projects">
+                                <div class="project-item">
+                                    <h4>Data Entry Agent</h4>
+                                    <span>Saisie automatisée</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Distribution Hub</h4>
+                                    <span>Gestion logistique</span>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Custom Integration</h4>
+                                    <span>API sur mesure</span>
+                                </div>
+                            </div>
+                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="nav-cta">
+                <a href="#demo" class="btn btn-secondary">Demander une démo</a>
+                <a href="#start" class="btn btn-primary">Commencer</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">✨ Nouvelle génération d'IA</span>
+                </div>
+                <h1 class="hero-title">
+                    L'IA qui transforme
+                    <span class="gradient-text">votre business</span>
+                </h1>
+                <p class="hero-description">
+                    Findora démocratise l'intelligence artificielle avec des solutions sur mesure. 
+                    De l'open source aux entreprises, nos agents IA redefinissent l'interaction homme-machine.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Catégories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Open Source</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponible</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#solutions" class="btn btn-primary btn-large">Découvrir nos solutions</a>
+                    <a href="#demo" class="btn btn-secondary btn-large">Voir la démo</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-gradient"></div>
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Open Source</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Agent Public</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>Entreprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Preview -->
+    <section class="solutions-preview" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Notre expertise</span>
+                <h2 class="section-title">Nos Solutions IA</h2>
+                <p class="section-description">Découvrez nos trois catégories de solutions adaptées à tous vos besoins</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card" id="open-source">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Open Source</h3>
+                    <p>Solutions ouvertes et collaboratives pour la communauté</p>
+                    <ul class="solution-features">
+                        <li>Agent de voyage en temps réel</li>
+                        <li><span class="tech-element">Findora MCP Creator</span></li>
+                        <li>Création d'agents par prompt</li>
+                        <li>Déploiement simplifié</li>
+                        <li>Code source accessible</li>
+                        <li>Communauté active</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card" id="agent-public">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Agent Public</h3>
+                    <p>IA accessible au grand public via des plateformes populaires</p>
+                    <ul class="solution-features">
+                        <li>IA conversation WhatsApp</li>
+                        <li>Interface intuitive</li>
+                        <li>Accessible à tous</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card" id="agent-entreprise">
+                    <div class="solution-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 21V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V21L12 17L19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Agent Entreprise</h3>
+                    <p>Solutions professionnelles sur mesure pour votre business</p>
+                    <ul class="solution-features">
+                        <li>Agent de saisie de données</li>
+                        <li>Spécialisé distribution</li>
+                        <li>Intégration sur mesure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
