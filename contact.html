@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Findora</title>
+    <meta
+      name="description"
+      content="Contactez l'équipe Findora pour vos questions, projets ou collaborations. Nous sommes là pour vous accompagner dans vos besoins en intelligence artificielle."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: {
+              18: "4.5rem",
+              25: "6.25rem",
+              72: "18rem",
+              84: "21rem",
+              96: "24rem",
+            },
+            borderRadius: {
+              xl: "12px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
+    <!-- Navigation (identique aux autres pages) -->
+    <nav
+      class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="logo-svg"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span
+                class="logo-text text-xl font-bold text-primary tracking-tight relative"
+                >Findora</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <!-- Menu Principal -->
+        <div class="hidden md:flex items-center gap-8 relative">
+          <div class="nav-item dropdown">
+            <button
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+              id="solutions-dropdown"
+            >
+              Solutions
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-menu" id="solutions-menu">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="open-source.html" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M12 2L2 7L12 12L22 7L12 2Z"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M2 17L12 22L22 17"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M2 12L12 17L22 12"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Open Source</h3>
+                              <p>Solutions ouvertes et gratuites</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>Agent de Voyage</h4>
+                              <span>Temps réel et intelligent</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>
+                                <span class="tech-element">MCP Creator</span>
+                              </h4>
+                              <span>Créer et déployer par prompt</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="./agent-public.html" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  fill-rule="evenodd"
+                                  d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
+                                  clip-rule="evenodd"
+                                />
+                                <path
+                                  fill="currentColor"
+                                  d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Agent Public</h3>
+                              <p>AI accessible via plateformes</p>
+                            </div>
+                          </div>
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>WhatsApp Agent IA</h4>
+                              <span>Conversation intelligente</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Web Interface</h4>
+                              <span>Accès universel</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#agent-entreprise" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
+                                />
+                                <path
+                                  fill="currentColor"
+                                  d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
+                                  opacity="0.2"
+                                />
+                                <path
+                                  fill="currentColor"
+                                  d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
+                                  opacity="0.15"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Agent Entreprise</h3>
+                              <p>Optimmiser pour cas d'usage</p>
+                            </div>
+                          </div>
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>Data Entry Agent</h4>
+                              <span>Saisie automatisée</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Web research</h4>
+                              <span>Collecter les données</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+
+          <div class="nav-item dropdown">
+            <button
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+              id="ressources-dropdown"
+            >
+              Ressources
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-menu" id="ressources-menu">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#use-cases" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M9 12L11 14L15 10"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Use Cases</h3>
+                              <p>Exemples d'utilisations</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>E-commerce</h4>
+                              <span>Automatisation complète</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Support Client</h4>
+                              <span>Réponses intelligentes</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#developers" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M16 18L22 12L16 6"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M8 6L2 12L8 18"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Développeurs</h3>
+                              <p>Outils et ressources techniques</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>API Documentation</h4>
+                              <span>Guide complet</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>SDK & Libraries</h4>
+                              <span>Intégration rapide</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="#docs" class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div>
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                              >
+                                <path
+                                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M14 2V8H20"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M16 13H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M16 17H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  d="M10 9H9H8"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3>Docs</h3>
+                              <p>Documentation complète</p>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                              <h4>Guide de démarrage</h4>
+                              <span>Premiers pas</span>
+                            </div>
+                            <div class="project-item">
+                              <h4>Tutoriels</h4>
+                              <span>Apprentissage guidé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+          href="./blog.html"
+          class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
+          >Actualités & blogs</a
+        >
+          <a
+            href="contact.html"
+            class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
+            >Contact</a
+          >
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="index.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg"
+            >Retour Accueil</a
+          >
+          <a
+            href="demo.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+            >Demander une démo</a
+          >
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section Contact -->
+    <section class="contact-hero pt-32 pb-20 bg-gradient-to-br from-bg-main to-white relative overflow-hidden">
+      <div class="contact-bg-decoration"></div>
+      
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-text-primary tracking-tight font-findora-inter">
+            Contactez-nous
+          </h1>
+          <p class="text-xl text-text-secondary max-w-3xl mx-auto font-findora-regular leading-relaxed">
+            Une question, un projet ou une collaboration ? Notre équipe est à votre disposition pour échanger sur vos besoins en intelligence artificielle.
+          </p>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <!-- Formulaire de Contact -->
+          <div class="contact-form-container">
+            <div class="contact-form-card bg-white rounded-2xl p-8 shadow-2xl border border-border-subtle relative overflow-hidden">
+              <div class="contact-form-glow"></div>
+              
+              <div class="relative z-10">
+                <h2 class="text-2xl font-bold mb-6 text-text-primary font-findora-inter">Envoyez-nous un message</h2>
+                
+                <form class="contact-form" id="contactForm">
+                  <div class="space-y-6">
+                    <!-- Nom et Prénom -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="form-group">
+                        <label class="form-label">Nom *</label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          class="form-input"
+                          placeholder="Votre nom"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Prénom *</label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          class="form-input"
+                          placeholder="Votre prénom"
+                          required
+                        />
+                      </div>
+                    </div>
+                    
+                    <!-- Email et Téléphone -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-input"
+                          placeholder="votre@email.com"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Téléphone</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          class="form-input"
+                          placeholder="+33 1 23 45 67 89"
+                        />
+                      </div>
+                    </div>
+                    
+                    <!-- Entreprise et Sujet -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="form-group">
+                        <label class="form-label">Entreprise</label>
+                        <input
+                          type="text"
+                          name="company"
+                          class="form-input"
+                          placeholder="Nom de votre entreprise"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Sujet *</label>
+                        <select name="subject" class="form-select" required>
+                          <option value="">Choisir un sujet</option>
+                          <option value="demo">Demande de démonstration</option>
+                          <option value="partnership">Partenariat</option>
+                          <option value="support">Support technique</option>
+                          <option value="pricing">Tarification</option>
+                          <option value="careers">Carrières</option>
+                          <option value="press">Presse & Médias</option>
+                          <option value="other">Autre</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <!-- Message -->
+                    <div class="form-group">
+                      <label class="form-label">Message *</label>
+                      <textarea
+                        name="message"
+                        class="form-textarea"
+                        rows="5"
+                        placeholder="Décrivez votre demande, votre projet ou vos questions..."
+                        required
+                      ></textarea>
+                    </div>
+                    
+                    <!-- Checkbox RGPD -->
+                    <div class="form-group">
+                      <label class="checkbox-wrapper">
+                        <input type="checkbox" name="consent" required />
+                        <span class="checkbox-text">
+                          J'accepte d'être contacté par Findora concernant ma demande et accepte la politique de confidentialité. *
+                        </span>
+                      </label>
+                    </div>
+                    
+                    <!-- Bouton de soumission -->
+                    <button type="submit" class="contact-submit-btn">
+                      <span class="btn-text">Envoyer le message</span>
+                      <span class="btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M2 3L18 12L2 21L7 12L2 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+                
+                <!-- Message de confirmation -->
+                <div class="contact-success-message" id="contactSuccessMessage">
+                  <div class="success-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                      <circle cx="24" cy="24" r="24" fill="#10B981"/>
+                      <path d="M16 24l6 6 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <h4>Message envoyé avec succès !</h4>
+                  <p>Merci pour votre message. Notre équipe vous contactera dans les plus brefs délais.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informations de Contact -->
+          <div class="contact-info-container">
+            <div class="space-y-8">
+              <!-- Adresse -->
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-2 font-findora-inter">Notre siège social</h3>
+                  <p class="text-text-secondary font-findora-regular">
+                    Abidjan <br>
+                    Cocody Côte d'Ivoire
+                  </p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-2 font-findora-inter">Email</h3>
+                  <p class="text-text-secondary font-findora-regular">
+                    <a href="mailto:support@findora.ai" class="hover:text-accent transition-colors">support@myfindora.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Téléphone -->
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59344 1.99522 8.06477 2.16708 8.43517 2.48353C8.80558 2.79999 9.04687 3.23945 9.10999 3.72C9.22854 4.68007 9.47138 5.62273 9.82999 6.53C9.95693 6.88792 9.97345 7.27691 9.87739 7.64382C9.78133 8.01072 9.57729 8.33811 9.28999 8.58L7.85999 9.79C9.2677 12.3162 11.6838 14.7323 14.21 16.14L15.42 14.71C15.6619 14.4227 15.9893 14.2187 16.3562 14.1226C16.7231 14.0266 17.1121 14.0431 17.47 14.17C18.3773 14.5286 19.3199 14.7715 20.28 14.89C20.7658 14.9549 21.2094 15.2002 21.5265 15.5775C21.8437 15.9547 22.0122 16.4326 21.1 16.92H22Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold mb-2 font-findora-inter">Téléphone</h3>
+                  <p class="text-text-secondary font-findora-regular">
+                    <a href="tel:+33142861234" class="hover:text-accent transition-colors">+225 01 60 48 56 54</a><br>
+                    <span class="text-sm">Lun-Ven : 8h00 - 18h00</span>
+                  </p>
+                </div>
+              </div>
+
+         
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Footer (complet - identique aux autres pages) -->
+    <footer class="footer-section bg-bg-dark text-text-on-dark relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="footer-bg-decoration"></div>
+      
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          <!-- Brand Section -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p class="text-text-light mb-6 leading-relaxed font-findora-regular">
+              Construire un futur avec moins d'effort.
+            </p>
+            
+
+          </div>
+          
+          <!-- Solutions -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Solutions</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="./open-source.html" class="footer-link">Open Source</a></li>
+              <li><a href="./agent-public.html" class="footer-link">Agent Public</a></li>
+              <li><a href="index.html#agent-entreprise" class="footer-link">Agent Entreprise</a></li>
+              <li><a href="index.html#mcp-creator" class="footer-link">MCP Creator</a></li>
+              <li><a href="index.html#whatsapp-agent" class="footer-link">WhatsApp Agent</a></li>
+            </ul>
+          </div>
+          
+          <!-- Ressources -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Ressources</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="index.html#use-cases" class="footer-link">Use Cases</a></li>
+              <li><a href="index.html#developers" class="footer-link">Développeurs</a></li>
+              <li><a href="index.html#docs" class="footer-link">Documentation</a></li>
+              <li><a href="index.html#api" class="footer-link">API</a></li>
+              <li><a href="index.html#sdk" class="footer-link">SDK & Libraries</a></li>
+              <li><a href="index.html#tutorials" class="footer-link">Tutoriels</a></li>
+            </ul>
+          </div>
+          
+          <!-- Company -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Entreprise</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="index.html#about" class="footer-link">À propos</a></li>
+              <li><a href="index.html#research" class="footer-link">Recherche</a></li>
+              <li><a href="index.html#careers" class="footer-link">Carrières</a></li>
+              <li><a href="index.html#press" class="footer-link">Presse</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+              <li><a href="index.html#support" class="footer-link">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        
+
+        <!-- Bottom Section -->
+        <div class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular">
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="#privacy" class="footer-link">Politique de confidentialité</a>
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+            <a href="#cookies" class="footer-link">Cookies</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Floating Elements -->
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact-script.js"></script>
+  </body>
+</html>

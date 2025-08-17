@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Findora - Open Source</title>
+    <meta name="description" content="Découvrez en détail les solutions open source Findora: Agent de Voyage temps réel et Findora MCP Creator." />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased bg-white">
+    <!-- Nav minimal -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
+        <a href="index.html" class="no-underline text-inherit inline-flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-sm">Accueil</span>
+        </a>
+        <a href="index.html" class="no-underline text-inherit font-bold">Findora</a>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="pt-28 pb-16 bg-white relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block text-base font-semibold text-accent uppercase tracking-widest mb-4">Open Source</span>
+          <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-5">Des solutions gratuites, prêtes à utiliser et à intégrer</h1>
+          <p class="text-text-secondary text-lg max-w-xl">Quand nous disons open source ici, nous voulons dire: gratuit à utiliser, à intégrer dans vos produits et vos besoins internes. Pas d’obligation de contribution: prenez, utilisez, déployez.</p>
+          <div class="flex gap-3 mt-8 flex-wrap">
+            <a href="#agent-voyage" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Agent de Voyage</a>
+            <a href="#mcp-creator" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">MCP Creator</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="h-24 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-sm text-text-secondary">MIT</div>
+              <div class="h-24 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-sm text-text-secondary">TypeScript</div>
+              <div class="h-24 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-sm text-text-secondary">Python</div>
+              <div class="col-span-3 h-24 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-sm text-text-secondary">Docs & Démos inclus</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Ce que signifie Open Source chez Findora -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight">Ce que cela veut dire</h2>
+          <p class="text-text-secondary max-w-2xl mx-auto mt-3">Libre d’usage, intégrable sans friction, et documenté pour démarrer vite.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl border border-border-subtle p-6">
+            <div class="w-10 h-10 rounded-md bg-bg-dark text-text-on-dark flex items-center justify-center mb-4">🆓</div>
+            <h3 class="text-lg font-bold mb-2">Gratuit</h3>
+            <p class="text-text-secondary">Utilisation libre pour vos projets personnels ou professionnels.</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border-subtle p-6">
+            <div class="w-10 h-10 rounded-md bg-bg-dark text-text-on-dark flex items-center justify-center mb-4">🔌</div>
+            <h3 class="text-lg font-bold mb-2">Intégrable</h3>
+            <p class="text-text-secondary">S’intègre facilement à vos flux existants et à nos solutions.</p>
+          </div>
+          <div class="bg-white rounded-xl border border-border-subtle p-6">
+            <div class="w-10 h-10 rounded-md bg-bg-dark text-text-on-dark flex items-center justify-center mb-4">📚</div>
+            <h3 class="text-lg font-bold mb-2">Simple</h3>
+            <p class="text-text-secondary">Guides courts, exemples clairs, prise en main rapide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent de Voyage -->
+    <section id="agent-voyage" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block text-sm font-semibold text-accent uppercase tracking-widest mb-3">Projet</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Agent de Voyage (temps réel)</h2>
+          <p class="text-text-secondary mb-6">Un agent conversationnel gratuit pour planifier des voyages en temps réel: destinations, itinéraires, budgets et recommandations personnalisées.</p>
+          <ul class="space-y-2 text-text-secondary mb-8">
+            <li>• Gratuit à utiliser et à intégrer</li>
+            <li>• Multilingue, streaming, contexte long</li>
+            <li>• Déploiement simple (Docker / Node)</li>
+          </ul>
+          <div class="flex gap-3 flex-wrap">
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Utiliser</a>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">Guide d’intégration</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle">
+            <div class="h-56 rounded-xl bg-white border border-border-subtle flex items-center justify-center text-text-secondary">Aperçu de l’interface</div>
+            <div class="grid grid-cols-3 gap-4 mt-4">
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">Streaming</div>
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">RAG</div>
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">Connecteurs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MCP Creator -->
+    <section id="mcp-creator" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 relative">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle">
+            <div class="h-56 rounded-xl bg-white border border-border-subtle flex items-center justify-center text-text-secondary">Génération d’agents par prompt</div>
+            <div class="grid grid-cols-3 gap-4 mt-4">
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">Templates</div>
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">CLI</div>
+              <div class="h-16 rounded-lg bg-white border border-border-subtle flex items-center justify-center text-xs text-text-secondary">Plugins</div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <span class="inline-block text-sm font-semibold text-accent uppercase tracking-widest mb-3">Projet</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">Findora MCP Creator</h2>
+          <p class="text-text-secondary mb-6">Findora MCP Creator est un générateur d’agents par prompt. Il crée la structure du projet, les scripts et les connecteurs de base.</p>
+          <div class="space-y-5 text-sm text-text-secondary mb-8 bg-white border border-border-subtle rounded-xl p-5">
+            <div>
+              <h3 class="text-base font-bold text-text-primary mb-2">C’est quoi ?</h3>
+              <p>Un outil qui génère un agent complet à partir d’un prompt (config, endpoints, connecteurs, scripts Dev).</p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-text-primary mb-2">Comment l’utiliser ?</h3>
+              <pre class="bg-gray-50 border border-border-subtle rounded-md p-3 overflow-auto"><code>1. Décrire l’agent (objectif, compétences, sources)
+2. Générer le squelette du projet
+3. Lancer en local pour tester</code></pre>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-text-primary mb-2">Comment déployer ?</h3>
+              <pre class="bg-gray-50 border border-border-subtle rounded-md p-3 overflow-auto"><code>- Docker (image fournie)
+- Cloud (VPS / Kubernetes)
+- Ou intégration directe dans vos services</code></pre>
+            </div>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Essayer</a>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">Lire le guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight">Prêt à explorer nos projets ?</h2>
+        <p class="text-text-secondary mt-3 mb-6 max-w-2xl mx-auto">Démarrez avec l’agent de voyage ou générez votre premier agent avec MCP Creator. Tout est documenté.</p>
+        <a href="#agent-voyage" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Commencer</a>
+      </div>
+    </section>
+
+    <footer class="py-12 text-center text-sm text-text-light border-t border-border-subtle">
+      <div class="max-w-6xl mx-auto px-6">© 2024 Findora</div>
+    </footer>
+  </body>
+ </html>
+
+

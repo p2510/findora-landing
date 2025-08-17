@@ -2,60 +2,54 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Gestion du menu déroulant Solutions
     const dropdownToggle = document.getElementById('solutions-dropdown');
-    const dropdown = dropdownToggle.closest('.dropdown');
+    const dropdown = dropdownToggle ? dropdownToggle.closest('.dropdown') : null;
     const dropdownMenu = document.getElementById('solutions-menu');
     
     // Gestion du menu déroulant Ressources
     const ressourcesDropdownToggle = document.getElementById('ressources-dropdown');
-    const ressourcesDropdown = ressourcesDropdownToggle.closest('.dropdown');
+    const ressourcesDropdown = ressourcesDropdownToggle ? ressourcesDropdownToggle.closest('.dropdown') : null;
     const ressourcesDropdownMenu = document.getElementById('ressources-menu');
     
     let solutionsTimeoutId;
     let ressourcesTimeoutId;
     
-    // Gestion des dropdowns Solutions
-    dropdown.addEventListener('mouseenter', function() {
-        clearTimeout(solutionsTimeoutId);
-        clearTimeout(ressourcesTimeoutId);
-        ressourcesDropdown.classList.remove('active');
-        dropdown.classList.add('active');
-    });
+    if (dropdown && dropdownToggle) {
+        dropdown.addEventListener('mouseenter', function() {
+            clearTimeout(solutionsTimeoutId);
+            clearTimeout(ressourcesTimeoutId);
+            if (ressourcesDropdown) ressourcesDropdown.classList.remove('active');
+            dropdown.classList.add('active');
+        });
+        dropdown.addEventListener('mouseleave', function() {
+            solutionsTimeoutId = setTimeout(() => { dropdown.classList.remove('active'); }, 150);
+        });
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (ressourcesDropdown) ressourcesDropdown.classList.remove('active');
+            dropdown.classList.toggle('active');
+        });
+    }
     
-    dropdown.addEventListener('mouseleave', function() {
-        solutionsTimeoutId = setTimeout(() => {
-            dropdown.classList.remove('active');
-        }, 150);
-    });
-    
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        ressourcesDropdown.classList.remove('active');
-        dropdown.classList.toggle('active');
-    });
-    
-    // Gestion des dropdowns Ressources
-    ressourcesDropdown.addEventListener('mouseenter', function() {
-        clearTimeout(ressourcesTimeoutId);
-        clearTimeout(solutionsTimeoutId);
-        dropdown.classList.remove('active');
-        ressourcesDropdown.classList.add('active');
-    });
-    
-    ressourcesDropdown.addEventListener('mouseleave', function() {
-        ressourcesTimeoutId = setTimeout(() => {
-            ressourcesDropdown.classList.remove('active');
-        }, 150);
-    });
-    
-    ressourcesDropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        dropdown.classList.remove('active');
-        ressourcesDropdown.classList.toggle('active');
-    });
+    if (ressourcesDropdown && ressourcesDropdownToggle) {
+        ressourcesDropdown.addEventListener('mouseenter', function() {
+            clearTimeout(ressourcesTimeoutId);
+            clearTimeout(solutionsTimeoutId);
+            if (dropdown) dropdown.classList.remove('active');
+            ressourcesDropdown.classList.add('active');
+        });
+        ressourcesDropdown.addEventListener('mouseleave', function() {
+            ressourcesTimeoutId = setTimeout(() => { ressourcesDropdown.classList.remove('active'); }, 150);
+        });
+        ressourcesDropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (dropdown) dropdown.classList.remove('active');
+            ressourcesDropdown.classList.toggle('active');
+        });
+    }
     
     // Fermer les menus en cliquant ailleurs
     document.addEventListener('click', function(e) {
-        if (!dropdown.contains(e.target) && !ressourcesDropdown.contains(e.target)) {
+        if (dropdown && ressourcesDropdown && !dropdown.contains(e.target) && !ressourcesDropdown.contains(e.target)) {
             dropdown.classList.remove('active');
             ressourcesDropdown.classList.remove('active');
         }
@@ -65,16 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
+                e.preventDefault();
                 const offsetTop = targetElement.offsetTop - 80; // Hauteur de la navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             }
         });
     });
@@ -82,35 +72,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Effet de scroll sur la navbar
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scroll vers le bas
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scroll vers le haut
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        // Ajouter un effet de transparence
-        if (scrollTop > 50) {
+        if (navbar) {
+            if (scrollTop > lastScrollTop && scrollTop > 100) navbar.style.transform = 'translateY(-100%)';
+            else navbar.style.transform = 'translateY(0)';
             navbar.style.background = 'rgba(255, 255, 255, 0.95)';
             navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         }
-        
         lastScrollTop = scrollTop;
     });
     
     // Animation des cartes solutions au scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -119,8 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
-    // Observer les cartes solutions
     const solutionCards = document.querySelectorAll('.solution-card');
     solutionCards.forEach(card => {
         card.style.opacity = '0';
@@ -129,68 +101,91 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    // Gestion du menu mobile (pour futures implémentations)
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function() {
-            // Logique pour le menu mobile
-            console.log('Menu mobile cliqué');
-        });
-    }
-    
-    // Effet de parallaxe léger sur le hero
+    // Parallaxe léger sur le hero
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const heroGradient = document.querySelector('.hero-gradient');
-        
-        if (heroGradient) {
-            heroGradient.style.transform = `translateY(${scrolled * 0.3}px)`;
+        const visStage = document.getElementById('visStage');
+        if (heroGradient) heroGradient.style.transform = `translateY(${scrolled * 0.3}px)`;
+        if (visStage) {
+            const rotateY = Math.min(5, scrolled * 0.02);
+            const rotateX = Math.min(4, scrolled * 0.015);
+            visStage.style.transform = `rotateX(${rotateX}deg) rotateY(${-rotateY}deg)`;
         }
     });
     
-    // Animation de typing pour le titre (optionnel)
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
+    // Auto-activation des cartes stack
+    (function autoActivateStackCards() {
+        const cards = Array.from(document.querySelectorAll('.stack-card'));
+        if (cards.length === 0) return;
+        let idx = 0;
+        function activate(i) {
+            cards.forEach(c => c.classList.remove('sc-active'));
+            const card = cards[i % cards.length];
+            card.classList.add('sc-active');
         }
-        type();
-    }
+        activate(idx);
+        setInterval(() => { idx = (idx + 1) % cards.length; activate(idx); }, 2200);
+    })();
     
-    // Gestion des interactions avec les cartes solutions
-    solutionCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px)';
+    // Accordéon FAQ
+    (function initFaqAccordion() {
+        const container = document.getElementById('faqAccordion');
+        if (!container) return;
+        const items = Array.from(container.querySelectorAll('.faq-item'));
+        const headers = Array.from(container.querySelectorAll('.faq-header'));
+        function collapse(item) {
+            const content = item.querySelector('.faq-content');
+            if (!content) return;
+            content.style.height = content.scrollHeight + 'px';
+            requestAnimationFrame(() => { content.style.height = '0px'; item.classList.remove('active'); });
+        }
+        function expand(item) {
+            const content = item.querySelector('.faq-content');
+            if (!content) return;
+            content.style.height = content.scrollHeight + 'px';
+            item.classList.add('active');
+            content.addEventListener('transitionend', function handler() { content.style.height = 'auto'; content.removeEventListener('transitionend', handler); });
+        }
+        headers.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const parent = btn.closest('.faq-item');
+                const isActive = parent.classList.contains('active');
+                items.forEach((it) => { if (it.classList.contains('active')) collapse(it); });
+                if (!isActive) expand(parent);
+            });
         });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-4px)';
+    })();
+    
+    // Pipeline V2 toggle
+    (function initPipelineV2(){
+        const container = document.getElementById('pipelineV2');
+        if(!container) return;
+        const buttons = container.querySelectorAll('.pipeline-toolbar button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const flow = btn.getAttribute('data-flow');
+                container.classList.remove('is-text','is-audio','is-image');
+                container.classList.add(`is-${flow}`);
+            });
         });
-    });
+    })();
 });
 
 // Utilitaires
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
+        const later = () => { clearTimeout(timeout); func(...args); };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
 }
 
 // Performance optimization pour le scroll
-const optimizedScroll = debounce(function() {
-    // Logique de scroll optimisée
-}, 10);
-
+const optimizedScroll = debounce(function() { /* noop */ }, 10);
 window.addEventListener('scroll', optimizedScroll);
+
+
