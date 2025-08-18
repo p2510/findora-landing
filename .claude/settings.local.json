@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(start open-source.html)",
+      "Bash(start index.html)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
