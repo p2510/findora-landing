@@ -246,154 +246,190 @@
     </nav>
 
     <!-- Hero -->
-    <header class="pt-32 pb-20 bg-gradient-to-br from-bg-main to-white relative overflow-hidden">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <div class="inline-flex items-center px-4 py-2 bg-bg-card border border-border-subtle rounded-full mb-6 shadow-lg">
-            <span class="text-sm font-medium text-text-secondary font-findora-regular">🌐 Agents Publics</span>
-          </div>
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-text-primary font-findora-inter">
-            IA accessible sur vos
-            <span class="text-accent">canaux préférés</span>
-          </h1>
-          <p class="text-text-secondary text-xl max-w-2xl leading-relaxed font-findora-regular mb-10">
-            Déployez des agents IA conversationnels prêts à l'emploi sur WhatsApp et sur le web. Interface naturelle, réponses intelligentes et support multilingue inclus.
-          </p>
-          <div class="flex gap-4 flex-wrap">
-            <a href="#whatsapp-agent" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">WhatsApp Agent</a>
-            <a href="#web-interface" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">Interface Web</a>
-          </div>
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Agents publics</span>
+        <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary">
+          IA accessible sur vos canaux
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+          Agents conversationnels prêts à l'emploi sur WhatsApp et sur le web.
+        </p>
+        <div class="mt-8 flex items-center justify-center gap-3 flex-wrap">
+          <a href="#whatsapp-public" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline border bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent transition-all">WhatsApp Agent</a>
+          <a href="#web-public" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline border bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary transition-all">Interface Web</a>
         </div>
-        <div class="relative">
-          <div class="rounded-2xl p-8 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle shadow-xl">
-            <div class="grid grid-cols-2 gap-6">
-              <div class="h-28 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-4 shadow-sm">
-                <div class="text-accent text-2xl mb-2">💬</div>
-                <span class="text-sm font-medium text-text-primary">Conversationnel</span>
-              </div>
-              <div class="h-28 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-4 shadow-sm">
-                <div class="text-accent text-2xl mb-2">🌍</div>
-                <span class="text-sm font-medium text-text-primary">Multilingue</span>
-              </div>
-              <div class="col-span-2 h-32 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-4 shadow-sm">
-                <div class="text-accent text-3xl mb-3">⚡</div>
-                <span class="text-base font-bold text-text-primary mb-1">Déploiement rapide</span>
-                <span class="text-xs text-text-secondary">Activation en quelques heures</span>
+      </div>
+    </section>
+
+    <!-- Case card: WhatsApp Agent -->
+    <section id="whatsapp-public" class="pb-10 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <!-- Texte principal -->
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700">WHATSAPP</span>
+              <h2 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">
+                WhatsApp Agent IA en temps réel
+              </h2>
+              <span class="mt-3 inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">Disponible 24/7</span>
+            </div>
+            <!-- Visuel -->
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-emerald-200 via-teal-300 to-emerald-500"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1p" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="70" y="20" rx="16" ry="16" width="140" height="140" fill="url(#g1p)" />
+                  <rect x="88" y="40" rx="8" ry="8" width="104" height="104" fill="#0f172a" opacity="0.08" />
+                  <circle cx="120" cy="75" r="18" fill="#10b981" opacity="0.9" />
+                  <rect x="148" y="64" rx="6" ry="6" width="36" height="14" fill="#10b981" opacity="0.8" />
+                  <rect x="148" y="88" rx="6" ry="6" width="56" height="14" fill="#10b981" opacity="0.6" />
+                </svg>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Avantages des Agents Publics -->
-    <section class="py-25 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight font-findora-inter mb-6">Pourquoi choisir nos agents publics ?</h2>
-          <p class="text-text-secondary max-w-3xl mx-auto text-xl font-findora-regular">Des solutions prêtes à déployer qui s'intègrent naturellement dans vos canaux de communication existants.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl border border-border-subtle p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mb-6 text-2xl">🎯</div>
-            <h3 class="text-xl font-bold mb-4 font-findora-inter">Facile à utiliser</h3>
-            <p class="text-text-secondary font-findora-regular leading-relaxed">Interface conversationnelle intuitive qui ne nécessite aucune formation. Vos utilisateurs interagissent naturellement par chat.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-border-subtle p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mb-6 text-2xl">🚀</div>
-            <h3 class="text-xl font-bold mb-4 font-findora-inter">Mise en place rapide</h3>
-            <p class="text-text-secondary font-findora-regular leading-relaxed">Déploiement possible en quelques heures. Configuration simple et support technique inclus pour un lancement sans friction.</p>
-          </div>
-          <div class="bg-white rounded-xl border border-border-subtle p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mb-6 text-2xl">💰</div>
-            <h3 class="text-xl font-bold mb-4 font-findora-inter">Coût maîtrisé</h3>
-            <p class="text-text-secondary font-findora-regular leading-relaxed">Tarification transparente basée sur l'usage réel. Commencez petit et évoluez selon vos besoins, sans engagement long terme.</p>
+          <!-- Ligne d'infos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-border-subtle p-6 md:p-8">
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Le besoin</div>
+              <p class="mt-2 text-text-primary">Automatiser le support client sur WhatsApp, répondre 24/7 avec un ton naturel et contextualisé.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Notre approche</div>
+              <p class="mt-2 text-text-primary">Connexion WhatsApp Business, modération intégrée, mémoire de conversation et intégrations CRM.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Résultats</div>
+              <p class="mt-2 text-text-primary">Temps de réponse &lt; 10s, satisfaction accrue et traitement simultané de centaines de conversations.</p>
+            </div>
+            <div class="md:col-span-3 pt-2">
+              <a href="#web-public" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border-subtle text-sm no-underline hover:border-primary hover:text-primary transition-colors">Découvrir aussi l'interface web <span>→</span></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WhatsApp Agent IA -->
-    <section id="whatsapp-agent" class="py-25 bg-white">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <span class="inline-block text-sm font-semibold text-accent uppercase tracking-widest mb-4 font-findora-inter">Solution Phare</span>
-          <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 font-findora-inter">WhatsApp Agent IA</h2>
-          <p class="text-text-secondary text-lg mb-8 font-findora-regular leading-relaxed">Transformez WhatsApp en canal de service client intelligent. Votre agent IA répond 24/7 avec la même interface que vos clients utilisent déjà quotidiennement.</p>
-          
-          <div class="bg-gray-50 rounded-xl p-6 mb-8">
-            <h3 class="text-lg font-bold mb-4 font-findora-inter">Fonctionnalités clés :</h3>
-            <ul class="space-y-3 text-text-secondary font-findora-regular">
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">✅</span>
-                <span><strong>Indicateur de saisie humain</strong> - L'utilisateur voit que "quelqu'un tape" pour une expérience naturelle</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🛡️</span>
-                <span><strong>Modération automatique</strong> - Filtrage des contenus inappropriés et respect des conditions d'usage</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🧠</span>
-                <span><strong>Mémoire de conversation</strong> - Contexte conservé tout au long de l'échange pour des réponses cohérentes</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🌍</span>
-                <span><strong>Support multilingue</strong> - Détection automatique de la langue et réponses adaptées</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🔗</span>
-                <span><strong>Intégrations CRM</strong> - Connexion avec vos outils existants (optionnel)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">📊</span>
-                <span><strong>Analytics inclus</strong> - Suivi des conversations et métriques de performance</span>
-              </li>
-            </ul>
+    <!-- Cas d'usage WhatsApp -->
+    <section id="whatsapp-use-cases" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-text-primary">Cas d'usage WhatsApp</h2>
+          <p class="mt-2 text-base text-text-secondary">Disponible 24/7 — adaptez l'agent à vos besoins métiers.</p>
+        </div>
+
+        <div class="rounded-2xl border border-border-subtle bg-white p-6 md:p-8">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="chip">Support client</span>
+            <span class="chip">Prise de rendez‑vous</span>
+            <span class="chip">FAQ automatisée</span>
+            <span class="chip">Suivi de commande</span>
+            <span class="chip">Qualification de leads</span>
           </div>
 
-          <div class="flex gap-4 flex-wrap">
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Demander une démo</a>
-            <a href="#comment-ca-marche" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">Voir le fonctionnement</a>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="rounded-2xl p-8 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle shadow-xl">
-            <div class="h-80 rounded-xl bg-white border border-border-subtle flex items-center justify-center text-text-secondary mb-6 relative overflow-hidden">
-              <div class="absolute inset-4 rounded-lg bg-gradient-to-br from-green-50 to-green-100 flex flex-col">
-                <div class="bg-green-600 text-white p-3 rounded-t-lg flex items-center gap-2">
-                  <div class="w-3 h-3 bg-white rounded-full"></div>
-                  <span class="text-sm font-medium">WhatsApp Business</span>
-                </div>
-                <div class="flex-1 p-4 space-y-3">
-                  <div class="bg-white rounded-lg p-3 max-w-xs">
-                    <p class="text-sm text-gray-700">Bonjour ! Je suis votre assistant IA. Comment puis-je vous aider aujourd'hui ? 😊</p>
-                  </div>
-                  <div class="bg-green-500 text-white rounded-lg p-3 max-w-xs ml-auto">
-                    <p class="text-sm">J'ai une question sur mon compte</p>
-                  </div>
-                  <div class="flex items-center gap-2 text-gray-500 text-xs">
-                    <div class="flex gap-1">
-                      <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
-                      <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary">Support client</h3>
+                <p class="text-sm text-text-secondary mt-1">Réponses instantanées, consignes de marque respectées, escalade vers humain si nécessaire.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary">Prise de rendez‑vous</h3>
+                <p class="text-sm text-text-secondary mt-1">Créneaux proposés, confirmation et rappels automatisés via WhatsApp.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary">FAQ & informations</h3>
+                <p class="text-sm text-text-secondary mt-1">Tarifs, horaires, politiques — l’agent répond avec une information à jour et sourcée.</p>
+              </div>
+            </div>
+            <div>
+              <div class="rounded-2xl p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border border-border-subtle">
+                <div class="relative overflow-hidden">
+                  <div class="uc-carousel">
+                    <!-- Slide 1: Support client -->
+                    <div class="uc-slide">
+                      <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                          <div class="flex items-center gap-2"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> <span>WhatsApp</span></div>
+                          <span class="rounded-full bg-gray-100 px-2 py-0.5">Disponible 24/7</span>
+                        </div>
+                        <div class="space-y-3">
+                          <div class="bg-gray-50 rounded-lg p-3 max-w-[75%]"><p class="text-sm text-gray-800">Bonjour, quels sont vos horaires d'ouverture ce week‑end ?</p></div>
+                          <div class="bg-emerald-500 text-white rounded-lg p-3 max-w-[85%] ml-auto">
+                            <p class="text-sm">Bonjour 👋 Nous sommes ouverts samedi 9h‑18h et dimanche 10h‑16h. Puis‑je vous réserver un créneau ?</p>
+                          </div>
+                          <div class="flex items-center gap-2 text-gray-500 text-xs">
+                            <div class="flex gap-1">
+                              <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                              <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay:.1s"></div>
+                              <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay:.2s"></div>
+                            </div>
+                            <span>En train d'écrire…</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-3 mt-4">
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">⚡</span><span class="text-[11px] font-medium text-text-primary">Temps réel</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">🧠</span><span class="text-[11px] font-medium text-text-primary">Mémoire</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">🛡️</span><span class="text-[11px] font-medium text-text-primary">Modération</span></div>
+                      </div>
                     </div>
-                    <span>En train d'écrire...</span>
+
+                    <!-- Slide 2: Prise de rendez-vous -->
+                    <div class="uc-slide">
+                      <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                          <div class="flex items-center gap-2"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> <span>WhatsApp</span></div>
+                          <span class="rounded-full bg-gray-100 px-2 py-0.5">Disponible 24/7</span>
+                        </div>
+                        <div class="space-y-3">
+                          <div class="bg-gray-50 rounded-lg p-3 max-w-[70%]"><p class="text-sm text-gray-800">Je souhaite un rendez‑vous pour samedi matin.</p></div>
+                          <div class="bg-emerald-500 text-white rounded-lg p-3 max-w-[95%] ml-auto">
+                            <p class="text-sm">Voici les créneaux disponibles samedi : 9h15, 10h00, 10h45. Lequel préférez‑vous ?</p>
+                          </div>
+                          <div class="bg-gray-50 rounded-lg p-3 max-w-[65%]"><p class="text-sm text-gray-800">10h00 👍</p></div>
+                          <div class="bg-emerald-500 text-white rounded-lg p-3 max-w-[90%] ml-auto">
+                            <p class="text-sm">Parfait ! Rendez‑vous confirmé samedi 10h00. Je vous envoie un rappel la veille.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-3 mt-4">
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">📅</span><span class="text-[11px] font-medium text-text-primary">Créneaux</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">🔔</span><span class="text-[11px] font-medium text-text-primary">Rappels</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">✅</span><span class="text-[11px] font-medium text-text-primary">Confirmation</span></div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 3: Suivi de commande -->
+                    <div class="uc-slide">
+                      <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                          <div class="flex items-center gap-2"><span class="w-2 h-2 bg-emerald-500 rounded-full"></span> <span>WhatsApp</span></div>
+                        <span class="rounded-full bg-gray-100 px-2 py-0.5">Disponible 24/7</span>
+                        </div>
+                        <div class="space-y-3">
+                          <div class="bg-gray-50 rounded-lg p-3 max-w-[70%]"><p class="text-sm text-gray-800">Où en est ma commande #FR12345 ?</p></div>
+                          <div class="bg-emerald-500 text-white rounded-lg p-3 max-w-[95%] ml-auto">
+                            <p class="text-sm">Votre colis est en transit 🚚. Livraison prévue demain 14h‑16h. Souhaitez‑vous activer les notifications ?</p>
+                          </div>
+                          <div class="bg-gray-50 rounded-lg p-3 max-w-[65%]"><p class="text-sm text-gray-800">Oui, tenez‑moi informé.</p></div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-3 mt-4">
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">📦</span><span class="text-[11px] font-medium text-text-primary">Tracking</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">🔄</span><span class="text-[11px] font-medium text-text-primary">Mises à jour</span></div>
+                        <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-emerald-600 text-lg">🔔</span><span class="text-[11px] font-medium text-text-primary">Alertes</span></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="grid grid-cols-3 gap-4">
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">💬</span>
-                <span class="text-xs font-medium text-text-primary">Temps réel</span>
-              </div>
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">🔄</span>
-                <span class="text-xs font-medium text-text-primary">24/7</span>
-              </div>
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">📱</span>
-                <span class="text-xs font-medium text-text-primary">Mobile-first</span>
               </div>
             </div>
           </div>
@@ -401,245 +437,254 @@
       </div>
     </section>
 
-    <!-- Interface Web -->
-    <section id="web-interface" class="py-25 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="relative">
-          <div class="rounded-2xl p-8 bg-gradient-to-br from-gray-100 to-gray-200 border border-border-subtle shadow-xl">
-            <div class="h-80 rounded-xl bg-white border border-border-subtle flex items-center justify-center text-text-secondary mb-6 relative overflow-hidden">
-              <div class="absolute inset-4 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
-                <div class="bg-primary text-white p-3 rounded-t-lg flex items-center justify-between">
-                  <span class="text-sm font-medium">Chat Assistant</span>
-                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                </div>
-                <div class="flex-1 p-4 space-y-3 overflow-hidden">
-                  <div class="bg-white rounded-lg p-3 shadow-sm">
-                    <p class="text-sm text-gray-700">Bienvenue ! Je suis là pour vous aider. Que puis-je faire pour vous ?</p>
-                  </div>
-                  <div class="bg-accent text-white rounded-lg p-3 ml-auto max-w-xs">
-                    <p class="text-sm">Informations sur vos services</p>
-                  </div>
-                  <div class="bg-white rounded-lg p-3 shadow-sm">
-                    <p class="text-sm text-gray-700">Voici nos principales solutions...</p>
-                  </div>
-                </div>
-                <div class="p-3 border-t bg-white">
-                  <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-2">
-                    <span class="text-xs text-gray-500">Tapez votre message...</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="grid grid-cols-3 gap-4">
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">🎨</span>
-                <span class="text-xs font-medium text-text-primary">Customizable</span>
-              </div>
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">💾</span>
-                <span class="text-xs font-medium text-text-primary">Historique</span>
-              </div>
-              <div class="h-20 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2">
-                <span class="text-accent text-lg">🔐</span>
-                <span class="text-xs font-medium text-text-primary">Sécurisé</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <span class="inline-block text-sm font-semibold text-accent uppercase tracking-widest mb-4 font-findora-inter">Solution Web</span>
-          <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 font-findora-inter">Interface Web Intelligente</h2>
-          <p class="text-text-secondary text-lg mb-8 font-findora-regular leading-relaxed">Une expérience conversationnelle moderne directement sur votre site web. Chat widget personnalisable qui s'adapte parfaitement à votre charte graphique.</p>
-          
-          <div class="bg-white rounded-xl p-6 mb-8 border border-border-subtle">
-            <h3 class="text-lg font-bold mb-4 font-findora-inter">Personnalisation complète :</h3>
-            <ul class="space-y-3 text-text-secondary font-findora-regular">
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🎨</span>
-                <span><strong>Thèmes et branding</strong> - Couleurs, fonts et style adaptés à votre identité visuelle</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">💾</span>
-                <span><strong>Historique des conversations</strong> - Sauvegarde automatique et export des échanges</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🔐</span>
-                <span><strong>Authentification optionnelle</strong> - Connexion utilisateur pour un service personnalisé</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">📱</span>
-                <span><strong>Responsive design</strong> - Fonctionne parfaitement sur desktop, tablet et mobile</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">⚡</span>
-                <span><strong>Performance optimisée</strong> - Chargement instantané et interface fluide</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent text-lg">🔧</span>
-                <span><strong>API complète</strong> - Intégration avec vos systèmes existants</span>
-              </li>
-            </ul>
-          </div>
+    <script>
+      // Carrousel simple auto-scroll plein largeur
+      (function(){
+        const root = document.querySelector('#whatsapp-use-cases .uc-carousel');
+        if(!root) return;
+        let current = 0;
+        const slides = root.querySelectorAll('.uc-slide');
+        function go(i){ root.scrollTo({left: i*root.clientWidth, behavior:'smooth'}); current = i; }
+        function next(){ go((current+1) % slides.length); }
+        const interval = setInterval(next, 4500);
+        window.addEventListener('resize', ()=>go(current));
+        go(0);
+      })();
+    </script>
+    <style>
+      #whatsapp-use-cases .uc-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;width:100%}
+      #whatsapp-use-cases .uc-carousel::-webkit-scrollbar{display:none}
+      #whatsapp-use-cases .uc-slide{min-width:100%;scroll-snap-align:center}
+    </style>
 
-          <div class="flex gap-4 flex-wrap">
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Parler à un expert</a>
-            <a href="#demo-web" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg">Voir la démo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comment ça marche -->
-    <section id="comment-ca-marche" class="py-25 bg-white">
+    <!-- Case card: Interface Web -->
+    <section id="web-public" class="pb-10 bg-white">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight font-findora-inter mb-6">Architecture simple et fiable</h2>
-          <p class="text-text-secondary max-w-3xl mx-auto text-xl font-findora-regular">Un pipeline optimisé qui garantit des réponses rapides et pertinentes à chaque interaction.</p>
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <!-- Texte principal -->
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700">WEB</span>
+              <h2 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">
+                Interface Web intelligente
+              </h2>
+              <span class="mt-3 inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">Widget personnalisable</span>
+            </div>
+            <!-- Visuel -->
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-200 via-indigo-300 to-blue-500"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1w" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="70" y="20" rx="16" ry="16" width="140" height="140" fill="url(#g1w)" />
+                  <rect x="88" y="40" rx="8" ry="8" width="104" height="104" fill="#1f2937" opacity="0.08" />
+                  <rect x="96" y="56" rx="6" ry="6" width="88" height="18" fill="#2563eb" opacity="0.9" />
+                  <rect x="96" y="80" rx="6" ry="6" width="88" height="14" fill="#2563eb" opacity="0.7" />
+                  <rect x="96" y="100" rx="6" ry="6" width="64" height="14" fill="#2563eb" opacity="0.6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Ligne d'infos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-border-subtle p-6 md:p-8">
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Le besoin</div>
+              <p class="mt-2 text-text-primary">Offrir une expérience conversationnelle moderne directement sur votre site web.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Notre approche</div>
+              <p class="mt-2 text-text-primary">Widget web personnalisable, branding, historique, intégration API et authentification optionnelle.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Résultats</div>
+              <p class="mt-2 text-text-primary">Expérience fluide sur desktop et mobile, augmentation de l'engagement et du self‑service.</p>
+            </div>
+            <div class="md:col-span-3 pt-2">
+              <a href="#whatsapp-public" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border-subtle text-sm no-underline hover:border-primary hover:text-primary transition-colors">Découvrir web interface <span>→</span></a>
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mx-auto mb-6 text-xl font-bold">1</div>
-            <div class="bg-white rounded-xl border border-border-subtle p-6 hover:shadow-lg transition-all duration-300">
-              <h3 class="text-lg font-bold mb-3 font-findora-inter">Réception</h3>
-              <p class="text-text-secondary text-sm font-findora-regular">Message reçu via WhatsApp ou interface web avec support multi-format (texte, audio, image)</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- Cas d'usage Web -->
+    <section id="web-use-cases" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-text-primary">Cas d'usage Interface Web</h2>
+          <p class="mt-2 text-base text-text-secondary">Expériences modernes, intégrées à votre site — design soigné et interactions fluides.</p>
+        </div>
+
+        <div class="rounded-2xl border border-border-subtle bg-white p-6 md:p-8">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="chip">Q&A Base de connaissances</span>
+            <span class="chip">Documents & extraits</span>
+            <span class="chip">Multilingue</span>
+            <span class="chip">Personnalisation</span>
           </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mx-auto mb-6 text-xl font-bold">2</div>
-            <div class="bg-white rounded-xl border border-border-subtle p-6 hover:shadow-lg transition-all duration-300">
-              <h3 class="text-lg font-bold mb-3 font-findora-inter">Modération</h3>
-              <p class="text-text-secondary text-sm font-findora-regular">Filtrage intelligent pour garantir la conformité et la sécurité des échanges</p>
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mx-auto mb-6 text-xl font-bold">3</div>
-            <div class="bg-white rounded-xl border border-border-subtle p-6 hover:shadow-lg transition-all duration-300">
-              <h3 class="text-lg font-bold mb-3 font-findora-inter">Génération IA</h3>
-              <p class="text-text-secondary text-sm font-findora-regular">Traitement par notre moteur IA avec accès au contexte et aux données pertinentes</p>
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center mx-auto mb-6 text-xl font-bold">4</div>
-            <div class="bg-white rounded-xl border border-border-subtle p-6 hover:shadow-lg transition-all duration-300">
-              <h3 class="text-lg font-bold mb-3 font-findora-inter">Livraison</h3>
-              <p class="text-text-secondary text-sm font-findora-regular">Réponse formatée et envoyée via le canal d'origine avec indicateurs visuels</p>
+
+          <div class="relative overflow-hidden">
+            <div class="wu-carousel">
+              <!-- Slide 1: Q&A Knowledge -->
+              <div class="wu-slide">
+                <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                  <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> <span>Chat Widget</span></div>
+                    <span class="rounded-full bg-gray-100 px-2 py-0.5">Thème custom</span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="bg-gray-50 rounded-lg p-3 max-w-[75%]"><p class="text-sm text-gray-800">Quels sont vos SLA pour le support ?</p></div>
+                    <div class="bg-indigo-600 text-white rounded-lg p-3 max-w-[90%] ml-auto">
+                      <p class="text-sm">Notre SLA standard: réponse &lt; 1h (heures ouvrées) et résolution &lt; 24h. Options premium disponibles.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 mt-4">
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🎨</span><span class="text-[11px] font-medium text-text-primary">Branding</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🔎</span><span class="text-[11px] font-medium text-text-primary">Recherche</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🔐</span><span class="text-[11px] font-medium text-text-primary">Auth</span></div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Documents & extraits -->
+              <div class="wu-slide">
+                <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                  <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> <span>Chat Widget</span></div>
+                    <span class="rounded-full bg-gray-100 px-2 py-0.5">Extraction</span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="bg-gray-50 rounded-lg p-3 max-w-[78%]"><p class="text-sm text-gray-800">Peux‑tu résumer ce PDF de 50 pages ?</p></div>
+                    <div class="bg-indigo-600 text-white rounded-lg p-3 max-w-[95%] ml-auto">
+                      <p class="text-sm">Résumé: 4 points clés + tableau des KPI. Voir l’extrait annoté ci‑dessous.</p>
+                    </div>
+                    <div class="bg-white rounded-lg border border-border-subtle p-3">
+                      <div class="h-28 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-md border border-border-subtle flex items-center justify-center text-xs text-gray-600">Aperçu document + extraits surlignés</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 mt-4">
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🧩</span><span class="text-[11px] font-medium text-text-primary">RAG</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">📄</span><span class="text-[11px] font-medium text-text-primary">PDF/Docs</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">📊</span><span class="text-[11px] font-medium text-text-primary">KPI</span></div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Multilingue -->
+              <div class="wu-slide">
+                <div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm">
+                  <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 bg-indigo-500 rounded-full"></span> <span>Chat Widget</span></div>
+                    <span class="rounded-full bg-gray-100 px-2 py-0.5">Multilingue</span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="bg-gray-50 rounded-lg p-3 max-w-[75%]"><p class="text-sm text-gray-800">¿Puedes ayudarme con el plan de precios?</p></div>
+                    <div class="bg-indigo-600 text-white rounded-lg p-3 max-w-[90%] ml-auto">
+                      <p class="text-sm">Bien sûr. Voici les formules disponibles en EUR. Souhaitez‑vous recevoir un devis par email ?</p>
+                    </div>
+                    <div class="flex gap-2">
+                      <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">FR</span>
+                      <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">ES</span>
+                      <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">EN</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 mt-4">
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🌍</span><span class="text-[11px] font-medium text-text-primary">Langues</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">📧</span><span class="text-[11px] font-medium text-text-primary">Emails</span></div>
+                  <div class="h-16 rounded-lg bg-white border border-border-subtle flex flex-col items-center justify-center text-center p-2"><span class="text-indigo-600 text-lg">🔗</span><span class="text-[11px] font-medium text-text-primary">API</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing/CTA final -->
-    <section class="py-25 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight font-findora-inter mb-6">Prêt à lancer votre agent public ?</h2>
-        <p class="text-text-secondary text-xl mb-10 max-w-3xl mx-auto font-findora-regular">Contactez notre équipe pour discuter de vos besoins et recevoir une proposition personnalisée. Activation possible sous 48h.</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-          <div class="bg-white rounded-xl border border-border-subtle p-8">
-            <h3 class="text-xl font-bold mb-4 font-findora-inter">WhatsApp Agent</h3>
-            <p class="text-text-secondary mb-6 font-findora-regular">Perfect pour le support client et les services directs</p>
-            <ul class="text-left space-y-2 text-sm text-text-secondary mb-6">
-              <li>✅ Configuration sous 24h</li>
-              <li>✅ Support multilingue</li>
-              <li>✅ Analytics inclus</li>
-              <li>✅ Modération automatique</li>
-            </ul>
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl w-full">Demander un devis</a>
-          </div>
-          
-          <div class="bg-white rounded-xl border border-border-subtle p-8">
-            <h3 class="text-xl font-bold mb-4 font-findora-inter">Interface Web</h3>
-            <p class="text-text-secondary mb-6 font-findora-regular">Idéal pour sites web et portails clients</p>
-            <ul class="text-left space-y-2 text-sm text-text-secondary mb-6">
-              <li>✅ Personnalisation complète</li>
-              <li>✅ Responsive design</li>
-              <li>✅ API d'intégration</li>
-              <li>✅ Historique persistant</li>
-            </ul>
-            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg w-full">Demander un devis</a>
-          </div>
-        </div>
-        
-        <div class="text-center">
-          <p class="text-text-light mb-6 font-findora-regular">Des questions ? Notre équipe est là pour vous accompagner</p>
-          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-md font-medium text-lg no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-accent text-primary border-accent hover:bg-accent-light hover:-translate-y-0.5 hover:shadow-xl">Planifier un appel</a>
-        </div>
-      </div>
-    </section>
+    <script>
+      // Carrousel auto-scroll (web use-cases)
+      (function(){
+        const root = document.querySelector('#web-use-cases .wu-carousel');
+        if(!root) return;
+        let current = 0;
+        const slides = root.querySelectorAll('.wu-slide');
+        function go(i){ root.scrollTo({left: i*root.clientWidth, behavior:'smooth'}); current = i; }
+        function next(){ go((current+1) % slides.length); }
+        const interval = setInterval(next, 4500);
+        window.addEventListener('resize', ()=>go(current));
+        go(0);
+      })();
+    </script>
+    <style>
+      #web-use-cases .wu-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;width:100%}
+      #web-use-cases .wu-carousel::-webkit-scrollbar{display:none}
+      #web-use-cases .wu-slide{min-width:100%;scroll-snap-align:center}
+    </style>
 
-    <!-- Footer -->
-    <footer class="footer-section bg-bg-dark text-text-on-dark relative overflow-hidden">
-      <div class="footer-bg-decoration"></div>
-      
-      <div class="max-w-6xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <!-- Brand Section -->
-          <div class="lg:col-span-1">
-            <div class="flex items-center gap-3 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="footer-logo">
-                <g>
-                  <rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" />
-                  <circle cx="60" cy="12" r="6" fill="white" />
-                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
-                </g>
-              </svg>
-              <span class="text-xl font-bold font-findora-inter">Findora</span>
-            </div>
-            <p class="text-text-light mb-6 leading-relaxed font-findora-regular">
-              Construire un futur avec moins d'effort grâce à nos solutions d'intelligence artificielle innovantes.
+    <!-- Exécution realtime -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Texte -->
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-extrabold leading-tight text-text-primary">
+              Exécution en temps réel
+              <br class="hidden md:block" />Sans cloud. Aucune latence perceptible.
+            </h2>
+            <p class="mt-4 text-base text-text-secondary max-w-xl">
+              Moteur edge optimisé pour iOS, Android et le Web. Résilient hors ligne, s’adapte au contexte et aux règles métier, avec APIs et webhooks.
             </p>
+
+            <div class="mt-10">
+              <div class="text-lg font-semibold text-text-primary">Connecteurs</div>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="chip">iOS SDK</span>
+                <span class="chip">Android SDK</span>
+                <span class="chip">API REST</span>
+                <span class="chip">Webhooks</span>
+                <span class="chip">Support 24/7</span>
+                <span class="chip">Mode hors ligne</span>
+              </div>
+            </div>
           </div>
-          
-          <!-- Solutions -->
-          <div>
-            <h3 class="text-lg font-bold mb-6 font-findora-inter">Solutions</h3>
-            <ul class="space-y-4 font-findora-regular">
-              <li><a href="open-source.html" class="footer-link">Open Source</a></li>
-              <li><a href="agent-public.html" class="footer-link">Agent Public</a></li>
-              <li><a href="agent-entreprise.html" class="footer-link">Agent Entreprise</a></li>
-            </ul>
-          </div>
-          
-          <!-- Ressources -->
-          <div>
-            <h3 class="text-lg font-bold mb-6 font-findora-inter">Ressources</h3>
-            <ul class="space-y-4 font-findora-regular">
-              <li><a href="index.html#use-cases" class="footer-link">Use Cases</a></li>
-              <li><a href="index.html#developers" class="footer-link">Développeurs</a></li>
-              <li><a href="index.html#docs" class="footer-link">Documentation</a></li>
-            </ul>
-          </div>
-          
-          <!-- Company -->
-          <div>
-            <h3 class="text-lg font-bold mb-6 font-findora-inter">Entreprise</h3>
-            <ul class="space-y-4 font-findora-regular">
-              <li><a href="blog.html" class="footer-link">Blog & Actualités</a></li>
-              <li><a href="contact.html" class="footer-link">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Bottom Section -->
-        <div class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular">
-            © 2025 Findora. Tous droits réservés.
-          </div>
-          <div class="flex gap-6 text-sm font-findora-regular">
-            <a href="#privacy" class="footer-link">Politique de confidentialité</a>
-            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+
+          <!-- Visuel -->
+          <div class="relative flex justify-center">
+            <div class="rounded-3xl border border-border-subtle overflow-hidden bg-white mx-auto max-w-[560px] w-full shadow-sm">
+              <div class="relative w-full aspect-[13/10]">
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <svg viewBox="0 0 520 360" class="w-[88%] h-auto max-w-[520px]" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="pline" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#8B5CF6" />
+                        <stop offset="100%" stop-color="#06B6D4" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="70" y="40" width="380" height="280" rx="28" fill="#fff" stroke="#e8e8e8"/>
+                    <rect x="120" y="80" width="280" height="200" rx="18" fill="#fff" stroke="#efefef"/>
+                    <rect x="200" y="120" width="120" height="120" rx="16" fill="#111"/>
+                    <circle cx="260" cy="180" r="16" fill="#fff" opacity="0.85"/>
+                    <path d="M252 176l6 6l10-10" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M200 180H90" stroke="url(#pline)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M320 180H430" stroke="url(#pline)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M260 120V90" stroke="url(#pline)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M260 240v40" stroke="url(#pline)" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- Floating Elements -->
-      <div class="footer-floating-elements">
-        <div class="footer-float-1"></div>
-        <div class="footer-float-2"></div>
-        <div class="footer-float-3"></div>
-      </div>
-    </footer>
+    </section>
+
+   
 
     <script src="script.js"></script>
   </body>

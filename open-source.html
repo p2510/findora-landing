@@ -56,13 +56,11 @@
     </script>
   </head>
   <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
-    <!-- Navigation -->
+    <!-- Navigation (alignée sur index.html) -->
     <nav
       class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
     >
-      <div
-        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18"
-      >
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
         <!-- Logo -->
         <div class="flex items-center">
           <a href="index.html" class="no-underline text-inherit">
@@ -75,106 +73,57 @@
                 class="logo-svg"
               >
                 <g>
-                  <rect
-                    x="0"
-                    y="0"
-                    width="88"
-                    height="24"
-                    rx="12"
-                    ry="12"
-                    fill="#ffbd59"
-                  />
+                  <rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" />
                   <circle cx="60" cy="12" r="6" fill="white" />
                   <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
                 </g>
               </svg>
-              <span
-                class="logo-text text-xl font-bold text-primary tracking-tight relative"
-                >Findora</span
-              >
+              <span class="logo-text text-xl font-bold text-primary tracking-tight relative">Findora</span>
             </div>
           </a>
         </div>
 
         <!-- Menu Principal -->
         <div class="hidden md:flex items-center gap-8 relative">
+          <!-- Menu Open Source -->
           <div class="nav-item dropdown">
-            <button
+            <span
               class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
-              id="solutions-dropdown"
             >
-              Solutions
-              <svg
-                class="dropdown-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M4 6L8 10L12 6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              Open source
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-            </button>
-            <div class="dropdown-menu" id="solutions-menu">
+            </span>
+
+            <div class="dropdown-menu">
               <div class="dropdown-content">
+                <!-- Agent de Voyage -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="open-source.html" class="dropdown-link">
+                    <a href="open-source.html#agent-voyage" class="dropdown-link">
                       <div class="dropdown-text">
-                        <div>
                           <div class="flex gap-2">
                             <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M12 2L2 7L12 12L22 7L12 2Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M2 17L12 22L22 17"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M2 12L12 17L22 12"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" />
+                              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" />
+                              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" />
                               </svg>
                             </div>
                             <div>
-                              <h3>Open Source</h3>
-                              <p>Agents gratuits prêts à utiliser</p>
+                            <h3>Agent de voyage</h3>
+                            <p>Accéder aux informations aériennes en temps réel.</p>
                             </div>
                           </div>
-
                           <div class="dropdown-projects">
                             <div class="project-item">
-                              <h4>Agent de Voyage</h4>
-                              <span>Informations temps réel</span>
+                            <h4>Accessibilité</h4>
+                            <span>WhatsApp ouvert</span>
                             </div>
                             <div class="project-item">
-                              <h4>
-                                <span class="tech-element">MCP Creator</span>
-                              </h4>
-                              <span>Construisez votre agent</span>
-                            </div>
+                            <h4>Information</h4>
+                            <span>Prix de billet, itinéraire, comparaison...</span>
                           </div>
                         </div>
                       </div>
@@ -182,45 +131,162 @@
                   </div>
                 </div>
 
+                <!-- MCP Creator -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="./agent-public.html" class="dropdown-link">
+                    <a href="open-source.html#mcp-creator" class="dropdown-link">
                       <div class="dropdown-text">
-                        <div>
                           <div class="flex gap-2">
                             <div class="dropdown-icon-wrapper">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  fill-rule="evenodd"
-                                  d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
-                                  clip-rule="evenodd"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
-                                />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" />
                               </svg>
                             </div>
                             <div>
-                              <h3>Agent Public</h3>
-                              <p>IA accessible via plateformes</p>
+                            <h3>MCP Creator</h3>
+                            <p>Construire vos propres agents à partir de prompt.</p>
                             </div>
                           </div>
                           <div class="dropdown-projects">
                             <div class="project-item">
-                              <h4>WhatsApp Agent IA</h4>
-                              <span>Conversation intelligente</span>
+                            <h4>Accessibilité</h4>
+                            <span>Dashboard Findora</span>
                             </div>
                             <div class="project-item">
-                              <h4>Web Interface</h4>
-                              <span>Accès universel</span>
+                            <h4>Capacité</h4>
+                            <span>Création d'agent, déploiement, amélioration</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+
+          <!-- Menu Agents Publics -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Agents publics
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <!-- WhatsApp AI Agent -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="agent-public.html#whatsapp-agent" class="dropdown-link">
+                      <div class="dropdown-text">
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755" clip-rule="evenodd" />
+                              <path fill="currentColor" d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694" />
+                              </svg>
                             </div>
+                            <div>
+                            <h3>WhatsApp AI Agent</h3>
+                            <p>Support client intelligent via WhatsApp.</p>
+                            </div>
+                          </div>
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>WhatsApp Business</span>
+                            </div>
+                            <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Réponses humanoïdes, support 24/7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+            </div>
+          </div>
+
+                <!-- Web Interface -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="agent-public.html#web-interface" class="dropdown-link">
+                      <div class="dropdown-text">
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" />
+                              <path d="M8 14S9.5 16 12 16S16 14 16 14" stroke="currentColor" stroke-width="2" />
+                              <path d="M9 9H9.01" stroke="currentColor" stroke-width="2" />
+                              <path d="M15 9H15.01" stroke="currentColor" stroke-width="2" />
+                              </svg>
+                            </div>
+                            <div>
+                            <h3>Web Interface</h3>
+                            <p>Analyse et synthèse de gros volumes de données.</p>
+                            </div>
+                          </div>
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>Interface web dédiée</span>
+                            </div>
+                            <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Documents 15k pages, filtrage, analyse</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+
+          <!-- Menu Agents Privés -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Agents privés
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <!-- Data Entry Agent -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a href="agent-entreprise.html#data-entry" class="dropdown-link">
+                      <div class="dropdown-text">
+                          <div class="flex gap-2">
+                            <div class="dropdown-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" />
+                              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" />
+                              <path d="M16 13H8" stroke="currentColor" stroke-width="2" />
+                              <path d="M16 17H8" stroke="currentColor" stroke-width="2" />
+                              </svg>
+                            </div>
+                            <div>
+                            <h3>Data Entry Agent</h3>
+                            <p>Automatisation des pipelines de saisie de données.</p>
+                            </div>
+                          </div>
+                          <div class="dropdown-projects">
+                            <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>Intégration CRM/ERP</span>
+                            </div>
+                            <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Analyse, synthèse, insertion automatique</span>
                           </div>
                         </div>
                       </div>
@@ -228,49 +294,32 @@
                   </div>
                 </div>
 
+                <!-- Web Research Agent -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="agent-entreprise.html" class="dropdown-link">
+                    <a href="agent-entreprise.html#web-research" class="dropdown-link">
                       <div class="dropdown-text">
-                        <div>
                           <div class="flex gap-2">
                             <div class="dropdown-icon-wrapper">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
-                                  opacity="0.2"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
-                                  opacity="0.15"
-                                />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+                              <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" />
+                              <path d="M11 6C13.7614 6 16 8.23858 16 11" stroke="currentColor" stroke-width="2" />
                               </svg>
                             </div>
                             <div>
-                              <h3>Agent Entreprise</h3>
-                              <p>Solutions sur mesure</p>
+                            <h3>Web Research Agent</h3>
+                            <p>Recherche approfondie et collecte d'informations web.</p>
                             </div>
                           </div>
                           <div class="dropdown-projects">
                             <div class="project-item">
-                              <h4>Data Entry Agent</h4>
-                              <span>Saisie automatisée</span>
+                            <h4>Accessibilité</h4>
+                            <span>En cours de développement</span>
                             </div>
                             <div class="project-item">
-                              <h4>Web Research</h4>
-                              <span>Collecte intelligente</span>
-                            </div>
+                            <h4>Capacité</h4>
+                            <span>Deep research, synthèse business</span>
                           </div>
                         </div>
                       </div>
@@ -280,215 +329,6 @@
               </div>
             </div>
           </div>
-
-          <div class="nav-item dropdown">
-            <button
-              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
-              id="ressources-dropdown"
-            >
-              Ressources
-              <svg
-                class="dropdown-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M4 6L8 10L12 6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="dropdown-menu" id="ressources-menu">
-              <div class="dropdown-content">
-                <div class="dropdown-section">
-                  <div class="dropdown-item">
-                    <a href="#use-cases" class="dropdown-link">
-                      <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M9 12L11 14L15 10"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Use Cases</h3>
-                              <p>Exemples d'utilisations</p>
-                            </div>
-                          </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>E-commerce</h4>
-                              <span>Automatisation complète</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Support Client</h4>
-                              <span>Réponses intelligentes</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="dropdown-section">
-                  <div class="dropdown-item">
-                    <a href="#developers" class="dropdown-link">
-                      <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M16 18L22 12L16 6"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M8 6L2 12L8 18"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Développeurs</h3>
-                              <p>Outils et ressources techniques</p>
-                            </div>
-                          </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>API Documentation</h4>
-                              <span>Guide complet</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>SDK & Libraries</h4>
-                              <span>Intégration rapide</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="dropdown-section">
-                  <div class="dropdown-item">
-                    <a href="#docs" class="dropdown-link">
-                      <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M14 2V8H20"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M16 13H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M16 17H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M10 9H9H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Docs</h3>
-                              <p>Documentation complète</p>
-                            </div>
-                          </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>Guide de démarrage</h4>
-                              <span>Premiers pas</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Tutoriels</h4>
-                              <span>Apprentissage guidé</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a
-          href="./blog.html"
-          class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
-          >Actualités & blogs</a
-        >
-          <a
-            href="contact.html"
-            class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
-            >Contact</a
-          >
         </div>
 
         <!-- CTA Buttons -->
@@ -507,744 +347,278 @@
 
         <!-- Mobile Menu Toggle -->
         <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
-          <span
-            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
-          ></span>
-          <span
-            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
-          ></span>
-          <span
-            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
-          ></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section pt-32 pb-20 bg-gradient-to-br from-bg-main to-white relative overflow-hidden">
-      <div class="hero-bg-decoration"></div>
-      
-      <div class="max-w-6xl mx-auto px-6 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="hero-content">
-            <div class="hero-badge">
-              <span class="badge-icon">🎯</span>
-              <span class="badge-text">Agents IA Gratuits</span>
-            </div>
-            
-            <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 text-text-primary font-findora-inter">
-              Agents IA 
-              <span class="text-accent">prêts à utiliser</span>
-              <br />gratuitement
+    <!-- Hero épuré -->
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Open source</span>
+        <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary">
+          Agents IA prêts à l'emploi, gratuits
             </h1>
-            
-            <p class="text-xl text-text-secondary mb-8 max-w-xl leading-relaxed">
-              Découvrez nos agents IA disponibles instantanément, sans inscription ni frais. Solutions concrètes pour vos besoins quotidiens.
-            </p>
-            
-            <div class="hero-stats grid grid-cols-3 gap-6 mb-10">
-              <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Gratuit</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Installation</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Disponible</div>
-              </div>
-            </div>
-            
-            <div class="hero-actions flex gap-4 flex-wrap">
-              <a
-                href="#agents"
-                class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
-              >
-                Explorer les agents
-              </a>
-              <a
-                href="#agent-voyage"
-                class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-base no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                Essayer Agent Voyage
-              </a>
-            </div>
-          </div>
-          
-          <div class="hero-visual relative">
-            <div class="open-source-showcase">
-              <div class="showcase-header">
-                <div class="header-title">Agents Disponibles</div>
-                <div class="header-status">
-                  <span class="status-indicator active"></span>
-                  <span>En ligne</span>
-                </div>
-              </div>
-              
-              <div class="showcase-content">
-                <div class="agent-cards">
-                  <div class="agent-card active">
-                    <div class="agent-icon">✈️</div>
-                    <div class="agent-name">Agent Voyage</div>
-                    <div class="agent-desc">Infos temps réel</div>
-                    <div class="agent-status online">En ligne</div>
-                  </div>
-                  <div class="agent-card">
-                    <div class="agent-icon">🛠️</div>
-                    <div class="agent-name">MCP Creator</div>
-                    <div class="agent-desc">Créer votre agent</div>
-                    <div class="agent-status online">En ligne</div>
-                  </div>
-                  <div class="agent-card coming-soon">
-                    <div class="agent-icon">📚</div>
-                    <div class="agent-name">Plus à venir</div>
-                    <div class="agent-desc">Bientôt disponible</div>
-                    <div class="agent-status">Bientôt</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Agents Overview -->
-    <section id="agents" class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-text-primary mb-6 font-findora-inter">
-            Nos agents gratuits
-          </h2>
-          <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-            Des solutions IA concrètes, utilisables immédiatement via simple chat. Aucune technique requise, juste des résultats.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Agent de Voyage -->
-          <div class="agent-overview-card group">
-            <div class="agent-header">
-              <div class="agent-icon-large">✈️</div>
-              <div>
-                <h3 class="text-2xl font-bold text-text-primary mb-2 font-findora-inter">Agent de Voyage</h3>
-                <p class="text-text-secondary">Informations de voyage en temps réel</p>
-              </div>
-            </div>
-            
-            <div class="agent-description mb-6">
-              <p class="text-text-secondary leading-relaxed">
-                Obtenez instantanément prix des billets, comparaisons de compagnies, informations sur le trafic aérien et destinations. Tout via WhatsApp, en temps réel.
-              </p>
-            </div>
-            
-            <div class="agent-features">
-              <div class="feature-item">
-                <span class="feature-icon">🛫</span>
-                <span>Prix des vols en temps réel</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🔄</span>
-                <span>Comparaison de compagnies</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">📊</span>
-                <span>Trafic aérien et retards</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">💬</span>
-                <span>Via WhatsApp</span>
-              </div>
-            </div>
-            
-            <div class="agent-access">
-              <span class="access-label">Accès :</span>
-              <span class="access-method">+33 7 xx xx xx xx</span>
-            </div>
-            
-            <a href="#agent-voyage" class="agent-cta">
-              Découvrir l'Agent Voyage
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </a>
-          </div>
-
-          <!-- MCP Creator -->
-          <div class="agent-overview-card group">
-            <div class="agent-header">
-              <div class="agent-icon-large">🛠️</div>
-              <div>
-                <h3 class="text-2xl font-bold text-text-primary mb-2 font-findora-inter">MCP Creator</h3>
-                <p class="text-text-secondary">Construisez votre agent personnel</p>
-              </div>
-            </div>
-            
-            <div class="agent-description mb-6">
-              <p class="text-text-secondary leading-relaxed">
-                Créez votre propre agent IA par simple conversation. Définissez sa logique, ses sources et ses actions, puis déployez-le sur nos serveurs.
-              </p>
-            </div>
-            
-            <div class="agent-features">
-              <div class="feature-item">
-                <span class="feature-icon">💭</span>
-                <span>Création par prompt</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🔄</span>
-                <span>Workflow Entrée → Agent → Sortie</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🚀</span>
-                <span>Déploiement en un clic</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🐍</span>
-                <span>Notions Python utiles</span>
-              </div>
-            </div>
-            
-            <div class="agent-access">
-              <span class="access-label">Accès :</span>
-              <span class="access-method">creator.findora.ai</span>
-            </div>
-            
-            <a href="#mcp-creator" class="agent-cta">
-              Découvrir MCP Creator
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Agent de Voyage Detail -->
-    <section id="agent-voyage" class="py-24 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div class="section-badge">
-              <span class="badge-icon">✈️</span>
-              <span>Agent de Voyage</span>
-            </div>
-            
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-text-primary mb-6 font-findora-inter">
-              Toutes vos infos voyage en temps réel
-            </h2>
-            
-            <p class="text-xl text-text-secondary mb-8">
-              Plus besoin de jongler entre 10 sites web. Demandez tout à notre agent via WhatsApp et obtenez des réponses précises et actualisées.
-            </p>
-            
-            <div class="feature-list space-y-4 mb-8">
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 22.08V12" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Prix des vols en direct</h4>
-                  <p class="text-text-secondary">Tarifs actualisés de toutes les compagnies, comparaisons automatiques</p>
-                </div>
-              </div>
-              
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Trafic aérien live</h4>
-                  <p class="text-text-secondary">Retards, annulations, conditions météo affectant les vols</p>
-                </div>
-              </div>
-              
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 15.9999V7.9999C20.9996 7.64918 20.9071 7.30471 20.7315 7.00106C20.556 6.69741 20.3037 6.44526 20 6.2699L13 2.2699C12.696 2.09437 12.3511 2.00195 12 2.00195C11.6489 2.00195 11.304 2.09437 11 2.2699L4 6.2699C3.69626 6.44526 3.44398 6.69741 3.26846 7.00106C3.09294 7.30471 3.00036 7.64918 3 7.9999V15.9999C3.00036 16.3506 3.09294 16.6951 3.26846 16.9987C3.44398 17.3024 3.69626 17.5545 4 17.7299L11 21.7299C11.304 21.9054 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9054 13 21.7299L20 17.7299C20.3037 17.5545 20.556 17.3024 20.7315 16.9987C20.9071 16.6951 20.9996 16.3506 21 15.9999Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M7.5 4.2099L16.5 4.2099L12 11.9999L7.5 4.2099Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Destinations intelligentes</h4>
-                  <p class="text-text-secondary">Suggestions basées sur budget, dates et préférences</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="whatsapp-access">
-              <h4 class="text-lg font-semibold text-text-primary mb-4">Commencer maintenant :</h4>
-              <div class="access-card">
-                <div class="access-method">
-                  <span class="whatsapp-icon">📱</span>
-                  <span class="phone-number">+33 7 xx xx xx xx</span>
-                </div>
-                <p class="access-instruction">Envoyez "Bonjour" pour démarrer</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="travel-agent-demo">
-            <div class="chat-interface">
-              <div class="chat-header">
-                <div class="chat-avatar">✈️</div>
-                <div class="chat-info">
-                  <div class="chat-name">Agent Voyage</div>
-                  <div class="chat-status">En ligne</div>
-                </div>
-              </div>
-              
-              <div class="chat-messages">
-                <div class="message user">
-                  <div class="message-content">Vol Paris-Tokyo demain ?</div>
-                  <div class="message-time">14:23</div>
-                </div>
-                
-                <div class="message agent typing">
-                  <div class="message-content">
-                    ✈️ **Paris → Tokyo demain**
-                    
-                    **Meilleurs prix :**
-                    • Air France: 649€ (1 escale)
-                    • JAL: 721€ (direct)
-                    • ANA: 734€ (direct)
-                    
-                    **Trafic :** Normal
-                    **Météo :** Ensoleillé
-                    
-                    Voulez-vous plus de détails ?
-                  </div>
-                  <div class="message-time">14:24</div>
-                </div>
-                
-                <div class="message user">
-                  <div class="message-content">Oui, détails Air France</div>
-                  <div class="message-time">14:25</div>
-                </div>
-                
-                <div class="message agent">
-                  <div class="message-content">
-                    🛫 **AF275 Paris-Tokyo**
-                    
-                    **Départ :** CDG 11h20
-                    **Arrivée :** NRT 07h15+1
-                    **Escale :** Amsterdam (1h15)
-                    **Durée :** 13h55
-                    
-                    **Disponibilité :** 12 sièges
-                    **Bagages :** 23kg inclus
-                  </div>
-                  <div class="message-time">14:25</div>
-                </div>
-              </div>
-              
-              <div class="chat-input">
-                <input type="text" placeholder="Tapez votre message..." disabled>
-                <button disabled>📤</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MCP Creator Detail -->
-    <section id="mcp-creator" class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="mcp-creator-demo order-first lg:order-last">
-            <div class="creator-interface">
-              <div class="creator-header">
-                <div class="creator-logo">🛠️</div>
-                <div class="creator-title">MCP Creator</div>
-                <div class="creator-status">
-                  <span class="status-dot"></span>
-                  <span>Prêt</span>
-                </div>
-              </div>
-              
-              <div class="creator-workflow">
-                <div class="workflow-step active">
-                  <div class="step-icon">📥</div>
-                  <div class="step-content">
-                    <h4>Entrée</h4>
-                    <p>WhatsApp, Email, Web</p>
-                  </div>
-                </div>
-                
-                <div class="workflow-arrow">→</div>
-                
-                <div class="workflow-step processing">
-                  <div class="step-icon">🤖</div>
-                  <div class="step-content">
-                    <h4>Agent</h4>
-                    <p>Logique IA personnalisée</p>
-                  </div>
-                </div>
-                
-                <div class="workflow-arrow">→</div>
-                
-                <div class="workflow-step">
-                  <div class="step-icon">📤</div>
-                  <div class="step-content">
-                    <h4>Sortie</h4>
-                    <p>Actions et réponses</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="creator-prompt">
-                <div class="prompt-label">Décrivez votre agent :</div>
-                <textarea placeholder="Ex: Un agent qui surveille les prix immobiliers dans ma ville et m'envoie une alerte email quand un bien correspond à mes critères..." rows="4"></textarea>
-              </div>
-              
-              <div class="creator-actions">
-                <button class="btn-build">Construire l'agent</button>
-                <button class="btn-deploy" disabled>Déployer</button>
-              </div>
-              
-              <div class="creator-progress">
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 0%"></div>
-                </div>
-                <span class="progress-text">Prêt à commencer</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="order-last lg:order-first">
-            <div class="section-badge">
-              <span class="badge-icon">🛠️</span>
-              <span>MCP Creator</span>
-            </div>
-            
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-text-primary mb-6 font-findora-inter">
-              Construisez votre agent IA personnel
-            </h2>
-            
-            <p class="text-xl text-text-secondary mb-8">
-              Créez un agent IA sur mesure sans coder. Décrivez ce que vous voulez, notre système construit la logique et vous déployez en un clic.
-            </p>
-            
-            <div class="feature-list space-y-4 mb-8">
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M8 9H16M8 13H12" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Création par conversation</h4>
-                  <p class="text-text-secondary">Décrivez votre agent en français, nous construisons la logique</p>
-                </div>
-              </div>
-              
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M6 4L10 8L18 0L22 4L10 16L2 8L6 4Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Workflow flexible</h4>
-                  <p class="text-text-secondary">Entrée (sources) → Agent (logique) → Sortie (actions)</p>
-                </div>
-              </div>
-              
-              <div class="feature-item-detailed">
-                <div class="feature-icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-text-primary mb-1">Déploiement instantané</h4>
-                  <p class="text-text-secondary">Un clic pour mettre votre agent en ligne sur nos serveurs</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="skill-requirement">
-              <div class="skill-badge">
-                <span class="skill-icon">🐍</span>
-                <span>Quelques notions Python recommandées</span>
-              </div>
-              <p class="skill-description">
-                Pour une personnalisation avancée de la logique métier
-              </p>
-            </div>
-            
-            <div class="creator-access">
-              <h4 class="text-lg font-semibold text-text-primary mb-4">Accès à la plateforme :</h4>
-              <div class="access-card">
-                <div class="access-method">
-                  <span class="web-icon">🌐</span>
-                  <span class="url">creator.findora.ai</span>
-                </div>
-                <p class="access-instruction">Interface web complète</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-24 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-text-primary mb-6 font-findora-inter">
-            Comment ça marche
-          </h2>
-          <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-            Trois étapes simples pour accéder à nos agents IA gratuitement
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="how-it-works-step">
-            <div class="step-number">1</div>
-            <div class="step-icon">📱</div>
-            <h3 class="text-xl font-bold text-text-primary mb-3">Contactez l'agent</h3>
-            <p class="text-text-secondary">
-              WhatsApp pour Agent Voyage, web pour MCP Creator. Aucune installation requise.
-            </p>
-          </div>
-
-          <div class="how-it-works-step">
-            <div class="step-number">2</div>
-            <div class="step-icon">💬</div>
-            <h3 class="text-xl font-bold text-text-primary mb-3">Posez vos questions</h3>
-            <p class="text-text-secondary">
-              Conversation naturelle en français. L'agent comprend et traite vos demandes en temps réel.
-            </p>
-          </div>
-
-          <div class="how-it-works-step">
-            <div class="step-number">3</div>
-            <div class="step-icon">⚡</div>
-            <h3 class="text-xl font-bold text-text-primary mb-3">Obtenez vos résultats</h3>
-            <p class="text-text-secondary">
-              Réponses précises et actualisées instantanément. Gratuit, sans limite d'usage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Free -->
-    <section class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-text-primary mb-6 font-findora-inter">
-            Pourquoi c'est <span class="text-accent">gratuit</span> ?
-          </h2>
-          <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-            Notre mission est de démocratiser l'accès à l'IA. Ces agents sont notre contribution à la communauté.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="why-free-card">
-            <div class="reason-icon">🌍</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Accessibilité universelle</h3>
-            <p class="text-text-secondary text-sm">
-              L'IA doit être accessible à tous, pas seulement aux grandes entreprises avec des budgets conséquents.
-            </p>
-          </div>
-
-          <div class="why-free-card">
-            <div class="reason-icon">🧪</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Laboratoire d'innovation</h3>
-            <p class="text-text-secondary text-sm">
-              Ces agents nous permettent de tester et améliorer nos technologies avec de vrais utilisateurs.
-            </p>
-          </div>
-
-          <div class="why-free-card">
-            <div class="reason-icon">🤝</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Communauté d'abord</h3>
-            <p class="text-text-secondary text-sm">
-              Nous croyons que partager nos innovations profite à tout l'écosystème de l'IA.
-            </p>
-          </div>
-
-          <div class="why-free-card">
-            <div class="reason-icon">🚀</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Démonstration de qualité</h3>
-            <p class="text-text-secondary text-sm">
-              La meilleure façon de montrer notre expertise est de vous laisser l'expérimenter.
-            </p>
-          </div>
-
-          <div class="why-free-card">
-            <div class="reason-icon">💡</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Retours utilisateurs</h3>
-            <p class="text-text-secondary text-sm">
-              Vos utilisations nous aident à comprendre les vrais besoins et améliorer nos services.
-            </p>
-          </div>
-
-          <div class="why-free-card">
-            <div class="reason-icon">🌱</div>
-            <h3 class="text-lg font-bold text-text-primary mb-3">Impact social</h3>
-            <p class="text-text-secondary text-sm">
-              Contribuer positivement à la société fait partie de nos valeurs fondamentales.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section py-24 bg-bg-dark text-text-on-dark relative overflow-hidden">
-      <div class="cta-bg-decoration"></div>
-      
-      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-6 font-findora-inter">
-          Prêt à essayer nos agents IA ?
-        </h2>
-        
-        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Commencez immédiatement avec l'Agent Voyage ou créez votre propre agent avec MCP Creator.
+        <p class="mt-4 text-lg text-text-secondary">
+          Deux agents simples et efficaces pour démarrer en quelques secondes.
         </p>
-        
-        <div class="cta-actions flex gap-4 justify-center flex-wrap">
-          <a
-            href="#agent-voyage"
-            class="inline-flex items-center justify-center px-8 py-4 rounded-md font-medium text-lg no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-accent text-primary border-accent hover:bg-accent-light hover:-translate-y-0.5 hover:shadow-xl"
-          >
-            ✈️ Essayer Agent Voyage
-          </a>
-          <a
-            href="#mcp-creator"
-            class="inline-flex items-center justify-center px-8 py-4 rounded-md font-medium text-lg no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-on-dark border-gray-600 hover:bg-gray-800 hover:border-gray-500 hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            🛠️ Créer mon agent
-          </a>
-        </div>
-        
-        <div class="cta-contact-info mt-8 text-gray-400">
-          <p>Des questions ? <a href="contact.html" class="text-accent hover:text-accent-light">Contactez-nous</a></p>
+        <div class="mt-8 flex items-center justify-center gap-3 flex-wrap">
+          <a href="#agent-voyage" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline border bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary transition-all">Essayer via whatsapp</a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-white border-t border-border-subtle">
-      <div class="max-w-6xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <!-- Company Info -->
-          <div class="footer-section">
-            <div class="footer-logo mb-4">
-              <div class="flex items-center gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="75"
-                  height="20"
-                  viewBox="0 0 88 24"
-                  class="logo-svg"
-                >
-                  <g>
-                    <rect
-                      x="0"
-                      y="0"
-                      width="88"
-                      height="24"
-                      rx="12"
-                      ry="12"
-                      fill="#ffbd59"
-                    />
-                    <circle cx="60" cy="12" r="6" fill="white" />
-                    <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
-                  </g>
+    <!-- Case card: Agent de Voyage  -->
+    <section class="pb-10 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <!-- Texte principal -->
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700">VOYAGE</span>
+              <h2 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">
+                Agent de voyage IA en temps réel
+          </h2>
+              <span class="mt-3 inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">Disponible sur WhatsApp</span>
+        </div>
+            <!-- Visuel -->
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-emerald-200 via-teal-300 to-emerald-500"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="70" y="20" rx="16" ry="16" width="140" height="140" fill="url(#g1)" />
+                  <rect x="88" y="40" rx="8" ry="8" width="104" height="104" fill="#0f172a" opacity="0.08" />
+                  <circle cx="120" cy="75" r="18" fill="#10b981" opacity="0.9" />
+                  <rect x="148" y="64" rx="6" ry="6" width="36" height="14" fill="#10b981" opacity="0.8" />
+                  <rect x="148" y="88" rx="6" ry="6" width="56" height="14" fill="#10b981" opacity="0.6" />
                 </svg>
-                <span class="text-xl font-bold text-primary tracking-tight">Findora</span>
               </div>
             </div>
-            <p class="footer-description mb-6">
-              Experts en agents IA, nous démocratisons l'accès à l'intelligence artificielle avec des solutions gratuites et professionnelles.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-              </a>
-              <a href="#" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="#" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.017 0z"/>
-                </svg>
-              </a>
             </div>
-          </div>
-
-          <!-- Solutions -->
-          <div class="footer-section">
-            <h3 class="footer-title">Solutions</h3>
-            <ul class="footer-links">
-              <li><a href="open-source.html">Agents Gratuits</a></li>
-              <li><a href="agent-public.html">Agent Public</a></li>
-              <li><a href="agent-entreprise.html">Agent Entreprise</a></li>
-              <li><a href="#mcp-creator">MCP Creator</a></li>
-            </ul>
-          </div>
-
-          <!-- Ressources -->
-          <div class="footer-section">
-            <h3 class="footer-title">Ressources</h3>
-            <ul class="footer-links">
-              <li><a href="#docs">Documentation</a></li>
-              <li><a href="#use-cases">Cas d'usage</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="#support">Support</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div class="footer-section">
-            <h3 class="footer-title">Contact</h3>
-            <ul class="footer-links">
-              <li><a href="contact.html">Nous contacter</a></li>
-              <li><a href="demo.html">Demander une démo</a></li>
-              <li><a href="#agent-voyage">Agent Voyage</a></li>
-              <li><a href="#mcp-creator">MCP Creator</a></li>
-            </ul>
-          </div>
+          <!-- Ligne d'infos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-border-subtle p-6 md:p-8">
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Le besoin</div>
+              <p class="mt-2 text-text-primary">Obtenir prix des billets, horaires et statuts de vols, itinéraires et options — 24/7 sur WhatsApp.</p>
+              </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Notre approche</div>
+              <p class="mt-2 text-text-primary">Connexion aux temps réels vols/compagnies, trafic aérien et météo. Modération intégrée, ton naturel</p>
+              </div>
+              <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Résultats</div>
+              <p class="mt-2 text-text-primary">Itinéraires et prix en &lt; 10s, veille vols en continu et expérience fluide à grande échelle.</p>
+              </div>
+            <div class="md:col-span-3 pt-2">
+              <a href="#agent-voyage" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border-subtle text-sm no-underline hover:border-primary hover:text-primary transition-colors">Découvrir l'agent de voyage <span>→</span></a>
+            </div>
+            </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom pt-8 border-t border-border-subtle">
-          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="footer-legal">
-              <span>&copy; 2024 Findora. Tous droits réservés.</span>
-              <a href="#privacy" class="footer-legal-link">Politique de confidentialité</a>
-              <a href="#terms" class="footer-legal-link">Conditions d'utilisation</a>
+    <!-- Exécution en temps réel sur l'appareil (inspiration Liquid) -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Texte -->
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-extrabold leading-tight text-text-primary">
+              Exécution realtime.<br class="hidden md:block" />
+              Pas de cloud, pas d'attente.
+            </h2>
+            <p class="mt-4 text-base text-text-secondary max-w-xl">
+              Nos moteurs d'inférence sont optimisés pour la performance, l'efficience
+              mémoire et une latence minimale sur tous les environnements.
+            </p>
+
+            <!-- Smartphone (déployé) -->
+            <div class="mt-10">
+              <div class="text-lg font-semibold text-text-primary">Smartphone</div>
+              <p class="mt-2 text-sm text-text-secondary max-w-xl">
+                Optimisé pour les environnements basse consommation et faible latence :
+                voix, vision, personnalisation. Idéal sur ARM et chipsets mobiles.
+              </p>
+              <p class="mt-2 text-xs text-text-light">*Support ARM et chipsets mobiles personnalisés avec &lt;100ms de latence.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="chip">iOS SDK</span>
+                <span class="chip">Android SDK</span>
+                <span class="chip">APIs REST</span>
+                <span class="chip">Webhooks</span>
+                <span class="chip">Support 24/7</span>
+                </div>
+              </div>
+              
+            <!-- Accordeon animé -->
+            <div class="mt-6 border-y border-border-subtle">
+              <button type="button" class="acc-toggle w-full py-4 flex items-center justify-between" data-acc="laptop">
+                <span class="text-base text-text-primary">Laptop</span>
+                <span class="acc-icon text-text-light transition-transform">+</span>
+              </button>
+              <div class="acc-panel" id="panel-laptop">
+                <div class="pb-4 text-sm text-text-secondary">
+                  Intégration desktop via APIs locales et SDK Web. Supporte l'analyse de documents,
+                  le RAG et la recherche offline. Exemples: Electron, Tauri, PWA.
+                </div>
+              </div>
+              
+              <button type="button" class="acc-toggle w-full py-4 flex items-center justify-between" data-acc="automobile">
+                <span class="text-base text-text-primary">Automobile</span>
+                <span class="acc-icon text-text-light transition-transform">+</span>
+              </button>
+              <div class="acc-panel" id="panel-automobile">
+                <div class="pb-4 text-sm text-text-secondary">
+                  Apps embarquées avec latence minimale, compatibilité ARM/Qualcomm.
+                  APIs de télémétrie, gestion des événements et mises à jour OTA.
+                </div>
+                </div>
+              </div>
             </div>
-            <div class="footer-location">
-              <span class="text-text-light text-sm">Conçu avec ❤️ à Paris, France</span>
+            
+          <!-- Visuel -->
+          <div class="relative flex justify-center">
+            <div class="rounded-3xl border border-border-subtle overflow-hidden bg-white mx-auto max-w-[560px] w-full shadow-sm">
+              <div class="relative w-full aspect-[13/10]">
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <svg viewBox="0 0 520 360" class="w-[88%] h-auto max-w-[520px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#8B5CF6" />
+                        <stop offset="100%" stop-color="#06B6D4" />
+                      </linearGradient>
+                    </defs>
+                    <!-- cadres -->
+                    <rect x="70" y="40" width="380" height="280" rx="28" fill="#fff" stroke="#e8e8e8"/>
+                    <rect x="120" y="80" width="280" height="200" rx="18" fill="#fff" stroke="#efefef"/>
+                    <!-- pulse derrière la puce -->
+                    <g>
+                      <circle cx="260" cy="180" r="26" fill="rgba(6,182,212,0.10)"/>
+                    </g>
+                    <!-- puce centrale (carré centré) -->
+                    <rect x="200" y="120" width="120" height="120" rx="16" fill="#111"/>
+                    <circle cx="260" cy="180" r="16" fill="#fff" opacity="0.85"/>
+                    <path d="M252 176l6 6l10-10" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <!-- lignes -->
+                    <path id="l1" d="M200 180H90" class="flow-line" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+                    <path id="l2" d="M320 180H430" class="flow-line" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+                    <path id="l3" d="M260 120V90" class="flow-line" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+                    <path id="l4" d="M260 240v40" class="flow-line" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+
+                    <!-- paquets statiques (sans animation) -->
+                    <circle r="3" fill="#06B6D4" opacity="0.8" cx="150" cy="180"/>
+                    <circle r="3" fill="#8B5CF6" opacity="0.8" cx="400" cy="180"/>
+                    <circle r="3" fill="#06B6D4" opacity="0.8" cx="260" cy="105"/>
+                    <circle r="3" fill="#8B5CF6" opacity="0.8" cx="260" cy="255"/>
+                  </svg>
+                </div>
+              </div>
             </div>
+          </div>
+                </div>
+              </div>
+    </section>
+
+    <script>
+      // Accordéon simple
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggles = document.querySelectorAll('.acc-toggle');
+        toggles.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-acc');
+            const panel = document.getElementById(`panel-${id}`);
+            const icon = btn.querySelector('.acc-icon');
+            const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+            document.querySelectorAll('.acc-panel').forEach(p => { p.style.maxHeight = 0; p.style.opacity = 0; });
+            document.querySelectorAll('.acc-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+            if (!isOpen) {
+              panel.style.maxHeight = panel.scrollHeight + 'px';
+              panel.style.opacity = 1;
+              icon.style.transform = 'rotate(45deg)';
+            }
+          });
+        });
+
+        // lignes statiques
+        document.querySelectorAll('.flow-line').forEach((el) => {
+          el.style.strokeDasharray = '0 0';
+          el.style.animation = 'none';
+        });
+      });
+    </script>
+    <style>
+      .chip{display:inline-flex;padding:6px 10px;border:1px solid #e8e8e8;border-radius:9999px;font-size:12px;color:#6b6b6b;background:#fff}
+      .acc-panel{max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .3s ease}
+      /* animation supprimée */
+    </style>
+
+
+
+    <!-- MCP Creator - CTA bandeau -->
+    <section id="mcp-creator" class="py-10 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="rounded-2xl border border-border-subtle bg-white p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-text-primary">Commencer avec MCP Creator aujourd'hui</h3>
+            <p class="mt-1 text-sm text-text-secondary">Construisez, testez et déployez vos agents sur notre plateforme. OS-agnostique, API-agnostique.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <a href="https://creator.myfindora.com" target="_blank" class="inline-flex items-center justify-center px-4 py-2 rounded-md font-medium text-sm no-underline border bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent transition-all">Accéder à MCP Creator</a>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- MCP Creator - Modules clés (inspiré des cartes) -->
+    <section id="mcp-modules" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-text-primary">MCP Creator — modules clés</h2>
+          <p class="mt-3 text-base text-text-secondary">Assembler des workflows simples: Entrées → Agent → Sorties. Déploiement en un clic.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Entrée -->
+          <div class="rounded-2xl border border-border-subtle bg-white p-6">
+            <span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">ENTRÉE</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-primary">Sources multicanales</h3>
+            <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+              <li>✓ WhatsApp, Email, Web, API</li>
+              <li>✓ Webhooks & programmation d'événements</li>
+              <li>✓ Filtres & validation</li>
+            </ul>
+          </div>
+          <!-- Agent -->
+          <div class="rounded-2xl border border-border-subtle bg-white p-6">
+            <span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">AGENT</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-primary">Logique & Outils</h3>
+            <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+              <li>✓ Templates d'agent & création par prompt</li>
+              <li>✓ Intégrations API (REST), RAG/Recherche</li>
+              <li>✓ Variables sécurisées & modération</li>
+            </ul>
+          </div>
+          <!-- Sortie -->
+          <div class="rounded-2xl border border-border-subtle bg-white p-6">
+            <span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] font-medium bg-gray-100 text-gray-700">SORTIE</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-primary">Actions & Déploiement</h3>
+            <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+              <li>✓ Emails, messages, webhooks, fichiers</li>
+              <li>✓ Déploiement 1 clic (serveur Findora)</li>
+              <li>✓ Monitoring & logs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Scripts -->
     <script src="script.js"></script>
@@ -1285,5 +659,64 @@
         }
       });
     </script>
+    <style>
+      /* Navigation - Menu au survol (aligné sur index.html) */
+      .dropdown { position: relative; }
+      .dropdown-menu {
+        position: fixed;
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        box-shadow: 0 16px 64px rgba(22, 22, 22, 0.16);
+        padding: 48px;
+        width: 800px;
+        max-width: calc(100vw - 48px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+      }
+      .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .dropdown-section { border-right: 1px solid #e8e8e8; padding-right: 20px; text-align: left; }
+      .dropdown-section:last-child { border-right: none; padding-right: 0; }
+      .dropdown-item {
+        border-radius: 6px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 180px;
+        display: flex;
+        align-items: stretch;
+      }
+      .dropdown-link { display: flex; align-items: flex-start; gap: 20px; text-decoration: none; color: inherit; border-radius: 6px; width: 100%; min-height: 100%; }
+      .dropdown-icon-wrapper {
+        flex-shrink: 0; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: #161616; border-radius: 6px; color: #edece8; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); align-self: flex-start;
+      }
+      .dropdown-item:hover .dropdown-icon-wrapper { background: linear-gradient(135deg, #ffbd59 0%, #ffd280 100%); transform: scale(1.05); }
+      .dropdown-text h3 { font-size: 20px; font-weight: 700; color: #161616; font-family: "FindoraInter", sans-serif; letter-spacing: -0.01em; text-align: left; }
+      .dropdown-text p { font-size: 15px; color: #6b6b6b; margin-bottom: 12px; font-family: "FindoraRegular", sans-serif; line-height: 1.6; max-width: 280px; text-align: left; }
+      .dropdown-projects { width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+      .project-item { background: rgb(252, 252, 252); border: 1px solid #e8e8e8; border-radius: 6px; padding: 12px 16px; width: 100%; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-family: "FindoraInter", sans-serif; text-align: left; }
+      .project-item:hover { background: white; border-color: #ffbd59; transform: translateY(-2px); box-shadow: 0 2px 8px rgba(22, 22, 22, 0.08); }
+      .project-item h4 { font-size: 14px; font-weight: 600; color: #161616; margin-bottom: 4px; font-family: "FindoraInter", sans-serif; }
+      .project-item span { font-size: 12px; color: #9b9b9b; font-family: "FindoraRegular", sans-serif; line-height: 1.4; display: block; }
+      .dropdown-icon { transition: transform 0.2s ease; }
+      .dropdown:hover .dropdown-icon { transform: rotate(180deg); }
+      @media (max-width: 1024px) { .dropdown-menu { width: 600px; max-width: 90vw; } }
+      @media (max-width: 768px) {
+        .dropdown-menu { width: 350px; max-width: calc(100vw - 24px); padding: 24px; }
+        .dropdown-content { grid-template-columns: 1fr; gap: 20px; }
+        .dropdown-section { border-right: none; border-bottom: 1px solid #e8e8e8; padding-right: 0; padding-bottom: 20px; }
+        .dropdown-section:last-child { border-bottom: none; padding-bottom: 0; }
+      }
+    </style>
   </body>
 </html>
