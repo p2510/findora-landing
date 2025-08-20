@@ -98,12 +98,12 @@
 
         <!-- Menu Principal -->
         <div class="hidden md:flex items-center gap-8 relative">
+          <!-- Menu Open Source -->
           <div class="nav-item dropdown">
-            <button
+            <span
               class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
-              id="solutions-dropdown"
             >
-              Solutions
+              Open source
               <svg
                 class="dropdown-icon"
                 width="16"
@@ -119,62 +119,60 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
-            <div class="dropdown-menu" id="solutions-menu">
+            </span>
+
+            <div class="dropdown-menu">
               <div class="dropdown-content">
+                <!-- Agent de Voyage -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="open-source.html" class="dropdown-link">
+                    <a
+                      href="open-source.html#agent-voyage"
+                      class="dropdown-link"
+                    >
                       <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M12 2L2 7L12 12L22 7L12 2Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M2 17L12 22L22 17"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M2 12L12 17L22 12"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Open Source</h3>
-                              <p>Solutions ouvertes et gratuites</p>
-                            </div>
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 2L2 7L12 12L22 7L12 2Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M2 17L12 22L22 17"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M2 12L12 17L22 12"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
                           </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>Agent de Voyage</h4>
-                              <span>Temps réel et intelligent</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>
-                                <span class="tech-element">MCP Creator</span>
-                              </h4>
-                              <span>Créer et déployer par prompt</span>
-                            </div>
+                          <div>
+                            <h3>Agent de voyage</h3>
+                            <p>
+                              Accéder aux informations aériennes en temps réel.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>WhatsApp ouvert</span>
+                          </div>
+                          <div class="project-item">
+                            <h4>Information</h4>
+                            <span
+                              >Prix de billet, itinéraire, comparaison...</span
+                            >
                           </div>
                         </div>
                       </div>
@@ -182,95 +180,46 @@
                   </div>
                 </div>
 
+                <!-- MCP Creator -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="./agent-public.html" class="dropdown-link">
+                    <a
+                      href="open-source.html#mcp-creator"
+                      class="dropdown-link"
+                    >
                       <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  fill-rule="evenodd"
-                                  d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
-                                  clip-rule="evenodd"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Agent Public</h3>
-                              <p>IA accessible via plateformes</p>
-                            </div>
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
                           </div>
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>WhatsApp Agent IA</h4>
-                              <span>Conversation intelligente</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Web Interface</h4>
-                              <span>Accès universel</span>
-                            </div>
+                          <div>
+                            <h3>MCP Creator</h3>
+                            <p>
+                              Construire vos propres agents à partir de prompt.
+                            </p>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="dropdown-section">
-                  <div class="dropdown-item">
-                    <a href="agent-entreprise.html" class="dropdown-link">
-                      <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M13.58 13.79a6 6 0 0 1-7.16-3.58a6 6 0 1 0 7.16 3.58"
-                                  opacity="0.2"
-                                />
-                                <path
-                                  fill="currentColor"
-                                  d="M13.58 13.79c.271.684.42 1.43.42 2.21a6 6 0 0 1-2 4.472a6 6 0 1 0 5.58-10.262a6.01 6.01 0 0 1-4 3.58"
-                                  opacity="0.15"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Agent Entreprise</h3>
-                              <p>Optimisé pour cas d'usage</p>
-                            </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>Dashboard Findora</span>
                           </div>
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>Data Entry Agent</h4>
-                              <span>Saisie automatisée</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Web Research</h4>
-                              <span>Collecter les données</span>
-                            </div>
+                          <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span
+                              >Création d'agent, déploiement, amélioration</span
+                            >
                           </div>
                         </div>
                       </div>
@@ -281,14 +230,12 @@
             </div>
           </div>
 
-       
-
+          <!-- Menu Agents Publics -->
           <div class="nav-item dropdown">
-            <button
+            <span
               class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
-              id="ressources-dropdown"
             >
-              Ressources
+              Agents publics
               <svg
                 class="dropdown-icon"
                 width="16"
@@ -304,51 +251,51 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
-            <div class="dropdown-menu" id="ressources-menu">
+            </span>
+
+            <div class="dropdown-menu">
               <div class="dropdown-content">
+                <!-- WhatsApp AI Agent -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="#use-cases" class="dropdown-link">
+                    <a
+                      href="agent-public.html#whatsapp-agent"
+                      class="dropdown-link"
+                    >
                       <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M9 12L11 14L15 10"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Use Cases</h3>
-                              <p>Exemples d'utilisations</p>
-                            </div>
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                d="M21.302 13.163c.386 0 .698.312.698.697v.053c0 1.71 0 3.064-.142 4.123c-.147 1.09-.456 1.974-1.152 2.67s-1.58 1.005-2.67 1.152c-1.06.142-2.414.142-4.123.142h-.053a.698.698 0 0 1 0-1.395c1.774 0 3.034-.002 3.99-.13c.936-.126 1.476-.362 1.87-.756c.393-.393.629-.933.755-1.869c.128-.956.13-2.216.13-3.99c0-.385.312-.697.697-.697m-18.604 0c.385 0 .697.312.697.697c0 1.774.002 3.034.13 3.99c.126.936.362 1.476.756 1.87c.394.393.933.629 1.869.755c.956.128 2.216.13 3.99.13a.698.698 0 1 1 0 1.395h-.053c-1.71 0-3.064 0-4.123-.142c-1.09-.147-1.974-.456-2.67-1.152s-1.005-1.58-1.152-2.67C2 16.976 2 15.622 2 13.913v-.053c0-.385.312-.697.698-.697M10.087 2h.053a.698.698 0 1 1 0 1.395c-1.774 0-3.034.002-3.99.13c-.936.126-1.475.362-1.87.756c-.393.394-.629.933-.755 1.869c-.128.956-.13 2.216-.13 3.99a.698.698 0 0 1-1.395 0v-.053c0-1.71 0-3.064.142-4.123c.147-1.09.456-1.974 1.152-2.67s1.58-1.005 2.67-1.152C7.024 2 8.378 2 10.087 2m7.763 1.525c-.956-.128-2.216-.13-3.99-.13a.698.698 0 0 1 0-1.395h.053c1.71 0 3.064 0 4.123.142c1.09.147 1.974.456 2.67 1.152s1.005 1.58 1.152 2.67C22 7.024 22 8.378 22 10.087v.053a.698.698 0 1 1-1.395 0c0-1.774-.002-3.034-.13-3.99c-.126-.936-.362-1.475-.756-1.87c-.393-.393-.933-.629-1.869-.755"
+                                clip-rule="evenodd"
+                              />
+                              <path
+                                fill="currentColor"
+                                d="M10.373 10.43c0 .675-.364 1.222-.814 1.222s-.814-.547-.814-1.221s.365-1.221.814-1.221c.45 0 .814.547.814 1.22m4.884 0c0 .675-.365 1.222-.814 1.222c-.45 0-.814-.547-.814-1.221s.364-1.221.814-1.221s.814.547.814 1.22m-5.334 3.987a.61.61 0 0 0-.727.981a4.7 4.7 0 0 0 2.805.934a4.7 4.7 0 0 0 2.805-.934a.61.61 0 1 0-.727-.98a3.47 3.47 0 0 1-2.078.693c-.77 0-1.486-.254-2.078-.694"
+                              />
+                            </svg>
                           </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>E-commerce</h4>
-                              <span>Automatisation complète</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Support Client</h4>
-                              <span>Réponses intelligentes</span>
-                            </div>
+                          <div>
+                            <h3>WhatsApp AI Agent</h3>
+                            <p>Support client intelligent via WhatsApp.</p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>WhatsApp Business</span>
+                          </div>
+                          <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Réponses humanoïdes, support 24/7</span>
                           </div>
                         </div>
                       </div>
@@ -356,122 +303,59 @@
                   </div>
                 </div>
 
+                <!-- Web Interface -->
                 <div class="dropdown-section">
                   <div class="dropdown-item">
-                    <a href="#developers" class="dropdown-link">
+                    <a
+                      href="agent-public.html#web-public"
+                      class="dropdown-link"
+                    >
                       <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M16 18L22 12L16 6"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M8 6L2 12L8 18"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Développeurs</h3>
-                              <p>Outils et ressources techniques</p>
-                            </div>
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8 14S9.5 16 12 16S16 14 16 14"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9 9H9.01"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M15 9H15.01"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
                           </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>API Documentation</h4>
-                              <span>Guide complet</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>SDK & Libraries</h4>
-                              <span>Intégration rapide</span>
-                            </div>
+                          <div>
+                            <h3>Web Interface</h3>
+                            <p>
+                              Offrir une expérience conversationnelle sur votre site.
+                            </p>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="dropdown-section">
-                  <div class="dropdown-item">
-                    <a href="#docs" class="dropdown-link">
-                      <div class="dropdown-text">
-                        <div>
-                          <div class="flex gap-2">
-                            <div class="dropdown-icon-wrapper">
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M14 2V8H20"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M16 13H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M16 17H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M10 9H9H8"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </div>
-                            <div>
-                              <h3>Docs</h3>
-                              <p>Documentation complète</p>
-                            </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>Interface web dédiée</span>
                           </div>
-
-                          <div class="dropdown-projects">
-                            <div class="project-item">
-                              <h4>Guide de démarrage</h4>
-                              <span>Premiers pas</span>
-                            </div>
-                            <div class="project-item">
-                              <h4>Tutoriels</h4>
-                              <span>Apprentissage guidé</span>
-                            </div>
+                          <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Widget web personnalisable, enquête, historique...</span>
                           </div>
                         </div>
                       </div>
@@ -481,25 +365,159 @@
               </div>
             </div>
           </div>
-          <a
-          href="./blog.html"
-          class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
-          >Actualités & blogs</a
-        >
-          <a
-            href="contact.html"
-            class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 hover:text-accent hover:-translate-y-0.5"
-            >Contact</a
-          >
+
+          <!-- Menu Agents Privés -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Agents privés
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <!-- Data Entry Agent -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a
+                      href="agent-entreprise.html#data-entry"
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M14 2V8H20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 13H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 17H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Data Entry Agent</h3>
+                            <p>
+                              Automatisation des pipelines de saisie de données.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>Intégration CRM/ERP</span>
+                          </div>
+                          <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span
+                              >Analyse, synthèse, insertion automatique</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Web Research Agent -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <a
+                      href="agent-entreprise.html#web-research"
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <circle
+                                cx="11"
+                                cy="11"
+                                r="8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M21 21L16.65 16.65"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11 6C13.7614 6 16 8.23858 16 11"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Web Research Agent</h3>
+                            <p>
+                              Recherche approfondie et collecte d'informations
+                              web.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <div class="project-item">
+                            <h4>Accessibilité</h4>
+                            <span>En cours de développement</span>
+                          </div>
+                          <div class="project-item">
+                            <h4>Capacité</h4>
+                            <span>Deep research, synthèse business</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- CTA Buttons -->
         <div class="hidden md:flex items-center gap-3">
-          <a
-            href="contact.html"
-            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary hover:-translate-y-0.5 hover:shadow-lg"
-            >Contact</a
-          >
+    
           <a
             href="demo.html"
             class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
@@ -521,6 +539,7 @@
         </div>
       </div>
     </nav>
+          
 
     <!-- Hero épuré -->
     <section class="pt-32 pb-16 bg-white">
@@ -706,9 +725,354 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer
+      class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden"
+    >
+      <!-- Background decoration -->
+      <div class="footer-bg-decoration"></div>
 
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Section -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p
+              class="text-text-light mb-6 leading-relaxed font-findora-regular"
+            >
+              Construire un futur avec moins d'effort .
+            </p>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Open source
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="./open-source.html#agent-voyage" class="footer-link"
+                  >Agent de voyage</a
+                >
+              </li>
+              <li>
+                <a href="./agent-public.html#mcp-creator" class="footer-link"
+                  >MCP creator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ressources -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Agent public
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="agent-public.html#whatsapp-agent" class="footer-link">Whatsapp Agent IA</a>
+              </li>
+              <li>
+                <a href="agent-public.html#web-public" class="footer-link">Web interface</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Entreprise
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="agent-entreprise.html#data-entry" class="footer-link">Data Entry Agent</a>
+              </li>
+              <li>
+                <a href="agent-entreprise.html#web-research" class="footer-link">Web research</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <div
+            class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular"
+          >
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="#privacy" class="footer-link"
+              >Politique de confidentialité</a
+            >
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Elements -->
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    
+    <style>
+      /* Navigation - Menu au survol */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        position: fixed;
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        box-shadow: 0 16px 64px rgba(22, 22, 22, 0.16);
+        padding: 48px;
+        width: 800px;
+        max-width: calc(100vw - 48px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+      }
+
+      /* Affichage au survol */
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .dropdown-section {
+        border-right: 1px solid #e8e8e8;
+        padding-right: 20px;
+        text-align: left;
+      }
+
+      .dropdown-section:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      .dropdown-item {
+        border-radius: 6px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 180px;
+        display: flex;
+        align-items: stretch;
+      }
+
+      .dropdown-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 6px;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      .dropdown-icon-wrapper {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #161616;
+        border-radius: 6px;
+        color: #edece8;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        align-self: flex-start;
+      }
+
+      .dropdown-item:hover .dropdown-icon-wrapper {
+        background: linear-gradient(135deg, #ffbd59 0%, #ffd280 100%);
+        transform: scale(1.05);
+      }
+
+      .dropdown-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #161616;
+        font-family: "FindoraInter", sans-serif;
+        letter-spacing: -0.01em;
+        text-align: left;
+      }
+
+      .dropdown-text p {
+        font-size: 15px;
+        color: #6b6b6b;
+        margin-bottom: 12px;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.6;
+        max-width: 280px;
+        text-align: left;
+      }
+
+      .dropdown-projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .project-item {
+        background: rgb(252, 252, 252);
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        padding: 12px 16px;
+        width: 100%;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: "FindoraInter", sans-serif;
+        text-align: left;
+      }
+
+      .project-item:hover {
+        background: white;
+        border-color: #ffbd59;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(22, 22, 22, 0.08);
+      }
+
+      .project-item h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #161616;
+        margin-bottom: 4px;
+        font-family: "FindoraInter", sans-serif;
+      }
+
+      .project-item span {
+        font-size: 12px;
+        color: #9b9b9b;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.4;
+        display: block;
+      }
+
+      .dropdown-icon {
+        transition: transform 0.2s ease;
+      }
+
+      .dropdown:hover .dropdown-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .dropdown-menu {
+          width: 600px;
+          max-width: 90vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .dropdown-menu {
+          width: 350px;
+          max-width: calc(100vw - 24px);
+          padding: 24px;
+        }
+
+        .dropdown-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .dropdown-section {
+          border-right: none;
+          border-bottom: 1px solid #e8e8e8;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        .dropdown-section:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    </style>
+    
+    <script>
+      // JavaScript pour gérer les menus déroulants
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector('span');
+          const menu = dropdown.querySelector('.dropdown-menu');
+
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Fermer les autres menus
+            dropdowns.forEach((otherDropdown) => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove("active");
+              }
+            });
+
+            // Toggle le menu actuel
+            dropdown.classList.toggle("active");
+          });
+        });
+
+        // Fermer les menus quand on clique ailleurs
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -619,6 +619,126 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer
+      class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden"
+    >
+      <!-- Background decoration -->
+      <div class="footer-bg-decoration"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Section -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p
+              class="text-text-light mb-6 leading-relaxed font-findora-regular"
+            >
+              Construire un futur avec moins d'effort .
+            </p>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Open source
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="./open-source.html#agent-voyage" class="footer-link"
+                  >Agent de voyage</a
+                >
+              </li>
+              <li>
+                <a href="./agent-public.html#mcp-creator" class="footer-link"
+                  >MCP creator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ressources -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Agent public
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="agent-public.html#whatsapp-agent" class="footer-link">Whatsapp Agent IA</a>
+              </li>
+              <li>
+                <a href="agent-public.html#web-public" class="footer-link">Web interface</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Entreprise
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="agent-entreprise.html#data-entry" class="footer-link">Data Entry Agent</a>
+              </li>
+              <li>
+                <a href="agent-entreprise.html#web-research" class="footer-link">Web research</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <div
+            class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular"
+          >
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="#privacy" class="footer-link"
+              >Politique de confidentialité</a
+            >
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Elements -->
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
@@ -718,5 +838,43 @@
         .dropdown-section:last-child { border-bottom: none; padding-bottom: 0; }
       }
     </style>
+    
+    <script src="script.js"></script>
+    
+    <script>
+      // JavaScript pour gérer les menus déroulants
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector('span');
+          const menu = dropdown.querySelector('.dropdown-menu');
+
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Fermer les autres menus
+            dropdowns.forEach((otherDropdown) => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove("active");
+              }
+            });
+
+            // Toggle le menu actuel
+            dropdown.classList.toggle("active");
+          });
+        });
+
+        // Fermer les menus quand on clique ailleurs
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
