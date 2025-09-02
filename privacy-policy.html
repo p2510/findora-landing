@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité - Findora</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité de Findora. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: {
+              18: "4.5rem",
+              25: "6.25rem",
+              72: "18rem",
+              84: "21rem",
+              96: "24rem",
+            },
+            borderRadius: {
+              xl: "12px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="logo-svg"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="logo-text text-xl font-bold text-primary tracking-tight relative">Findora</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-text-primary hover:text-accent transition-colors duration-300 font-medium text-sm">Accueil</a>
+          <a href="open-source.html" class="text-text-primary hover:text-accent transition-colors duration-300 font-medium text-sm">Open Source</a>
+          <a href="agent-public.html" class="text-text-primary hover:text-accent transition-colors duration-300 font-medium text-sm">Agents Publics</a>
+          <a href="agent-entreprise.html" class="text-text-primary hover:text-accent transition-colors duration-300 font-medium text-sm">Entreprise</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="demo.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+          >Demander une démo</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+      <!-- Header Section -->
+      <section class="bg-gray-50 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-center">
+            <h1 class="text-4xl lg:text-5xl font-extrabold mb-6 text-text-primary tracking-tight font-findora-inter">
+              Politique de confidentialité
+            </h1>
+            <p class="text-xl text-text-secondary mb-8 font-findora-regular max-w-2xl mx-auto">
+              Chez Findora, nous nous engageons à protéger votre vie privée et à être transparents sur la façon dont nous collectons, utilisons et protégeons vos informations.
+            </p>
+            <div class="text-sm text-text-light font-findora-regular">
+              Dernière mise à jour : 2 septembre 2025
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="prose prose-lg max-w-none">
+            
+            <!-- Introduction -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Introduction</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  La présente Politique de confidentialité décrit comment Findora (« nous », « notre » ou « nos ») 
+                  collecte, utilise, divulgue et protège vos informations lorsque vous utilisez nos services, 
+                  y compris notre site web, nos agents IA et nos applications.
+                </p>
+                <p>
+                  En utilisant nos services, vous acceptez les pratiques décrites dans cette politique. 
+                  Si vous n'acceptez pas cette politique, veuillez ne pas utiliser nos services.
+                </p>
+              </div>
+            </div>
+
+            <!-- Informations collectées -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Informations que nous collectons</h2>
+              <div class="text-text-secondary font-findora-regular space-y-6">
+                
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Informations que vous nous fournissez</h3>
+                  <ul class="list-disc pl-6 space-y-2">
+                    <li>Informations de compte (nom, adresse e-mail, mot de passe)</li>
+                    <li>Informations de profil et préférences</li>
+                    <li>Communications avec nos agents IA (messages, requêtes)</li>
+                    <li>Informations de contact et de support client</li>
+                    <li>Informations de facturation et de paiement</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Informations collectées automatiquement</h3>
+                  <ul class="list-disc pl-6 space-y-2">
+                    <li>Données d'utilisation (pages visitées, fonctionnalités utilisées)</li>
+                    <li>Informations techniques (adresse IP, type de navigateur, système d'exploitation)</li>
+                    <li>Cookies et technologies similaires</li>
+                    <li>Données de performance et d'analyse</li>
+                    <li>Journaux d'accès et d'erreurs</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Informations provenant de tiers</h3>
+                  <ul class="list-disc pl-6 space-y-2">
+                    <li>Données d'authentification via des services tiers (Google, GitHub, etc.)</li>
+                    <li>Informations publiques provenant de réseaux sociaux</li>
+                    <li>Données d'intégration avec des plateformes partenaires</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comment nous utilisons vos informations -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Comment nous utilisons vos informations</h2>
+              <div class="text-text-secondary font-findora-regular">
+                <p class="mb-4">Nous utilisons les informations collectées pour :</p>
+                <ul class="list-disc pl-6 space-y-2">
+                  <li>Fournir et améliorer nos services d'agents IA</li>
+                  <li>Personnaliser votre expérience utilisateur</li>
+                  <li>Traiter les transactions et gérer votre compte</li>
+                  <li>Communiquer avec vous sur nos services</li>
+                  <li>Fournir un support client et technique</li>
+                  <li>Analyser l'utilisation pour améliorer nos produits</li>
+                  <li>Détecter et prévenir les fraudes et abus</li>
+                  <li>Respecter nos obligations légales</li>
+                  <li>Développer de nouvelles fonctionnalités et services</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Partage et divulgation -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Partage et divulgation de vos informations</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Nous ne vendons pas vos informations personnelles. Nous pouvons partager vos informations dans les cas suivants :
+                </p>
+                
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Prestataires de services</h3>
+                  <p>Avec des fournisseurs tiers qui nous aident à fournir nos services (hébergement, analyse, support client).</p>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Obligations légales</h3>
+                  <p>Lorsque requis par la loi, une ordonnance du tribunal ou une demande gouvernementale valide.</p>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Protection des droits</h3>
+                  <p>Pour protéger nos droits, notre propriété, ou la sécurité de nos utilisateurs.</p>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Transactions commerciales</h3>
+                  <p>En cas de fusion, acquisition ou vente d'actifs, avec notification préalable.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sécurité des données -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Sécurité des données</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Nous prenons la sécurité de vos données très au sérieux et mettons en place des mesures techniques et organisationnelles appropriées :
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                  <li>Chiffrement des données en transit et au repos</li>
+                  <li>Contrôles d'accès stricts et authentification multi-facteurs</li>
+                  <li>Surveillance et détection des incidents de sécurité</li>
+                  <li>Audits de sécurité réguliers</li>
+                  <li>Formation continue de notre équipe sur la sécurité</li>
+                  <li>Sauvegarde et récupération des données</li>
+                </ul>
+                <p class="mt-4">
+                  Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est 100% sécurisée. 
+                  Nous ne pouvons garantir une sécurité absolue.
+                </p>
+              </div>
+            </div>
+
+            <!-- Conservation des données -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Conservation des données</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Nous conservons vos informations personnelles aussi longtemps que nécessaire pour :
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                  <li>Fournir nos services et maintenir votre compte</li>
+                  <li>Respecter nos obligations légales et réglementaires</li>
+                  <li>Résoudre les litiges et faire respecter nos accords</li>
+                  <li>Améliorer nos services et développer de nouvelles fonctionnalités</li>
+                </ul>
+                <p>
+                  Lorsque nous n'avons plus besoin de vos données, nous les supprimons de manière sécurisée ou les anonymisons.
+                </p>
+              </div>
+            </div>
+
+            <!-- Vos droits -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Vos droits</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Selon votre localisation, vous pouvez avoir les droits suivants concernant vos données personnelles :
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                  <li><strong>Droit d'accès :</strong> Obtenir une copie des données que nous détenons sur vous</li>
+                  <li><strong>Droit de rectification :</strong> Corriger les données inexactes ou incomplètes</li>
+                  <li><strong>Droit d'effacement :</strong> Demander la suppression de vos données</li>
+                  <li><strong>Droit à la limitation :</strong> Restreindre le traitement de vos données</li>
+                  <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré</li>
+                  <li><strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données</li>
+                  <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
+                </ul>
+                <p>
+                  Pour exercer ces droits, contactez-nous à l'adresse : <a href="mailto:contact@myfindora.com" class="text-accent hover:underline">contact@myfindora.com</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Cookies et technologies similaires -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Cookies et technologies similaires</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience :
+                </p>
+                
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Types de cookies</h3>
+                  <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site</li>
+                    <li><strong>Cookies de performance :</strong> Pour analyser l'utilisation du site</li>
+                    <li><strong>Cookies de fonctionnalité :</strong> Pour mémoriser vos préférences</li>
+                    <li><strong>Cookies marketing :</strong> Pour personnaliser la publicité (avec votre consentement)</li>
+                  </ul>
+                </div>
+
+                <p>
+                  Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur ou notre bannière de cookies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Transferts internationaux -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Transferts internationaux</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Vos informations peuvent être transférées et traitées dans des pays autres que votre pays de résidence. 
+                  Nous nous assurons que ces transferts sont effectués conformément aux lois applicables sur la protection des données 
+                  et avec des garanties appropriées pour protéger vos informations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Services spécialisés -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Traitement des données pour nos services IA</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Concernant nos agents IA spécifiques :
+                </p>
+                
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Agent WhatsApp</h3>
+                  <p>Les conversations sont chiffrées et traitées uniquement pour fournir des réponses appropriées. Nous ne stockons pas le contenu des messages au-delà de la durée nécessaire au traitement.</p>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Agent de voyage</h3>
+                  <p>Les requêtes de recherche sont utilisées pour fournir des informations de voyage actualisées. Les préférences peuvent être sauvegardées pour améliorer les recommandations futures.</p>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-text-primary mb-3 font-findora-inter">Agents d'entreprise</h3>
+                  <p>Les données d'entreprise sont traitées selon des accords de traitement des données spécifiques et ne sont jamais utilisées pour entraîner nos modèles IA généraux.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modifications -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Modifications de cette politique</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Nous pouvons mettre à jour cette Politique de confidentialité de temps à autre. 
+                  Nous vous informerons des modifications importantes par e-mail ou via un avis sur notre site web. 
+                  Les modifications entrent en vigueur dès leur publication.
+                </p>
+                <p>
+                  Nous vous encourageons à consulter régulièrement cette politique pour rester informé de nos pratiques de confidentialité.
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mb-12">
+              <h2 class="text-2xl font-bold text-text-primary mb-6 font-findora-inter">Nous contacter</h2>
+              <div class="text-text-secondary font-findora-regular space-y-4">
+                <p>
+                  Si vous avez des questions concernant cette Politique de confidentialité ou nos pratiques de traitement des données, 
+                  n'hésitez pas à nous contacter :
+                </p>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                  <h3 class="text-lg font-semibold text-text-primary mb-4 font-findora-inter">Informations de contact</h3>
+                  <div class="space-y-2">
+                    <p><strong>E-mail :</strong> <a href="mailto:contact@myfindora.com" class="text-accent hover:underline">contact@myfindora.com</a></p>
+                    <p><strong>Support général :</strong> <a href="mailto:support@findora.com" class="text-accent hover:underline">support@findora.com</a></p>
+                    <p><strong>Site web :</strong> <a href="https://console.myfindora.com" class="text-accent hover:underline">https://console.myfindora.com</a></p>
+                  </div>
+                </div>
+                
+                <p class="text-sm text-text-light">
+                  Nous nous efforçons de répondre à toutes les demandes dans les plus brefs délais, généralement dans les 30 jours.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <!-- Brand Section -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p class="text-text-light mb-6 leading-relaxed font-findora-regular">
+              Construire un futur avec moins d'effort.
+            </p>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Open source</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="./open-source.html#agent-voyage" class="footer-link">Agent de voyage</a></li>
+              <li><a href="./open-source.html#mcp-creator" class="footer-link">MCP creator</a></li>
+            </ul>
+          </div>
+
+          <!-- Ressources -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Agent public</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="agent-public.html#whatsapp-agent" class="footer-link">WhatsApp Agent IA</a></li>
+              <li><a href="agent-public.html#web-public" class="footer-link">Web interface</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Entreprise</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="agent-entreprise.html#data-entry" class="footer-link">Data Entry Agent</a></li>
+              <li><a href="agent-entreprise.html#web-research" class="footer-link">Web research</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular">
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="privacy-policy.html" class="footer-link">Politique de confidentialité</a>
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
