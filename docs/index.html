@@ -30,63 +30,796 @@
           <nav class="text-sm">
             <div class="mb-3 text-xs font-semibold text-text-light uppercase">Documentation</div>
             <ul class="space-y-2">
-              <li><a href="./index.html" class="text-text-primary">Introduction</a></li>
-              <li><a href="./authentification.html" class="text-text-secondary hover:text-text-primary">Authentification</a></li>
-              <li><a href="./quickstart.html" class="text-text-secondary hover:text-text-primary">Quickstart</a></li>
+              <li><a href="#introduction" class="text-text-primary hover:text-accent">Introduction</a></li>
+              <li><a href="#authentification" class="text-text-secondary hover:text-text-primary">Authentification</a></li>
+              <li><a href="#quickstart" class="text-text-secondary hover:text-text-primary">Quickstart</a></li>
             </ul>
             <div class="mt-6 mb-3 text-xs font-semibold text-text-light uppercase">API</div>
             <ul class="space-y-2">
+              <li><a href="#agents" class="text-text-secondary hover:text-text-primary">Agents</a></li>
               <li><a href="#messages" class="text-text-secondary hover:text-text-primary">Messages</a></li>
               <li><a href="#fichiers" class="text-text-secondary hover:text-text-primary">Fichiers</a></li>
               <li><a href="#sessions" class="text-text-secondary hover:text-text-primary">Sessions</a></li>
+              <li><a href="#webhooks" class="text-text-secondary hover:text-text-primary">Webhooks</a></li>
+            </ul>
+            <div class="mt-6 mb-3 text-xs font-semibold text-text-light uppercase">Référence</div>
+            <ul class="space-y-2">
+              <li><a href="#erreurs" class="text-text-secondary hover:text-text-primary">Codes d'erreur</a></li>
+              <li><a href="#limites" class="text-text-secondary hover:text-text-primary">Limites & Quotas</a></li>
+              <li><a href="#sdks" class="text-text-secondary hover:text-text-primary">SDKs & Librairies</a></li>
             </ul>
           </nav>
         </aside>
 
         <article class="min-w-0">
-          <header class="mb-8">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Docs</span>
-            <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight">Bienvenue</h1>
-            <p class="mt-3 text-lg text-text-secondary max-w-3xl">Cette documentation présente comment intégrer un agent Findora: clés API, endpoints, webhooks et bonnes pratiques.</p>
-          </header>
-          <section class="mb-10">
-            <h2 class="text-2xl font-extrabold">Ce que vous pouvez faire</h2>
-            <ul class="mt-3 space-y-2 text-text-secondary"><li>• Envoyer des messages à un agent et lire les réponses</li><li>• Ajouter des fichiers pour enrichir le contexte</li><li>• Suivre les sessions et recevoir des webhooks d’événements</li></ul>
-          </section>
-          <section id="messages" class="mb-14">
-            <h2 class="text-2xl font-extrabold">Messages</h2>
-            <p class="mt-3 text-text-secondary">Envoyer un message à un agent et récupérer sa réponse (POST /v1/messages).</p>
-            <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
-              <div class="font-semibold">Exemple cURL</div>
-              <pre class="mt-2 overflow-auto bg-secondary p-3 rounded"><code>curl -X POST https://api.findora.ai/v1/messages \
--H "Authorization: Bearer $FINDORA_API_KEY" \
--H "Content-Type: application/json" \
--d '{"agent_id":"agent_123","input":{"type":"text","text":"Bonjour !"}}'</code></pre>
+          <!-- INTRODUCTION -->
+          <section id="introduction" class="mb-16">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Docs</span>
+              <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight">Bienvenue</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Cette documentation présente comment intégrer un agent Findora: clés API, endpoints, webhooks et bonnes pratiques.</p>
+            </header>
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Ce que vous pouvez faire</h2>
+              <ul class="mt-3 space-y-2 text-text-secondary">
+                <li>• Envoyer des messages à un agent et lire les réponses</li>
+                <li>• Ajouter des fichiers pour enrichir le contexte</li>
+                <li>• Suivre les sessions et recevoir des webhooks d'événements</li>
+              </ul>
             </div>
           </section>
-          <section id="fichiers" class="mb-14">
-            <h2 class="text-2xl font-extrabold">Fichiers</h2>
-            <p class="mt-3 text-text-secondary">Uploader un fichier (POST /v1/files).</p>
-            <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
-              <div class="font-semibold">Exemple cURL</div>
-              <pre class="mt-2 overflow-auto bg-secondary p-3 rounded"><code>curl -X POST https://api.findora.ai/v1/files \
--H "Authorization: Bearer $FINDORA_API_KEY" \
--F "file=@/chemin/vers/document.pdf" \
--F "purpose=knowledge"</code></pre>
+
+          <!-- AUTHENTIFICATION -->
+          <section id="authentification" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Auth</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Authentification</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Utilisez une clé API secrète via l'entête Bearer. Ne l'exposez jamais côté client.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-semibold">Entêtes</h2>
+              <pre class="mt-4 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>Authorization: Bearer &lt;VOTRE_CLE_API&gt;
+Content-Type: application/json</code></pre>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-semibold">Bonnes pratiques</h2>
+              <ul class="mt-3 space-y-2 text-text-secondary">
+                <li>• Variables d'environnement (<code>FINDORA_API_KEY</code>)</li>
+                <li>• Clés distinctes par environnement (dev, staging, prod)</li>
+                <li>• Rotation régulière, révocation immédiate en cas d'exposition</li>
+                <li>• Jamais côté navigateur: proxifiez depuis votre backend</li>
+              </ul>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-semibold">Exemples</h2>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">cURL</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>curl -X POST https://api.findora.ai/v1/messages \
+  -H "Authorization: Bearer $FINDORA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"agentId":"agt_123","sessionId":"sess_abc","content":"Bonjour"}'</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">JavaScript</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>await fetch('https://api.findora.ai/v1/messages', {
+  method: 'POST',
+  headers: {
+    Authorization: `Bearer ${process.env.FINDORA_API_KEY}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    agentId: 'agt_123',
+    sessionId: 'sess_abc',
+    content: 'Bonjour'
+  }),
+});</code></pre>
+                </div>
+              </div>
             </div>
           </section>
-          <section id="sessions" class="mb-4">
-            <h2 class="text-2xl font-extrabold">Sessions</h2>
-            <p class="mt-3 text-text-secondary">Lister et clore des sessions (GET /v1/sessions, POST /v1/sessions/close).</p>
-            <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
-              <div class="font-semibold">Lister (cURL)</div>
-              <pre class="mt-2 overflow-auto bg-secondary p-3 rounded"><code>curl -H "Authorization: Bearer $FINDORA_API_KEY" https://api.findora.ai/v1/sessions</code></pre>
+
+          <!-- QUICKSTART -->
+          <section id="quickstart" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Quickstart</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Votre premier message</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Envoyez un message à un agent et obtenez une réponse en quelques lignes.</p>
+            </header>
+
+            <ol class="list-decimal pl-6 space-y-4 text-text-secondary mb-6">
+              <li>Créer un agent dans Findora et récupérer une clé API.</li>
+              <li>Appeler l'endpoint <strong>POST /v1/messages</strong> avec <code>agentId</code>, <code>sessionId</code> et <code>content</code>.</li>
+              <li>Lire la réponse JSON (<code>answer</code>, <code>status</code>).</li>
+            </ol>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="font-semibold">cURL</div>
+                <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>curl -X POST https://api.findora.ai/v1/messages \
+  -H "Authorization: Bearer $FINDORA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "agentId": "agt_123",
+    "sessionId": "sess_abc",
+    "content": "Bonjour"
+  }'</code></pre>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="font-semibold">JavaScript</div>
+                <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>const res = await fetch('https://api.findora.ai/v1/messages', {
+  method: 'POST',
+  headers: {
+    Authorization: `Bearer ${process.env.FINDORA_API_KEY}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    agentId: 'agt_123',
+    sessionId: 'sess_abc',
+    content: 'Bonjour'
+  }),
+});
+const data = await res.json();</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <!-- API AGENTS -->
+          <section id="agents" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">API</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Agents</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Créer, configurer et gérer vos agents IA.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">GET /v1/agents</h2>
+              <p class="mt-2 text-text-secondary text-sm">Liste tous vos agents disponibles.</p>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>[
+  {
+    "id": "agt_123",
+    "name": "Agent Commercial",
+    "status": "active",
+    "createdAt": "2025-01-15T10:00:00Z"
+  }
+]</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">POST /v1/agents</h2>
+              <p class="mt-2 text-text-secondary text-sm">Créer un nouvel agent.</p>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Requête</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "name": "Mon Agent",
+  "instructions": "Tu es un assistant commercial...",
+  "model": "gpt-4",
+  "temperature": 0.7
+}</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "id": "agt_456",
+  "name": "Mon Agent",
+  "status": "active"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">GET /v1/agents/:id</h2>
+              <p class="mt-2 text-text-secondary text-sm">Récupérer les détails d'un agent spécifique.</p>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "id": "agt_123",
+  "name": "Agent Commercial",
+  "instructions": "...",
+  "model": "gpt-4",
+  "temperature": 0.7,
+  "status": "active"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">PATCH /v1/agents/:id</h2>
+              <p class="mt-2 text-text-secondary text-sm">Mettre à jour la configuration d'un agent.</p>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Requête</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "name": "Nouveau nom",
+  "temperature": 0.5
+}</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "id": "agt_123",
+  "name": "Nouveau nom",
+  "temperature": 0.5
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">DELETE /v1/agents/:id</h2>
+              <p class="mt-2 text-text-secondary text-sm">Supprimer un agent (action irréversible).</p>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "deleted": true,
+  "id": "agt_123"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- API MESSAGES -->
+          <section id="messages" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">API</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Messages</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Envoyer un message à un agent et récupérer la réponse structurée.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">POST /v1/messages</h2>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Requête</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "agentId": "agt_123",
+  "sessionId": "sess_abc",
+  "content": "Bonjour"
+}</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "id": "msg_001",
+  "sessionId": "sess_abc",
+  "status": "completed",
+  "answer": "Bonjour, comment puis‑je aider ?"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- API FICHIERS -->
+          <section id="fichiers" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">API</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Fichiers</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Uploader un fichier pour le contexte: PDF, image, tableur.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">POST /v1/files</h2>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Requête</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>Content-Type: multipart/form-data
+file=@mon.pdf</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "id": "file_001",
+  "status": "ready"
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- API SESSIONS -->
+          <section id="sessions" class="mb-4 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">API</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Sessions</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Lister les sessions ouvertes et fermer une session quand elle n'est plus utile.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">GET /v1/sessions</h2>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>[
+  {
+    "id": "sess_abc",
+    "createdAt": "..."
+  }
+]</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">POST /v1/sessions/close</h2>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Requête</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "sessionId": "sess_abc"
+}</code></pre>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold">Réponse</div>
+                  <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "ok": true
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- API WEBHOOKS -->
+          <section id="webhooks" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">API</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Webhooks</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Recevez des notifications en temps réel sur les événements de vos agents.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Configuration</h2>
+              <p class="mt-2 text-text-secondary text-sm">Configurez une URL de webhook dans votre dashboard pour recevoir les événements.</p>
+              <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
+                <div class="font-semibold">Structure d'un événement</div>
+                <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "event": "message.completed",
+  "timestamp": "2025-01-15T10:30:00Z",
+  "data": {
+    "messageId": "msg_001",
+    "sessionId": "sess_abc",
+    "agentId": "agt_123",
+    "status": "completed"
+  }
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Types d'événements</h2>
+              <div class="mt-4 space-y-3">
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">message.created</code>
+                  <p class="text-sm text-text-secondary mt-1">Un nouveau message a été créé</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">message.completed</code>
+                  <p class="text-sm text-text-secondary mt-1">L'agent a terminé de répondre</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">message.failed</code>
+                  <p class="text-sm text-text-secondary mt-1">Une erreur s'est produite lors du traitement</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">session.created</code>
+                  <p class="text-sm text-text-secondary mt-1">Une nouvelle session a été ouverte</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">session.closed</code>
+                  <p class="text-sm text-text-secondary mt-1">Une session a été fermée</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <code class="font-semibold text-accent">file.uploaded</code>
+                  <p class="text-sm text-text-secondary mt-1">Un fichier a été uploadé avec succès</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Sécurité</h2>
+              <p class="mt-2 text-text-secondary text-sm">Chaque webhook inclut une signature HMAC dans l'entête <code>X-Findora-Signature</code> pour vérifier l'authenticité.</p>
+              <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
+                <div class="font-semibold">Vérification (Node.js)</div>
+                <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>const crypto = require('crypto');
+
+function verifyWebhook(payload, signature, secret) {
+  const hash = crypto
+    .createHmac('sha256', secret)
+    .update(JSON.stringify(payload))
+    .digest('hex');
+  return hash === signature;
+}</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <!-- CODES D'ERREUR -->
+          <section id="erreurs" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Référence</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Codes d'erreur</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Comprendre et gérer les erreurs de l'API Findora.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Structure d'erreur</h2>
+              <div class="mt-4 rounded-xl border border-border-subtle p-5 bg-white text-sm">
+                <pre class="mt-2 bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>{
+  "error": {
+    "code": "invalid_request",
+    "message": "Le champ 'agentId' est requis",
+    "param": "agentId",
+    "type": "validation_error"
+  }
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Codes HTTP</h2>
+              <div class="mt-4 space-y-3">
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-green-600">200</code>
+                    <span class="font-semibold">OK</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">La requête a réussi</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-yellow-600">400</code>
+                    <span class="font-semibold">Bad Request</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Paramètres invalides ou manquants</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-red-600">401</code>
+                    <span class="font-semibold">Unauthorized</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Clé API invalide ou expirée</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-red-600">403</code>
+                    <span class="font-semibold">Forbidden</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Accès refusé à cette ressource</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-orange-600">404</code>
+                    <span class="font-semibold">Not Found</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Ressource introuvable</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-yellow-600">429</code>
+                    <span class="font-semibold">Too Many Requests</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Limite de taux dépassée</p>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white">
+                  <div class="flex items-center gap-3">
+                    <code class="font-semibold text-red-600">500</code>
+                    <span class="font-semibold">Internal Server Error</span>
+                  </div>
+                  <p class="text-sm text-text-secondary mt-1">Erreur serveur interne</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Codes d'erreur spécifiques</h2>
+              <div class="mt-4 overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                  <thead>
+                    <tr class="border-b border-border-subtle">
+                      <th class="text-left py-3 px-4 font-semibold">Code</th>
+                      <th class="text-left py-3 px-4 font-semibold">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>invalid_api_key</code></td>
+                      <td class="py-3 px-4 text-text-secondary">La clé API fournie est invalide</td>
+                    </tr>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>agent_not_found</code></td>
+                      <td class="py-3 px-4 text-text-secondary">L'agent spécifié n'existe pas</td>
+                    </tr>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>session_expired</code></td>
+                      <td class="py-3 px-4 text-text-secondary">La session a expiré (>24h d'inactivité)</td>
+                    </tr>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>file_too_large</code></td>
+                      <td class="py-3 px-4 text-text-secondary">Le fichier dépasse la taille maximale (50MB)</td>
+                    </tr>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>rate_limit_exceeded</code></td>
+                      <td class="py-3 px-4 text-text-secondary">Trop de requêtes en peu de temps</td>
+                    </tr>
+                    <tr class="border-b border-border-subtle">
+                      <td class="py-3 px-4"><code>quota_exceeded</code></td>
+                      <td class="py-3 px-4 text-text-secondary">Quota mensuel de messages dépassé</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- LIMITES & QUOTAS -->
+          <section id="limites" class="mb-16 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Référence</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">Limites & Quotas</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Comprendre les limites d'utilisation de l'API.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Rate Limiting</h2>
+              <p class="mt-2 text-text-secondary text-sm">Nombre maximum de requêtes par période de temps.</p>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white text-center">
+                  <div class="text-3xl font-extrabold text-accent">60</div>
+                  <div class="text-sm text-text-secondary mt-1">requêtes / minute</div>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white text-center">
+                  <div class="text-3xl font-extrabold text-accent">1000</div>
+                  <div class="text-sm text-text-secondary mt-1">requêtes / heure</div>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white text-center">
+                  <div class="text-3xl font-extrabold text-accent">50k</div>
+                  <div class="text-sm text-text-secondary mt-1">requêtes / jour</div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-text-secondary">Les entêtes de réponse incluent: <code>X-RateLimit-Limit</code>, <code>X-RateLimit-Remaining</code>, <code>X-RateLimit-Reset</code></p>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Tailles maximales</h2>
+              <div class="mt-4 space-y-3">
+                <div class="rounded-xl border border-border-subtle p-4 bg-white flex justify-between items-center">
+                  <span class="font-semibold">Message texte</span>
+                  <code class="text-accent">32,000 caractères</code>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white flex justify-between items-center">
+                  <span class="font-semibold">Upload fichier</span>
+                  <code class="text-accent">50 MB</code>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white flex justify-between items-center">
+                  <span class="font-semibold">Messages par session</span>
+                  <code class="text-accent">1,000 messages</code>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-4 bg-white flex justify-between items-center">
+                  <span class="font-semibold">Durée de session</span>
+                  <code class="text-accent">24 heures</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Quotas mensuels</h2>
+              <p class="mt-2 text-text-secondary text-sm">Selon votre plan d'abonnement.</p>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold text-lg">Starter</div>
+                  <div class="text-3xl font-extrabold text-primary mt-2">10k</div>
+                  <div class="text-sm text-text-secondary mt-1">messages / mois</div>
+                  <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+                    <li>• 3 agents max</li>
+                    <li>• Support email</li>
+                    <li>• Webhooks basiques</li>
+                  </ul>
+                </div>
+                <div class="rounded-xl border-2 border-accent p-5 bg-white relative">
+                  <div class="absolute -top-3 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">Populaire</div>
+                  <div class="font-semibold text-lg">Pro</div>
+                  <div class="text-3xl font-extrabold text-primary mt-2">100k</div>
+                  <div class="text-sm text-text-secondary mt-1">messages / mois</div>
+                  <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+                    <li>• Agents illimités</li>
+                    <li>• Support prioritaire</li>
+                    <li>• Webhooks avancés</li>
+                  </ul>
+                </div>
+                <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                  <div class="font-semibold text-lg">Enterprise</div>
+                  <div class="text-3xl font-extrabold text-primary mt-2">Custom</div>
+                  <div class="text-sm text-text-secondary mt-1">selon vos besoins</div>
+                  <ul class="mt-4 space-y-2 text-sm text-text-secondary">
+                    <li>• Volume sur mesure</li>
+                    <li>• Support dédié</li>
+                    <li>• SLA personnalisé</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SDKS & LIBRAIRIES -->
+          <section id="sdks" class="mb-4 scroll-mt-24">
+            <header class="mb-8">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Référence</span>
+              <h1 class="mt-5 text-3xl lg:text-4xl font-extrabold tracking-tight">SDKs & Librairies</h1>
+              <p class="mt-3 text-lg text-text-secondary max-w-3xl">Intégrez Findora facilement avec nos librairies officielles.</p>
+            </header>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Librairies officielles</h2>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-xl border border-border-subtle p-6 bg-white">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center font-bold text-yellow-700">JS</div>
+                    <div>
+                      <div class="font-semibold text-lg">JavaScript / TypeScript</div>
+                      <div class="text-xs text-text-light">Node.js 16+</div>
+                    </div>
+                  </div>
+                  <pre class="bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>npm install @findora/sdk
+
+import { Findora } from '@findora/sdk';
+
+const client = new Findora({
+  apiKey: process.env.FINDORA_API_KEY
+});
+
+const response = await client.messages.create({
+  agentId: 'agt_123',
+  sessionId: 'sess_abc',
+  content: 'Hello'
+});</code></pre>
+                </div>
+
+                <div class="rounded-xl border border-border-subtle p-6 bg-white">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center font-bold text-blue-700">PY</div>
+                    <div>
+                      <div class="font-semibold text-lg">Python</div>
+                      <div class="text-xs text-text-light">Python 3.8+</div>
+                    </div>
+                  </div>
+                  <pre class="bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>pip install findora
+
+from findora import Findora
+
+client = Findora(
+    api_key=os.environ['FINDORA_API_KEY']
+)
+
+response = client.messages.create(
+    agent_id='agt_123',
+    session_id='sess_abc',
+    content='Hello'
+)</code></pre>
+                </div>
+
+                <div class="rounded-xl border border-border-subtle p-6 bg-white">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center font-bold text-purple-700">GO</div>
+                    <div>
+                      <div class="font-semibold text-lg">Go</div>
+                      <div class="text-xs text-text-light">Go 1.19+</div>
+                    </div>
+                  </div>
+                  <pre class="bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>go get github.com/findora/findora-go
+
+import "github.com/findora/findora-go"
+
+client := findora.NewClient(
+    os.Getenv("FINDORA_API_KEY"),
+)
+
+resp, err := client.Messages.Create(ctx, &findora.MessageCreateParams{
+    AgentID: "agt_123",
+    SessionID: "sess_abc",
+    Content: "Hello",
+})</code></pre>
+                </div>
+
+                <div class="rounded-xl border border-border-subtle p-6 bg-white">
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center font-bold text-red-700">RB</div>
+                    <div>
+                      <div class="font-semibold text-lg">Ruby</div>
+                      <div class="text-xs text-text-light">Ruby 3.0+</div>
+                    </div>
+                  </div>
+                  <pre class="bg-gray-50 border border-border-subtle rounded-lg p-4 text-xs overflow-auto"><code>gem install findora
+
+require 'findora'
+
+client = Findora::Client.new(
+  api_key: ENV['FINDORA_API_KEY']
+)
+
+response = client.messages.create(
+  agent_id: 'agt_123',
+  session_id: 'sess_abc',
+  content: 'Hello'
+)</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-10">
+              <h2 class="text-2xl font-extrabold">Ressources supplémentaires</h2>
+              <div class="mt-4 space-y-3">
+                <a href="#" class="block rounded-xl border border-border-subtle p-4 bg-white hover:border-accent transition-colors">
+                  <div class="font-semibold">📚 Documentation complète</div>
+                  <p class="text-sm text-text-secondary mt-1">Guides détaillés et références API</p>
+                </a>
+                <a href="#" class="block rounded-xl border border-border-subtle p-4 bg-white hover:border-accent transition-colors">
+                  <div class="font-semibold">💬 Discord communauté</div>
+                  <p class="text-sm text-text-secondary mt-1">Posez vos questions et partagez vos projets</p>
+                </a>
+                <a href="#" class="block rounded-xl border border-border-subtle p-4 bg-white hover:border-accent transition-colors">
+                  <div class="font-semibold">🐙 GitHub repositories</div>
+                  <p class="text-sm text-text-secondary mt-1">Code source des SDKs et exemples</p>
+                </a>
+                <a href="#" class="block rounded-xl border border-border-subtle p-4 bg-white hover:border-accent transition-colors">
+                  <div class="font-semibold">📊 Status page</div>
+                  <p class="text-sm text-text-secondary mt-1">État des services en temps réel</p>
+                </a>
+              </div>
             </div>
           </section>
         </article>
       </div>
     </main>
+
+    <script>
+      // Smooth scroll pour les liens d'ancrage
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Mettre à jour la navigation active au scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('aside a[href^="#"]');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-text-primary', 'text-accent');
+          link.classList.add('text-text-secondary');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.remove('text-text-secondary');
+            link.classList.add('text-text-primary');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
-
-
