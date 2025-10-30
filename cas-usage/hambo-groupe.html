@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Findora Agent AI - cas d'usage Hambo Groupe (agent d'entreprise)</title>
     <meta name="description" content="Hambo Groupe: agent de saisie pour commerciaux. Validation simple, migration vers le CRM, tableau de bord des opérations. Moins de saisie, plus de terrain." />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./../styles.css" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Hambo Groupe — agent de saisie pour commerciaux | Findora" />
     <meta property="og:description" content="Moins de saisie, plus de terrain: validation rapide, mises à jour CRM, tableau de bord des opérations." />
@@ -16,7 +16,8 @@
     <meta name="twitter:description" content="Synthèse prête à valider, mises à jour continues, visibilité claire." />
     <meta name="twitter:image" content="assets/faq-illustration.webp" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-png" />
+    <link rel="shortcut icon" href="./../favicon.png" type="image/x-png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -328,6 +329,484 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="rounded-xl border border-border-subtle p-5 bg-white">
             <div class="text-sm font-semibold text-text-light uppercase">Objectif</div>
-            <p class="mt-2 text-text-primary">Réduire la saisie manuelle et fiabiliser les informations.</p>
+            <p class="mt-2 text-text-primary">Réduire la saisie manuelle et fiabiliser les informations commerciales dans le CRM.</p>
           </div>
           <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Canal</div>
+            <p class="mt-2 text-text-primary">Agent IA sur WhatsApp + dashboard web pour managers et équipe terrain.</p>
+          </div>
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Résultat</div>
+            <p class="mt-2 text-text-primary">Synthèse automatique, mise à jour CRM fluide, visibilité temps réel des opérations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="article-hambo" class="py-16 bg-white" itemscope itemtype="https://schema.org/Article">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="mb-8">
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-text-primary" itemprop="headline">Hambo Groupe — étude de cas d'un agent d'entreprise</h2>
+          <p class="mt-3 text-text-secondary max-w-3xl" itemprop="description">Comment un <mark>agent de saisie conversationnel</mark> simplifie le quotidien des commerciaux, centralise les données et offre aux managers une vue d'ensemble en temps réel.</p>
+          <meta itemprop="author" content="Findora" />
+          <meta itemprop="inLanguage" content="fr-FR" />
+        </header>
+
+        <nav aria-label="Plan de l'article" class="mb-8" role="navigation">
+          <ul class="list-disc pl-6 text-sm text-text-secondary grid gap-1 md:grid-cols-2">
+            <li><a href="#contextes-objectifs" class="no-underline hover:underline">Contexte & objectifs</a></li>
+            <li><a href="#parcours-utilisateur" class="no-underline hover:underline">Parcours utilisateur</a></li>
+            <li><a href="#integration-technique" class="no-underline hover:underline">Intégration technique</a></li>
+            <li><a href="#securite-conformite" class="no-underline hover:underline">Sécurité & conformité</a></li>
+            <li><a href="#indicateurs-resultats" class="no-underline hover:underline">Indicateurs & résultats</a></li>
+          </ul>
+        </nav>
+
+        <article itemprop="articleBody">
+          <section id="contextes-objectifs" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Contexte & objectifs</h3>
+            <p class="mt-3 text-text-secondary">Hambo Groupe est une entreprise de distribution multisectorielle qui opère sur plusieurs zones géographiques. Les commerciaux passent leur journée sur le terrain: visites clients, négociations, relevés de stocks. Le soir, il faut tout saisir dans le CRM, ce qui génère des <strong>oublis, des erreurs</strong> et beaucoup de <strong>temps perdu</strong>.</p>
+            <blockquote class="mt-4 border-l-4 border-accent pl-4 text-text-primary">« Nos équipes veulent être sur le terrain, pas derrière un ordinateur. On cherchait un moyen de capturer l'essentiel en quelques secondes, sans casser le rythme. »</blockquote>
+          </section>
+
+          <section id="parcours-utilisateur" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Parcours utilisateur</h3>
+            <p class="mt-3 text-text-secondary">Le commercial termine sa visite, sort son téléphone et envoie un message vocal ou texte à l'agent sur WhatsApp. L'agent <strong>comprend la situation</strong>, pose des questions de clarification si besoin (nom du client, produits discutés, quantités, échéances), puis <strong>structure l'information</strong> et propose une synthèse prête à valider.</p>
+            <ul class="mt-3 space-y-2 text-text-secondary">
+              <li>1. <strong>Capture vocale ou texte</strong> après chaque visite ou call client.</li>
+              <li>2. <strong>Questions ciblées</strong> pour compléter les informations manquantes.</li>
+              <li>3. <strong>Synthèse structurée</strong> présentée au commercial pour validation.</li>
+              <li>4. <strong>Migration CRM automatique</strong> une fois validée.</li>
+              <li>5. <strong>Dashboard temps réel</strong> pour les managers: état des visites, prochaines actions, opportunités en cours.</li>
+            </ul>
+            <figure class="mt-5 rounded-xl border border-border-subtle p-4 bg-white">
+              <figcaption class="text-sm text-text-light">Schéma simplifié du parcours</figcaption>
+              <div class="mt-3 text-xs text-text-secondary">Visite client → Message WhatsApp → Agent structure → Validation → CRM + Dashboard</div>
+            </figure>
+          </section>
+
+          <section id="integration-technique" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Intégration technique</h3>
+            <p class="mt-3 text-text-secondary">L'agent s'interface avec le <strong>CRM existant</strong> de Hambo via APIs REST (création de contacts, mise à jour d'opportunités, ajout de notes). Les messages WhatsApp sont traités en temps réel, et chaque validation commerciale déclenche une synchronisation immédiate.</p>
+            <p class="mt-3 text-text-secondary">Côté management, un <strong>dashboard web</strong> connecté à l'agent affiche en direct les activités de l'équipe: visites du jour, taux de conversion, alertes sur les dossiers en retard.</p>
+          </section>
+
+          <section id="securite-conformite" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Sécurité & conformité</h3>
+            <ul class="mt-3 space-y-2 text-text-secondary">
+              <li>• <strong>Données clients</strong> chiffrées en transit et au repos.</li>
+              <li>• Journaux d'audit complets pour tracer chaque action.</li>
+              <li>• Authentification à deux facteurs pour les managers.</li>
+              <li>• Conformité RGPD: droit d'accès, de rectification et de suppression.</li>
+            </ul>
+          </section>
+
+          <section id="indicateurs-resultats" class="mb-2">
+            <h3 class="text-2xl font-bold text-text-primary">Indicateurs & résultats</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">-65%</div>
+                <div class="text-sm text-text-secondary mt-1">Temps de saisie CRM par visite</div>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">×3</div>
+                <div class="text-sm text-text-secondary mt-1">Fiabilité des données commerciales</div>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">100%</div>
+                <div class="text-sm text-text-secondary mt-1">Traçabilité des actions terrain</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="temoignage-histoire" class="mt-8">
+            <h3 class="text-2xl font-bold text-text-primary">Une histoire simple</h3>
+            <p class="mt-3 text-text-secondary">Amadou, commercial chez Hambo, termine sa visite chez un grossiste. Au lieu de noter dans un carnet, il envoie un vocal WhatsApp: "J'ai vu le client Koné, commande de 200 cartons de riz prévu pour la semaine prochaine, paiement à 30 jours." L'agent répond: "Merci Amadou. Confirmation: client Koné, 200 cartons riz, livraison semaine prochaine, paiement J+30. Je valide?" Amadou confirme. En deux secondes, l'info est dans le CRM et visible par son manager.</p>
+          </section>
+
+          <section id="ce-que-ca-change" class="mt-8">
+            <h3 class="text-2xl font-bold text-text-primary">Ce que ça change pour Hambo Groupe</h3>
+            <ul class="mt-3 space-y-2 text-text-secondary">
+              <li>• Les commerciaux passent <strong>plus de temps avec les clients</strong>, moins derrière un écran.</li>
+              <li>• Les données sont <strong>fraîches et fiables</strong>, capturées à chaud.</li>
+              <li>• Les managers ont une <strong>vision temps réel</strong> de l'activité commerciale.</li>
+              <li>• Moins de friction administrative, <strong>plus de réactivité</strong> sur les opportunités.</li>
+            </ul>
+          </section>
+        </article>
+
+        <section class="py-12 bg-gray-50 mt-6">
+          <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-text-primary">Votre équipe terrain a besoin d'un assistant ?</h3>
+            <p class="mt-3 text-text-secondary">Nous adaptons l'agent à vos processus commerciaux et à votre CRM pour un déploiement rapide.</p>
+            <div class="mt-6 flex gap-3 justify-center">
+              <a href="../demo.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline border bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent transition-all">Demander une démo</a>
+            </div>
+          </div>
+        </section>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Hambo Groupe — étude de cas d'un agent d'entreprise",
+          "description": "Agent conversationnel pour simplifier la saisie CRM des commerciaux et offrir une vue temps réel aux managers.",
+          "author": { "@type": "Organization", "name": "Findora" },
+          "inLanguage": "fr-FR"
+        }
+        </script>
+      </div>
+    </section>
+
+
+
+    <footer
+      class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden"
+    >
+
+      <div class="footer-bg-decoration"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-20">
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p
+              class="text-text-light mb-6 leading-relaxed font-findora-regular"
+            >
+              Construire un futur avec moins d'effort .
+            </p>
+          </div>
+
+
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Cas d'usage
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="ambo-wallet.html" class="footer-link">Ambo wallet</a></li>
+              <li><a href="oja.html" class="footer-link">Oja</a></li>
+              <li><a href="faba.html" class="footer-link">Faba</a></li>
+              <li><a href="hambo-groupe.html" class="footer-link">Hambo GROUPE</a></li>
+            </ul>
+          </div>
+
+
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Types d'offres
+            </h3>
+            <ul class="space-y-2 font-findora-regular">
+              <li><a href="../offre/lancement-mvp.html" class="footer-link">Lancement MVP</a></li>
+              <li><a href="../offre/optimisation-metier.html" class="footer-link">Optimisation métier</a></li>
+              <li><a href="../offre/integration-process.html" class="footer-link">Intégration d'un process</a></li>
+              <li><a href="../offre/custom-agent-prive.html" class="footer-link">Custom d'un agent privé</a></li>
+            </ul>
+          </div>
+
+
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Aide & ressources
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="#" class="footer-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div
+          class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <div
+            class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular"
+          >
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="#privacy" class="footer-link"
+              >Politique de confidentialité</a
+            >
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const typingMessage = document.querySelector(".message.agent.typing");
+        if (typingMessage) {
+          setTimeout(() => {
+            typingMessage.classList.remove("typing");
+          }, 2000);
+        }
+
+
+        const progressBar = document.querySelector(".progress-fill");
+        const progressText = document.querySelector(".progress-text");
+        const buildBtn = document.querySelector(".btn-build");
+        const deployBtn = document.querySelector(".btn-deploy");
+
+        if (buildBtn) {
+          buildBtn.addEventListener("click", function () {
+            let progress = 0;
+            progressText.textContent = "Construction en cours...";
+
+            const interval = setInterval(() => {
+              progress += Math.random() * 15;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
+                progressText.textContent = "Agent prêt à déployer !";
+                deployBtn.disabled = false;
+                deployBtn.classList.remove("opacity-50");
+              }
+              progressBar.style.width = progress + "%";
+            }, 500);
+          });
+        }
+      });
+    </script>
+    <style>
+
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-menu {
+        position: fixed;
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        box-shadow: 0 16px 64px rgba(22, 22, 22, 0.16);
+        padding: 48px;
+        width: 800px;
+        max-width: calc(100vw - 48px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+      }
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .dropdown-section {
+        border-right: 1px solid #e8e8e8;
+        padding-right: 20px;
+        text-align: left;
+      }
+      .dropdown-section:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+      .dropdown-item {
+        border-radius: 6px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 180px;
+        display: flex;
+        align-items: stretch;
+      }
+      .dropdown-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 6px;
+        width: 100%;
+        min-height: 100%;
+      }
+      .dropdown-icon-wrapper {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #161616;
+        border-radius: 6px;
+        color: #edece8;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        align-self: flex-start;
+      }
+      .dropdown-item:hover .dropdown-icon-wrapper {
+        background: linear-gradient(135deg, #ffbd59 0%, #ffd280 100%);
+        transform: scale(1.05);
+      }
+      .dropdown-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #161616;
+        font-family: "FindoraInter", sans-serif;
+        letter-spacing: -0.01em;
+        text-align: left;
+      }
+      .dropdown-text p {
+        font-size: 15px;
+        color: #6b6b6b;
+        margin-bottom: 12px;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.6;
+        max-width: 280px;
+        text-align: left;
+      }
+      .dropdown-projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .project-item {
+        background: rgb(252, 252, 252);
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        padding: 12px 16px;
+        width: 100%;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: "FindoraInter", sans-serif;
+        text-align: left;
+      }
+      .project-item:hover {
+        background: white;
+        border-color: #ffbd59;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(22, 22, 22, 0.08);
+      }
+      .project-item h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #161616;
+        margin-bottom: 4px;
+        font-family: "FindoraInter", sans-serif;
+      }
+      .project-item span {
+        font-size: 12px;
+        color: #9b9b9b;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.4;
+        display: block;
+      }
+      .dropdown-icon {
+        transition: transform 0.2s ease;
+      }
+      .dropdown:hover .dropdown-icon {
+        transform: rotate(180deg);
+      }
+      @media (max-width: 1024px) {
+        .dropdown-menu {
+          width: 600px;
+          max-width: 90vw;
+        }
+      }
+      @media (max-width: 768px) {
+        .dropdown-menu {
+          width: 350px;
+          max-width: calc(100vw - 24px);
+          padding: 24px;
+        }
+        .dropdown-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .dropdown-section {
+          border-right: none;
+          border-bottom: 1px solid #e8e8e8;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+        .dropdown-section:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    </style>
+
+    <script src="./../script.js"></script>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector("span");
+          const menu = dropdown.querySelector(".dropdown-menu");
+
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            dropdowns.forEach((otherDropdown) => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove("active");
+              }
+            });
+
+            dropdown.classList.toggle("active");
+          });
+        });
+
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
