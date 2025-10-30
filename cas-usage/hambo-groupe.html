@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Findora Agent AI - cas d'usage Hambo Groupe (agent d'entreprise)</title>
+    <meta name="description" content="Hambo Groupe: agent de saisie pour commerciaux. Validation simple, migration vers le CRM, tableau de bord des opérations. Moins de saisie, plus de terrain." />
+    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Hambo Groupe — agent de saisie pour commerciaux | Findora" />
+    <meta property="og:description" content="Moins de saisie, plus de terrain: validation rapide, mises à jour CRM, tableau de bord des opérations." />
+    <meta property="og:image" content="assets/faq-illustration.webp" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hambo Groupe — agent de saisie | Findora" />
+    <meta name="twitter:description" content="Synthèse prête à valider, mises à jour continues, visibilité claire." />
+    <meta name="twitter:image" content="assets/faq-illustration.webp" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: { 18: "4.5rem", 25: "6.25rem", 72: "18rem", 84: "21rem", 96: "24rem" },
+            borderRadius: { xl: "12px" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
+        <div class="flex items-center">
+          <a href="../index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="logo-svg">
+                <g>
+                  <rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="logo-text text-xl font-bold text-primary tracking-tight relative">Findora</span>
+            </div>
+          </a>
+        </div>
+        <!-- Menu Principal -->
+        <div class="hidden md:flex items-center gap-8 relative">
+          <!-- Menu Cas d'usage -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Cas d'usage
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="ambo-wallet.html">
+                            <h4>Ambo wallet</h4>
+                            <span>Fintech startup</span>
+                          </a>
+                          <a class="project-item" href="oja.html">
+                            <h4>Oja</h4>
+                            <span
+                              >App mobile pour shopping depuis l'Europe</span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="faba.html">
+                            <h4>Faba</h4>
+                            <span>Mise en relation de répetiteurs/élèves</span>
+                          </a>
+                          <a class="project-item" href="hambo-groupe.html">
+                            <h4>Hambo GROUPE</h4>
+                            <span
+                              >Entreprise de distribution multisectorielle
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typologies des agents -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Types d'offres
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <!-- Pour projet -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M14 2V8H20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 13H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 17H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Pas encore de projet ? </h3>
+                            <p>
+                              Vous n'avez pas encore un projet .
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="../offre/lancement-mvp.html">
+                            <h4>Lancement MVP</h4>
+                            <span>Démrrer votre projet plus vite avec un agent</span>
+                          </a>
+                          <a class="project-item" href="../offre/optimisation-metier.html">
+                            <h4>Optimisation  métier</h4>
+                            <span
+                              >Optimiser votre cas métier avec un agent</span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <circle
+                                cx="11"
+                                cy="11"
+                                r="8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M21 21L16.65 16.65"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11 6C13.7614 6 16 8.23858 16 11"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Explorons ensemble</h3>
+                            <p>
+                                Améliorons les processus .
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="../offre/integration-process.html">
+                            <h4>Intégration d'un process</h4>
+                            <span>Intégration d'un agent dans le processus</span>
+                          </a>
+                          <a class="project-item" href="../offre/custom-agent-prive.html">
+                            <h4>Custom d'un agent privé</h4>
+                            <span>Customisation d'un agent pour votre entreprise</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu pour developpeurs -->
+          <a
+          href="../docs/index.html"
+          class="inline-flex items-center justify-center py-2.5 text-slate-700 hover:text-slate-900  font-medium text-sm  transition-all duration-300 cursor-pointer  whitespace-nowrap   "
+          >Pour développeurs</a
+        >
+
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="../demo.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+            >Demander une démo</a
+          >
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Hambo Groupe</span>
+        <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary">cas d'usage Hambo Groupe</h1>
+        <p class="mt-4 text-lg text-text-secondary">Hambo opère dans la distribution avec une équipe de commerciaux. Chaque jour, des points à faire et des informations à saisir dans le CRM.</p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Objectif</div>
+            <p class="mt-2 text-text-primary">Réduire la saisie manuelle et fiabiliser les informations.</p>
+          </div>
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">

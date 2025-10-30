@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Findora Agent AI - cas d'usage Faba (agent d'entreprise)</title>
+    <meta
+      name="description"
+      content="Étude de cas Faba: agent d’entreprise par Findora. Mise en relation parents et maîtres de maison via WhatsApp/QR, suivi centralisé et matching sans friction."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: {
+              18: "4.5rem",
+              25: "6.25rem",
+              72: "18rem",
+              84: "21rem",
+              96: "24rem",
+            },
+            borderRadius: {
+              xl: "12px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-findora-inter text-text-primary leading-relaxed antialiased"
+  >
+    <nav
+      class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18"
+      >
+        
+        <div class="flex items-center">
+          <a href="../index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="logo-svg"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span
+                class="logo-text text-xl font-bold text-primary tracking-tight relative"
+                >Findora</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <!-- Menu Principal -->
+        <div class="hidden md:flex items-center gap-8 relative">
+          <!-- Menu Cas d'usage -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Cas d'usage
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="ambo-wallet.html">
+                            <h4>Ambo wallet</h4>
+                            <span>Fintech startup</span>
+                          </a>
+                          <a class="project-item" href="oja.html">
+                            <h4>Oja</h4>
+                            <span
+                              >App mobile pour shopping depuis l'Europe</span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div class="dropdown-link">
+                      <div class="dropdown-text">
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="faba.html">
+                            <h4>Faba</h4>
+                            <span>Mise en relation de répetiteurs/élèves</span>
+                          </a>
+                          <a class="project-item" href="hambo-groupe.html">
+                            <h4>Hambo GROUPE</h4>
+                            <span
+                              >Entreprise de distribution multisectorielle
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typologies des agents -->
+          <div class="nav-item dropdown">
+            <span
+              class="text-text-primary no-underline font-medium text-sm py-2 transition-all duration-300 cursor-pointer bg-transparent border-none flex items-center gap-1.5 hover:text-accent hover:-translate-y-0.5"
+            >
+              Types d'offres
+              <svg
+                class="dropdown-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <!-- Pour projet -->
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M14 2V8H20"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 13H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 17H8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Pas encore de projet ? </h3>
+                            <p>
+                              Vous n'avez pas encore un projet .
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="../offre/lancement-mvp.html">
+                            <h4>Lancement MVP</h4>
+                            <span>Démrrer votre projet plus vite avec un agent</span>
+                          </a>
+                          <a class="project-item" href="../offre/optimisation-metier.html">
+                            <h4>Optimisation  métier</h4>
+                            <span
+                              >Optimiser votre cas métier avec un agent</span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-section">
+                  <div class="dropdown-item">
+                    <div
+                      class="dropdown-link"
+                    >
+                      <div class="dropdown-text">
+                        <div class="flex gap-2">
+                          <div class="dropdown-icon-wrapper">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <circle
+                                cx="11"
+                                cy="11"
+                                r="8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M21 21L16.65 16.65"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11 6C13.7614 6 16 8.23858 16 11"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3>Explorons ensemble</h3>
+                            <p>
+                                Améliorons les processus .
+                            </p>
+                          </div>
+                        </div>
+                        <div class="dropdown-projects">
+                          <a class="project-item" href="../offre/integration-process.html">
+                            <h4>Intégration d'un process</h4>
+                            <span>Intégration d'un agent dans le processus</span>
+                          </a>
+                          <a class="project-item" href="../offre/custom-agent-prive.html">
+                            <h4>Custom d'un agent privé</h4>
+                            <span>Customisation d'un agent pour votre entreprise</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu pour developpeurs -->
+          <a
+          href="../docs/index.html"
+          class="inline-flex items-center justify-center py-2.5 text-slate-700 hover:text-slate-900  font-medium text-sm  transition-all duration-300 cursor-pointer  whitespace-nowrap   "
+          >Pour développeurs</a
+        >
+
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="../demo.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl"
+            >Demander une démo</a
+          >
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-text-primary transition-all duration-300"
+          ></span>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
+          >Faba</span
+        >
+        <h1
+          class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary"
+        >
+          cas d'usage Faba 
+        </h1>
+        <p class="mt-4 text-lg text-text-secondary">
+         Faba est une entreprise qui met en relation des répetiteurs avec les parents des élèves en Côte d'Ivoire.
+        </p>
+      </div>
+    </section>
+
+    
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Objectif</div>
+            <p class="mt-2 text-text-primary">Mettre en relation simplement les parents et des maîtres de maison de confiance.</p>
+          </div>
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Canal</div>
+            <p class="mt-2 text-text-primary">Agent accessible sur WhatsApp et via QR code, suivi côté équipe dans l’application Findora.</p>
+          </div>
+          <div class="rounded-xl border border-border-subtle p-5 bg-white">
+            <div class="text-sm font-semibold text-text-light uppercase">Résultat</div>
+            <p class="mt-2 text-text-primary">Matching plus rapide, informations centralisées, moins d’appels et de frictions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="article-faba" class="py-16 bg-white" itemscope itemtype="https://schema.org/Article">
+      <div class="max-w-6xl mx-auto px-6">
+        <header class="mb-8">
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-text-primary" itemprop="headline">Faba — étude de cas d’un agent d’entreprise</h2>
+          <p class="mt-3 text-text-secondary max-w-3xl" itemprop="description">Un agent conversationnel qui parle aux parents et aux maîtres de maison, collecte les besoins, propose des profils, et facilite la mise en relation. Le tout avec un suivi clair pour l’équipe Faba.</p>
+          <meta itemprop="author" content="Findora" />
+          <meta itemprop="inLanguage" content="fr-FR" />
+        </header>
+
+        <nav aria-label="Plan de l’article" class="mb-8" role="navigation">
+          <ul class="list-disc pl-6 text-sm text-text-secondary grid gap-1 md:grid-cols-2">
+            <li><a href="#contextes-objectifs" class="no-underline hover:underline">Contexte & objectifs</a></li>
+            <li><a href="#parcours-utilisateur" class="no-underline hover:underline">Parcours & UX</a></li>
+            <li><a href="#comment-faba-sy-prend" class="no-underline hover:underline">Comment Faba s’y prend</a></li>
+            <li><a href="#securite-conformite" class="no-underline hover:underline">Sécurité & conformité</a></li>
+            <li><a href="#indicateurs-resultats" class="no-underline hover:underline">Indicateurs & résultats</a></li>
+          </ul>
+        </nav>
+
+        <article itemprop="articleBody">
+          <section id="contextes-objectifs" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Contexte & objectifs</h3>
+            <p class="mt-3 text-text-secondary">Faba voulait une solution simple pour aider les parents à trouver des maîtres de maison de confiance en Côte d’Ivoire. L’idée: un agent disponible là où sont les gens (WhatsApp ou QR code), qui pose les bonnes questions, propose des profils, et garde une trace claire de chaque échange pour l’équipe.</p>
+            <blockquote class="mt-4 border-l-4 border-accent pl-4 text-text-primary">« Aller vite, rester simple, et inspirer confiance aux familles comme aux tuteurs. »</blockquote>
+          </section>
+
+          <section id="parcours-utilisateur" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Parcours & UX</h3>
+            <p class="mt-3 text-text-secondary">Côté parent, on scanne un QR code ou on ouvre WhatsApp, on explique le besoin (niveau, matières, disponibilité), et on reçoit des propositions adaptées. Côté maître de maison, on se présente, on indique sa zone, ses disponibilités et ses préférences. L’agent <strong>met en relation</strong>, garde l’historique et informe l’équipe Faba qui peut suivre et intervenir à tout moment.</p>
+          </section>
+
+          <section id="comment-faba-sy-prend" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Comment Faba s’y prend</h3>
+            <p class="mt-3 text-text-secondary">L’agent discute avec les deux parties, pose des questions claires, reformule si besoin et <strong>enregistre les informations</strong> utiles. Il propose des matchs pertinents et peut <strong>escalader vers un humain</strong> pour les cas sensibles ou complexes. Tout est consultable par l’équipe Faba dans l’application Findora.</p>
+            <p class="mt-3 text-text-secondary">Résultat: un parcours fluide, des échanges tracés, et des mises en relation plus rapides, sans multiplier les appels ni les formulaires.</p>
+          </section>
+
+          <section id="securite-conformite" class="mb-10">
+            <h3 class="text-2xl font-bold text-text-primary">Confiance & protection</h3>
+            <p class="mt-3 text-text-secondary">Les informations des familles et des maîtres de maison sont traitées avec soin. L’accès est limité à l’équipe autorisée, les échanges sont conservés pour le suivi, et chacun peut avancer en toute sérénité.</p>
+          </section>
+
+          <section id="indicateurs-resultats" class="mb-2">
+            <h3 class="text-2xl font-bold text-text-primary">Indicateurs & résultats</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">-50%</div>
+                <div class="text-sm text-text-secondary mt-1">Temps de qualification initiale</div>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">×2</div>
+                <div class="text-sm text-text-secondary mt-1">Vitesse de mise en relation</div>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-3xl font-extrabold text-text-primary">24/7</div>
+                <div class="text-sm text-text-secondary mt-1">Disponibilité des échanges</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="temoignage-histoire" class="mt-8">
+            <h3 class="text-2xl font-bold text-text-primary">Une histoire simple</h3>
+            <p class="mt-3 text-text-secondary">Un parent cherche un maître de maison pour son enfant. Il écrit sur WhatsApp, répond à quelques questions et reçoit rapidement un profil adapté. L’échange se fait sans friction, l’équipe Faba suit le dossier depuis l’app Findora, prête à intervenir. La famille est rassurée, le tuteur est bien informé.</p>
+          </section>
+
+          <section id="ce-que-ca-change" class="mt-8">
+            <h3 class="text-2xl font-bold text-text-primary">Ce que ça change pour Faba</h3>
+            <ul class="mt-3 space-y-2 text-text-secondary">
+              <li>• Un parcours plus fluide pour les familles et les maîtres de maison.</li>
+              <li>• Moins d’appels et de va-et-vient, plus de clarté.</li>
+              <li>• Une base d’informations consultable par l’équipe pour décider vite.</li>
+            </ul>
+          </section>
+        </article>
+
+        <section class="py-12 bg-gray-50 mt-6">
+          <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-text-primary">Envie de tester une approche similaire ?</h3>
+            <p class="mt-3 text-text-secondary">Nous adaptons l’agent à vos besoins et à vos règles d’organisation pour un lancement rapide.</p>
+            <div class="mt-6 flex gap-3 justify-center">
+              <a href="demo.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline border bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent transition-all">Demander une démo</a>
+              <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline border border-border-subtle hover:border-primary transition-all">Nous contacter</a>
+            </div>
+          </div>
+        </section>
+
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Faba — étude de cas d’un agent d’entreprise",
+          "description": "Agent conversationnel pour la mise en relation parents / maîtres de maison, avec suivi centralisé pour l’équipe Faba.",
+          "author": { "@type": "Organization", "name": "Findora" },
+          "inLanguage": "fr-FR"
+        }
+        </script>
+      </div>
+    </section>
+
+
+    
+    <footer
+      class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden"
+    >
+      
+      <div class="footer-bg-decoration"></div>
+
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="20"
+                viewBox="0 0 88 24"
+                class="footer-logo"
+              >
+                <g>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="88"
+                    height="24"
+                    rx="12"
+                    ry="12"
+                    fill="#ffbd59"
+                  />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p
+              class="text-text-light mb-6 leading-relaxed font-findora-regular"
+            >
+              Construire un futur avec moins d'effort .
+            </p>
+          </div>
+
+          
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Cas d’usage
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="#" class="footer-link">Ambo wallet</a></li>
+              <li><a href="#" class="footer-link">Oja</a></li>
+              <li><a href="#" class="footer-link">Faba</a></li>
+              <li><a href="#" class="footer-link">Hambo GROUPE</a></li>
+            </ul>
+          </div>
+
+          
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Types d'offres
+            </h3>
+            <ul class="space-y-2 font-findora-regular">
+              <li><a href="#" class="footer-link">Lancement MVP</a></li>
+              <li><a href="#" class="footer-link">Optimisation métier</a></li>
+              <li><a href="#" class="footer-link">Intégration d’un process</a></li>
+              <li><a href="#" class="footer-link">Custom d’un agent privé</a></li>
+            </ul>
+          </div>
+
+          
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">
+              Aide & ressources
+            </h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li>
+                <a href="#" class="footer-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <div
+          class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <div
+            class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular"
+          >
+            © 2025 Findora. Tous droits réservés.
+          </div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="#privacy" class="footer-link"
+              >Politique de confidentialité</a
+            >
+            <a href="#terms" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        const typingMessage = document.querySelector(".message.agent.typing");
+        if (typingMessage) {
+          setTimeout(() => {
+            typingMessage.classList.remove("typing");
+          }, 2000);
+        }
+
+        
+        const progressBar = document.querySelector(".progress-fill");
+        const progressText = document.querySelector(".progress-text");
+        const buildBtn = document.querySelector(".btn-build");
+        const deployBtn = document.querySelector(".btn-deploy");
+
+        if (buildBtn) {
+          buildBtn.addEventListener("click", function () {
+            let progress = 0;
+            progressText.textContent = "Construction en cours...";
+
+            const interval = setInterval(() => {
+              progress += Math.random() * 15;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
+                progressText.textContent = "Agent prêt à déployer !";
+                deployBtn.disabled = false;
+                deployBtn.classList.remove("opacity-50");
+              }
+              progressBar.style.width = progress + "%";
+            }, 500);
+          });
+        }
+      });
+    </script>
+    <style>
+      
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-menu {
+        position: fixed;
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        box-shadow: 0 16px 64px rgba(22, 22, 22, 0.16);
+        padding: 48px;
+        width: 800px;
+        max-width: calc(100vw - 48px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+      }
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .dropdown-section {
+        border-right: 1px solid #e8e8e8;
+        padding-right: 20px;
+        text-align: left;
+      }
+      .dropdown-section:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+      .dropdown-item {
+        border-radius: 6px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 180px;
+        display: flex;
+        align-items: stretch;
+      }
+      .dropdown-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 6px;
+        width: 100%;
+        min-height: 100%;
+      }
+      .dropdown-icon-wrapper {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #161616;
+        border-radius: 6px;
+        color: #edece8;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        align-self: flex-start;
+      }
+      .dropdown-item:hover .dropdown-icon-wrapper {
+        background: linear-gradient(135deg, #ffbd59 0%, #ffd280 100%);
+        transform: scale(1.05);
+      }
+      .dropdown-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #161616;
+        font-family: "FindoraInter", sans-serif;
+        letter-spacing: -0.01em;
+        text-align: left;
+      }
+      .dropdown-text p {
+        font-size: 15px;
+        color: #6b6b6b;
+        margin-bottom: 12px;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.6;
+        max-width: 280px;
+        text-align: left;
+      }
+      .dropdown-projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .project-item {
+        background: rgb(252, 252, 252);
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        padding: 12px 16px;
+        width: 100%;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: "FindoraInter", sans-serif;
+        text-align: left;
+      }
+      .project-item:hover {
+        background: white;
+        border-color: #ffbd59;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(22, 22, 22, 0.08);
+      }
+      .project-item h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #161616;
+        margin-bottom: 4px;
+        font-family: "FindoraInter", sans-serif;
+      }
+      .project-item span {
+        font-size: 12px;
+        color: #9b9b9b;
+        font-family: "FindoraRegular", sans-serif;
+        line-height: 1.4;
+        display: block;
+      }
+      .dropdown-icon {
+        transition: transform 0.2s ease;
+      }
+      .dropdown:hover .dropdown-icon {
+        transform: rotate(180deg);
+      }
+      @media (max-width: 1024px) {
+        .dropdown-menu {
+          width: 600px;
+          max-width: 90vw;
+        }
+      }
+      @media (max-width: 768px) {
+        .dropdown-menu {
+          width: 350px;
+          max-width: calc(100vw - 24px);
+          padding: 24px;
+        }
+        .dropdown-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .dropdown-section {
+          border-right: none;
+          border-bottom: 1px solid #e8e8e8;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+        .dropdown-section:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    </style>
+
+    <script src="script.js"></script>
+
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector("span");
+          const menu = dropdown.querySelector(".dropdown-menu");
+
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            dropdowns.forEach((otherDropdown) => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove("active");
+              }
+            });
+
+            dropdown.classList.toggle("active");
+          });
+        });
+
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

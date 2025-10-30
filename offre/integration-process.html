@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intégration d’un process - Offre Findora</title>
+    <meta name="description" content="Intégration d’un process: brancher un agent dans votre chaîne opérationnelle, avec validations et traçabilité, sans perturber vos équipes." />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-png">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { primary: "#161616", "primary-light": "#2a2a2a", secondary: "#edece8", accent: "#ffbd59", "accent-light": "#ffd280", "text-primary": "#161616", "text-secondary": "#6b6b6b", "text-light": "#9b9b9b", "text-on-dark": "#edece8", "bg-main": "#edece8", "bg-dark": "#161616", "bg-card": "#ffffff", "border-main": "#d1d1d1", "border-subtle": "#e8e8e8" }, fontFamily: { "findora-inter": ["FindoraInter", "Inter", "sans-serif"], "findora-regular": ["FindoraRegular", "sans-serif"], "findora-mono": ["FindoraMono", "monospace"] }, spacing: { 18: "4.5rem", 25: "6.25rem", 72: "18rem", 84: "21rem", 96: "24rem" }, borderRadius: { xl: "12px" } } } };
+    </script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
+        <div class="flex items-center">
+          <a href="../index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="logo-svg"><g><rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" /><circle cx="60" cy="12" r="6" fill="white" /><path d="M30 12 L58 12" stroke="white" stroke-width="2" /></g></svg>
+              <span class="logo-text text-xl font-bold text-primary tracking-tight relative">Findora</span>
+            </div>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="../demo.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Demander une démo</a>
+        </div>
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2"><span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span><span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span><span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span></div>
+      </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Offre</span>
+        <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary">Intégration d’un process</h1>
+        <p class="mt-4 text-lg text-text-secondary">Brancher un agent à votre chaîne opérationnelle, avec validations humaines et historique, sans bouleverser vos pratiques.</p>
+        <div class="mt-8 flex items-center justify-center gap-3 flex-wrap">
+          <a href="../demo.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline border bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary transition-all">Parler à un expert</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="pt-8 pb-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden mb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Position</span>
+              <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Au bon endroit du process</h3>
+              <p class="mt-2 text-text-secondary">L’agent intervient au bon moment, avec les bonnes informations, et laisse la main à l’humain si besoin.</p>
+              <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-primary">
+                <li class="flex items-start gap-2"><span>✓</span> Points d’entrée clairs</li>
+                <li class="flex items-start gap-2"><span>✓</span> Validation humaine simple</li>
+                <li class="flex items-start gap-2"><span>✓</span> Connecteurs vers vos outils</li>
+                <li class="flex items-start gap-2"><span>✓</span> Journal et traçabilité</li>
+              </ul>
+            </div>
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-200"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="40" width="220" height="20" rx="10" fill="#c7d2fe" />
+                  <rect x="30" y="80" width="220" height="20" rx="10" fill="#a5b4fc" />
+                  <rect x="30" y="120" width="220" height="20" rx="10" fill="#818cf8" />
+                  <circle cx="240" cy="50" r="6" fill="#10b981" />
+                  <circle cx="240" cy="130" r="6" fill="#10b981" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-top border-border-subtle p-6 md:p-8">
+            <div><div class="text-sm font-semibold tracking-wide text-text-light uppercase">Le besoin</div><p class="mt-2 text-text-primary">Insérer un agent sans casser la chaîne.</p></div>
+            <div><div class="text-sm font-semibold tracking-wide text-text-light uppercase">Notre approche</div><p class="mt-2 text-text-primary">Connecteurs, validations, notifications à bon escient.</p></div>
+            <div><div class="text-sm font-semibold tracking-wide text-text-light uppercase">Résultats</div><p class="mt-2 text-text-primary">Moins de frictions, plus de visibilité.</p></div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Livrables</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Ce qui est livré</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-base font-semibold text-text-primary">Agent intégré</div><p class="mt-2 text-sm text-text-secondary">Au point du process déterminé ensemble.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-base font-semibold text-text-primary">Connecteurs</div><p class="mt-2 text-sm text-text-secondary">Vers vos systèmes critiques uniquement.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-base font-semibold text-text-primary">Traçabilité</div><p class="mt-2 text-sm text-text-secondary">Journal des opérations et notifications.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Timeline</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Étapes</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-sm font-semibold text-text-light uppercase">Semaine 1</div><div class="mt-1 font-semibold">Cartographie</div><p class="mt-2 text-sm text-text-secondary">Flux, systèmes, acteurs.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-sm font-semibold text-text-light uppercase">Semaine 2</div><div class="mt-1 font-semibold">Intégration</div><p class="mt-2 text-sm text-text-secondary">Connecteurs, validations.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-sm font-semibold text-text-light uppercase">Semaine 3</div><div class="mt-1 font-semibold">Tests</div><p class="mt-2 text-sm text-text-secondary">Parcours, notifications.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-sm font-semibold text-text-light uppercase">Suite</div><div class="mt-1 font-semibold">Go live</div><p class="mt-2 text-sm text-text-secondary">Pilotage et suivi.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Exemples</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Cas fréquents</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary"><div class="font-semibold text-text-primary">CRM</div><p class="mt-2">Mises à jour validées et tracées.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary"><div class="font-semibold text-text-primary">Support</div><p class="mt-2">Escalades claires vers humains.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary"><div class="font-semibold text-text-primary">Documents</div><p class="mt-2">Insertion contrôlée et historisée.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Valeur</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">La valeur pour chacun</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="font-semibold">Pour la direction</div>
+                <ul class="mt-2 space-y-2 text-sm text-text-secondary">
+                  <li>• Visibilité claire sur le flux et les validations.</li>
+                  <li>• Moins de risques d’erreur et meilleure conformité.</li>
+                  <li>• Indicateurs exploitables pour décider vite.</li>
+                </ul>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="font-semibold">Pour les équipes</div>
+                <ul class="mt-2 space-y-2 text-sm text-text-secondary">
+                  <li>• Moins de ressaisie et d’allers‑retours.</li>
+                  <li>• Validation simple au bon moment.</li>
+                  <li>• Historique accessible en un coup d’œil.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Avant / Après</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Ce que ça change</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="font-semibold text-text-primary">Avant</div><ul class="mt-2 space-y-2 text-sm text-text-secondary"><li>• Informations éparses, peu de traçabilité.</li><li>• Saisies manuelles tardives.</li><li>• Escalades floues.</li></ul></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="font-semibold text-text-primary">Après</div><ul class="mt-2 space-y-2 text-sm text-text-secondary"><li>• Parcours clair avec validations.</li><li>• Mise à jour ponctuelle et fiable.</li><li>• Historique et notifications.</li></ul></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Indicateurs</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Indicateurs avancés</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-3xl font-extrabold text-text-primary">-50%</div><div class="text-sm text-text-secondary mt-1">Temps de saisie</div></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-3xl font-extrabold text-text-primary">+35%</div><div class="text-sm text-text-secondary mt-1">Complétude des données</div></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-3xl font-extrabold text-text-primary">100%</div><div class="text-sm text-text-secondary mt-1">Traçabilité des étapes</div></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white"><div class="text-3xl font-extrabold text-text-primary">-30%</div><div class="text-sm text-text-secondary mt-1">Allers‑retours</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Exemple</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Exemple d’opération</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary"><div class="font-semibold text-text-primary">Entrée</div><p class="mt-2">Récap’ envoyé par l’équipe. L’agent propose une mise à jour prête à valider.</p></div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary"><div class="font-semibold text-text-primary">Sortie</div><p class="mt-2">Mise à jour dans le système cible, statut et horodatage visibles.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="py-12 bg-gray-50 mt-10 rounded-3xl border border-border-subtle">
+          <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-text-primary">Prêt à intégrer l’agent dans votre process ?</h3>
+            <p class="mt-3 text-text-secondary">Nous le branchons à vos outils, avec validations simples et traçabilité.</p>
+            <div class="mt-6 flex gap-3 justify-center">
+              <a href="../demo.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline border bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent transition-all">Demander une démo</a>
+              <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline border border-border-subtle hover:border-primary transition-all">Nous contacter</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden">
+      <div class="footer-bg-decoration"></div>
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div class="lg:col-span-1"><div class="flex items-center gap-3 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="footer-logo"><g><rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" /><circle cx="60" cy="12" r="6" fill="white" /><path d="M30 12 L58 12" stroke="white" stroke-width="2" /></g></svg><span class="text-xl font-bold font-findora-inter">Findora</span></div><p class="text-text-light mb-6 leading-relaxed font-findora-regular">Construire un futur avec moins d'effort .</p></div>
+          <div><h3 class="text-lg font-bold mb-6 font-findora-inter">Cas d’usage</h3><ul class="space-y-4 font-findora-regular"><li><a href="#" class="footer-link">Ambo wallet</a></li><li><a href="#" class="footer-link">Oja</a></li><li><a href="#" class="footer-link">Faba</a></li><li><a href="#" class="footer-link">Hambo GROUPE</a></li></ul></div>
+          <div><h3 class="text-lg font-bold mb-6 font-findora-inter">Types d'offres</h3><ul class="space-y-2 font-findora-regular"><li><a href="#" class="footer-link">Lancement MVP</a></li><li><a href="#" class="footer-link">Optimisation métier</a></li><li><a href="#" class="footer-link">Intégration d’un process</a></li><li><a href="#" class="footer-link">Custom d’un agent privé</a></li></ul></div>
+          <div><h3 class="text-lg font-bold mb-6 font-findora-inter">Aide & ressources</h3><ul class="space-y-4 font-findora-regular"><li><a href="#" class="footer-link">FAQ</a></li></ul></div>
+        </div>
+        <div class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center"><div class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular">© 2025 Findora. Tous droits réservés.</div><div class="flex gap-6 text-sm font-findora-regular"><a href="../privacy-policy.html" class="footer-link">Politique de confidentialité</a><a href="../terms-of-service.html" class="footer-link">Conditions d'utilisation</a></div></div>
+      </div>
+      <div class="footer-floating-elements"><div class="footer-float-1"></div><div class="footer-float-2"></div><div class="footer-float-3"></div></div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector('span');
+          const menu = dropdown.querySelector('.dropdown-menu');
+          button.addEventListener("click", function (e) {
+            e.preventDefault(); e.stopPropagation();
+            dropdowns.forEach((otherDropdown) => { if (otherDropdown !== dropdown) { otherDropdown.classList.remove("active"); } });
+            dropdown.classList.toggle("active");
+          });
+        });
+        document.addEventListener("click", function (e) { dropdowns.forEach((dropdown) => { if (!dropdown.contains(e.target)) { dropdown.classList.remove("active"); } }); });
+      });
+    </script>
+  </body>
+</html>
+
+

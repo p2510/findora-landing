@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lancement MVP - Offre Findora</title>
+    <meta name="description" content="Lancement MVP: un agent IA focalisé sur un flux prioritaire pour prouver la valeur rapidement, avec intégration légère et indicateurs clairs." />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-png">
+    <link rel="stylesheet" href="../styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#161616",
+              "primary-light": "#2a2a2a",
+              secondary: "#edece8",
+              accent: "#ffbd59",
+              "accent-light": "#ffd280",
+              "text-primary": "#161616",
+              "text-secondary": "#6b6b6b",
+              "text-light": "#9b9b9b",
+              "text-on-dark": "#edece8",
+              "bg-main": "#edece8",
+              "bg-dark": "#161616",
+              "bg-card": "#ffffff",
+              "border-main": "#d1d1d1",
+              "border-subtle": "#e8e8e8",
+            },
+            fontFamily: {
+              "findora-inter": ["FindoraInter", "Inter", "sans-serif"],
+              "findora-regular": ["FindoraRegular", "sans-serif"],
+              "findora-mono": ["FindoraMono", "monospace"],
+            },
+            spacing: { 18: "4.5rem", 25: "6.25rem", 72: "18rem", 84: "21rem", 96: "24rem" },
+            borderRadius: { xl: "12px" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-findora-inter text-text-primary leading-relaxed antialiased">
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-border-subtle transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-18">
+        <div class="flex items-center">
+          <a href="../index.html" class="no-underline text-inherit">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="logo-svg">
+                <g>
+                  <rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="logo-text text-xl font-bold text-primary tracking-tight relative">Findora</span>
+            </div>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="../demo.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-sm no-underline transition-all duration-300 cursor-pointer border whitespace-nowrap bg-bg-dark text-text-on-dark border-primary hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-xl">Demander une démo</a>
+        </div>
+        <div class="md:hidden flex flex-col gap-1 cursor-pointer p-2">
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-text-primary transition-all duration-300"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-32 pb-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">Offre</span>
+        <h1 class="mt-5 text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary">Lancement MVP</h1>
+        <p class="mt-4 text-lg text-text-secondary">Validez rapidement un cas réel avec un agent ciblé. Intégration légère, résultats mesurables, prêt à évoluer.</p>
+        <div class="mt-8 flex items-center justify-center gap-3 flex-wrap">
+          <a href="../demo.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline border bg-transparent text-text-primary border-border-main hover:bg-bg-card hover:border-primary transition-all">Parler à un expert</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="pt-8 pb-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="rounded-3xl border border-border-subtle bg-white overflow-hidden mb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Étendue</span>
+              <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Un flux prioritaire, rien de superflu</h3>
+              <p class="mt-2 text-text-secondary">Nous ciblons un parcours qui compte vraiment pour vos utilisateurs.</p>
+              <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-primary">
+                <li class="flex items-start gap-2"><span>✓</span> Cadrage rapide et règles simples</li>
+                <li class="flex items-start gap-2"><span>✓</span> Intégration légère à vos outils</li>
+                <li class="flex items-start gap-2"><span>✓</span> Tableau de bord d’impact</li>
+                <li class="flex items-start gap-2"><span>✓</span> Plan d’évolution</li>
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-6 text-sm">
+                <div><span class="font-semibold">×2</span> Vitesse d’exécution</div>
+                <div><span class="font-semibold">-40%</span> Tâches manuelles</div>
+                <div><span class="font-semibold">Clair</span> Indicateurs</div>
+              </div>
+              <div class="mt-8">
+                <a href="../demo.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border-subtle text-sm no-underline hover:border-primary hover:text-primary transition-colors">Démarrer maintenant <span>→</span></a>
+              </div>
+            </div>
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-amber-100 via-yellow-100 to-amber-200"></div>
+              <div class="relative h-full flex items-center justify-center p-6">
+                <div class="rounded-2xl border border-border-subtle bg-white overflow-hidden shadow-sm w-[92%]">
+                  <div class="relative w-full aspect-[13/10]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <svg viewBox="0 0 520 360" class="w-[88%] h-auto max-w-[520px]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ffbd59" />
+                            <stop offset="100%" stop-color="#ffd280" />
+                          </linearGradient>
+                        </defs>
+                        <rect x="60" y="40" width="400" height="280" rx="22" fill="#fff" stroke="#e8e8e8" />
+                        <rect x="210" y="120" width="140" height="120" rx="16" fill="#111" />
+                        <circle cx="280" cy="180" r="14" fill="url(#acc)" />
+                        <rect x="90" y="100" width="90" height="46" rx="10" fill="#fff" stroke="#efefef" />
+                        <rect x="90" y="158" width="90" height="46" rx="10" fill="#fff" stroke="#efefef" />
+                        <rect x="90" y="216" width="90" height="46" rx="10" fill="#fff" stroke="#efefef" />
+                        <text x="105" y="128" font-size="12" fill="#6b6b6b">Flux A</text>
+                        <text x="105" y="186" font-size="12" fill="#6b6b6b">Flux B</text>
+                        <text x="105" y="244" font-size="12" fill="#6b6b6b">Flux C</text>
+                        <path d="M180 123 H210" stroke="#ffbd59" stroke-width="3" stroke-linecap="round" />
+                        <path d="M180 181 H210" stroke="#ffbd59" stroke-width="3" stroke-linecap="round" />
+                        <path d="M180 239 H210" stroke="#ffbd59" stroke-width="3" stroke-linecap="round" />
+                        <rect x="362" y="140" width="78" height="80" rx="12" fill="#fff" stroke="#efefef" />
+                        <rect x="372" y="156" width="58" height="10" rx="5" fill="#ededed" />
+                        <rect x="372" y="174" width="58" height="10" rx="5" fill="#ededed" />
+                        <rect x="372" y="192" width="58" height="10" rx="5" fill="#ededed" />
+                        <path d="M350 180 H362" stroke="url(#acc)" stroke-width="4" stroke-linecap="round" />
+                        <circle cx="401" cy="226" r="10" fill="#10b981" opacity="0.9" />
+                        <path d="M396 226l3 3l6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-top border-border-subtle p-6 md:p-8">
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Le besoin</div>
+              <p class="mt-2 text-text-primary">Prouver la valeur sans attendre, avec un périmètre clair et utile.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Notre approche</div>
+              <p class="mt-2 text-text-primary">Parcours minimal viable, intégration légère, lecture d’impact.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Résultats</div>
+              <p class="mt-2 text-text-primary">Adoption rapide, équipes alignées, base solide pour la suite.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="deploiement" class="rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-stretch">
+            <div class="p-8 md:p-12">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Déploiement</span>
+              <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Canaux et intégration</h3>
+              <p class="mt-2 text-text-secondary">Choisissez le meilleur point de départ. Nous nous branchons à vos outils pour zéro friction.</p>
+              <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-primary">
+                <li class="flex items-start gap-2"><span>✓</span> WhatsApp, web, ou canal interne</li>
+                <li class="flex items-start gap-2"><span>✓</span> Connexion légère à vos systèmes</li>
+                <li class="flex items-start gap-2"><span>✓</span> Indicateurs de suivi intégrés</li>
+                <li class="flex items-start gap-2"><span>✓</span> Hébergement Findora recommandé</li>
+              </ul>
+              <div class="mt-8">
+                <a href="../demo.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border-subtle text-sm no-underline hover:border-primary hover:text-primary transition-colors">Voir une démo <span>→</span></a>
+              </div>
+            </div>
+            <div class="relative hidden lg:block">
+              <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-indigo-100 to-blue-200"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="70" y="20" rx="16" ry="16" width="140" height="140" fill="url(#g2)" />
+                  <rect x="88" y="40" rx="8" ry="8" width="104" height="104" fill="#0f172a" opacity="0.08" />
+                  <circle cx="120" cy="75" r="18" fill="#2563eb" opacity="0.85" />
+                  <rect x="148" y="64" rx="6" ry="6" width="36" height="14" fill="#2563eb" opacity="0.75" />
+                  <rect x="148" y="88" rx="6" ry="6" width="56" height="14" fill="#6366f1" opacity="0.65" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-top border-border-subtle p-6 md:p-8">
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Sécurité</div>
+              <p class="mt-2 text-text-primary">Accès limité, traçabilité, et hébergement Findora recommandé.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Pilotage</div>
+              <p class="mt-2 text-text-primary">Tableau de bord simple pour lire l’impact et décider vite.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold tracking-wide text-text-light uppercase">Évolution</div>
+              <p class="mt-2 text-text-primary">Montée en charge progressive selon l’usage et la valeur.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="livrables" class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Livrables</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Ce que vous recevez</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Agent opérationnel</div>
+                <p class="mt-2 text-sm text-text-secondary">Un flux prioritaire prêt à l’emploi sur le canal choisi.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Règles et consignes</div>
+                <p class="mt-2 text-sm text-text-secondary">Règles métier claires pour un comportement constant.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Tableau de bord</div>
+                <p class="mt-2 text-sm text-text-secondary">Indicateurs simples pour suivre l’impact et décider.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Intégration légère</div>
+                <p class="mt-2 text-sm text-text-secondary">Connexion minimale à vos systèmes si nécessaire.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Journal d’exploitation</div>
+                <p class="mt-2 text-sm text-text-secondary">Traçabilité des opérations pour compréhension et audit.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-base font-semibold text-text-primary">Plan d’évolution</div>
+                <p class="mt-2 text-sm text-text-secondary">Recommandations concrètes pour la suite.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="timeline" class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Timeline</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Un déroulé simple</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-sm font-semibold text-text-light uppercase">Étape 1</div>
+                <div class="mt-1 font-semibold">Cadrage</div>
+                <p class="mt-2 text-sm text-text-secondary">Cas prioritaire, règles, objectifs et métriques.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-sm font-semibold text-text-light uppercase">Étape 2</div>
+                <div class="mt-1 font-semibold">Mise en place</div>
+                <p class="mt-2 text-sm text-text-secondary">Canal choisi et intégration minimale.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-sm font-semibold text-text-light uppercase">Étape 3</div>
+                <div class="mt-1 font-semibold">Lecture d’impact</div>
+                <p class="mt-2 text-sm text-text-secondary">Suivi des indicateurs et retours terrain.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white">
+                <div class="text-sm font-semibold text-text-light uppercase">Étape 4</div>
+                <div class="mt-1 font-semibold">Cap vers la suite</div>
+                <p class="mt-2 text-sm text-text-secondary">Plan d’évolution et priorités suivantes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="exemples" class="mt-10 rounded-3xl border border-border-subtle bg-white overflow-hidden">
+          <div class="p-8 md:p-12">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">Exemples</span>
+            <h3 class="mt-4 text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide text-text-primary max-w-3xl">Cas typiques de MVP</h3>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary">
+                <div class="font-semibold text-text-primary">Onboarding express</div>
+                <p class="mt-2">Aide à la création de compte et réponses aux questions fréquentes.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary">
+                <div class="font-semibold text-text-primary">Qualification simple</div>
+                <p class="mt-2">Collecte des informations clés pour lancer un dossier.</p>
+              </div>
+              <div class="rounded-xl border border-border-subtle p-5 bg-white text-sm text-text-secondary">
+                <div class="font-semibold text-text-primary">Mise à jour essentielle</div>
+                <p class="mt-2">Saisie rapide vers le CRM avec validation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <footer class="footer-section footer-visible bg-bg-dark text-text-on-dark relative overflow-hidden">
+      <div class="footer-bg-decoration"></div>
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="20" viewBox="0 0 88 24" class="footer-logo">
+                <g>
+                  <rect x="0" y="0" width="88" height="24" rx="12" ry="12" fill="#ffbd59" />
+                  <circle cx="60" cy="12" r="6" fill="white" />
+                  <path d="M30 12 L58 12" stroke="white" stroke-width="2" />
+                </g>
+              </svg>
+              <span class="text-xl font-bold font-findora-inter">Findora</span>
+            </div>
+            <p class="text-text-light mb-6 leading-relaxed font-findora-regular">Construire un futur avec moins d'effort .</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Cas d’usage</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="#" class="footer-link">Ambo wallet</a></li>
+              <li><a href="#" class="footer-link">Oja</a></li>
+              <li><a href="#" class="footer-link">Faba</a></li>
+              <li><a href="#" class="footer-link">Hambo GROUPE</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Types d'offres</h3>
+            <ul class="space-y-2 font-findora-regular">
+              <li><a href="#" class="footer-link">Lancement MVP</a></li>
+              <li><a href="#" class="footer-link">Optimisation métier</a></li>
+              <li><a href="#" class="footer-link">Intégration d’un process</a></li>
+              <li><a href="#" class="footer-link">Custom d’un agent privé</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6 font-findora-inter">Aide & ressources</h3>
+            <ul class="space-y-4 font-findora-regular">
+              <li><a href="#" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-primary-light pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div class="text-text-light text-sm mb-4 md:mb-0 font-findora-regular">© 2025 Findora. Tous droits réservés.</div>
+          <div class="flex gap-6 text-sm font-findora-regular">
+            <a href="../privacy-policy.html" class="footer-link">Politique de confidentialité</a>
+            <a href="../terms-of-service.html" class="footer-link">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-floating-elements">
+        <div class="footer-float-1"></div>
+        <div class="footer-float-2"></div>
+        <div class="footer-float-3"></div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector('span');
+          const menu = dropdown.querySelector('.dropdown-menu');
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdowns.forEach((otherDropdown) => { if (otherDropdown !== dropdown) { otherDropdown.classList.remove("active"); } });
+            dropdown.classList.toggle("active");
+          });
+        });
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach((dropdown) => { if (!dropdown.contains(e.target)) { dropdown.classList.remove("active"); } });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
